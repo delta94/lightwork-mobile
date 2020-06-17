@@ -57,7 +57,7 @@ const TEXT_PRICE: TextStyle = {
     color: color.greenDark
 }
 
-let HistoryItem = (props) => {
+const HistoryItem = (props) => {
     var TYPE;
     var IMAGE;
     switch (props.type) {

@@ -1,14 +1,16 @@
 import React from 'react'
-import { View, ViewStyle } from 'react-native';
-
+import { View, ViewStyle, FlatList } from 'react-native';
 import BonusItem from '../../components/BonusesScreen/BonusItem/BonusItem';
-import { ScrollView, FlatList } from 'react-native-gesture-handler';
 import Balance from '../../components/BonusesScreen/Balance/Balance';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
+//DOCUMENTATION
+//https://reactnative.dev/docs/flatlist
+
+//STYLES
 const CONTAINER: ViewStyle = {
   flexDirection: "column",
   flex: 1,
+  alignItems: "stretch",
   paddingTop: 0,
 }
 
@@ -17,31 +19,42 @@ const FLATLIST: ViewStyle = {
   alignSelf: "stretch"
 }
 
-const data = [
-  { id: "1", type: "Заказ Грузчиков", count: "30" },
-  { id: "2", type: "Заказ Мастера", count: "21" },
-  { id: "3", type: "Заказ Клинера", count: "24" },
-  { id: "4", type: "Заказ Грузчиков", count: "54" },
-  { id: "5", type: "Заказ Мастера", count: "45" },
-  { id: "6", type: "Заказ Клинера", count: "86" },
-  { id: "7", type: "Заказ Грузчиков", count: "12" },
-  { id: "8", type: "Заказ Клинера", count: "7" },
-  { id: "9", type: "Заказ Мастера", count: "558" },
-]
+//DATA
+const DATA = [
+  { id: 1, type: "MOVERS", bonusCount: 30, date: "11/25/2019", price: 3000 },
+  { id: 2, type: "MASTER", bonusCount: 21, date: "11/25/2019", price: 2500 },
+  { id: 3, type: "CLEANING", bonusCount: 60, date: "11/25/2019", price: 5000 },
+  { id: 4, type: "MOVERS", bonusCount: 54, date: "11/12/2019", price: 10000 },
+  { id: 5, type: "CLEANING", bonusCount: 164, date: "11/12/2019", price: 1500 },
+  { id: 6, type: "MOVERS", bonusCount: 5, date: "11/12/2019", price: 4500 },
+  { id: 7, type: "MOVERS", bonusCount: 89, date: "11/12/2019", price: 2500 },
+  { id: 8, type: "CLEANING", bonusCount: 12, date: "11/09/2019", price: 6500 },
+  { id: 9, type: "MASTER", bonusCount: 204, date: "11/09/2019", price: 3000 },
+  { id: 10, type: "MASTER", bonusCount: 84, date: "11/07/2019", price: 3000 },
+];
 
+const BALANCE = 35990
 
+//COMPONENT
 const BonusesScreen = () => {
   return ( 
       <View style={CONTAINER}> 
-        <ScrollView>
-          <Balance />
           <FlatList 
             style={FLATLIST}
-            data={data}
-            renderItem={({ item }) => <BonusItem type={item.type} count={item.count} />}
-            keyExtractor={item => item.id}
+            data={DATA}
+            ListHeaderComponent={
+              <Balance 
+                balance={BALANCE}
+              />
+            }
+            keyExtractor={item => "bonus-item-"+item.id}
+            renderItem={({ item }) => 
+              <BonusItem 
+                type={item.type} 
+                count={item.bonusCount}
+                date={item.date}
+              />}
           />
-        </ScrollView>
       </View>
   );
 }

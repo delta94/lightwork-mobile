@@ -5,7 +5,6 @@ import * as Animatable from 'react-native-animatable';
 import { Entypo } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 //DOCUMENTATION
 //https://github.com/oblador/react-native-collapsible
@@ -15,7 +14,6 @@ import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 //ViewStyle
 const CONTAINER: ViewStyle = {
     alignSelf: "stretch",
-    flex: 1,
     alignItems: "center",
 }
 
@@ -157,8 +155,7 @@ const HelpItems = (props) => {
         }
         else {
             return (
-                <View style={CONTAINER}>
-                    
+                <View style={CONTAINER}>         
                     <ScrollView>
                         <View style={SUBHEADER}>
                             <Text style={SUBHEADER_TEXT}>Результаты поиска</Text>

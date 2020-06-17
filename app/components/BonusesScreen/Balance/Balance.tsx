@@ -1,17 +1,17 @@
 import React from 'react'
 import { Text, TextStyle, View, ViewStyle } from 'react-native';
 
-
+//STYLES
+//ViewStyles
 const CONTAINER: ViewStyle = {
     paddingHorizontal: 20,
     paddingTop: 10,
     backgroundColor: "#fff",
     paddingBottom: 5,
-    flex: 1,
-    alignSelf: 'stretch',
     flexDirection: "column"
 }
 
+//TextStyles
 const TEXT: TextStyle = {
     fontFamily: "Lato",
 }
@@ -30,10 +30,10 @@ const TEXT_MUTED: TextStyle = {
     fontSize: 16,
 }
 
-const Balance = () => {
+const Balance = (props) => {
     return (
         <View style={CONTAINER}>
-            <Text style={BONUS_COUNT}>35 990</Text>
+            <Text style={BONUS_COUNT}>{props.balance}</Text>
             <Text style={TEXT_MUTED}>Заказывая услуги в компании Lightwork Вы возвращаете 1% с каждого заказа</Text>
         </View>
     );

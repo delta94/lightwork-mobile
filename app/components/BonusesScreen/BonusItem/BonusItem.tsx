@@ -1,13 +1,39 @@
 import React, { useState } from 'react'
-import { Text, TextStyle, View, ViewStyle, ShadowPropTypesIOS, TouchableHighlight } from 'react-native';
+import { Text, TextStyle, View, ViewStyle } from 'react-native';
 import { color } from '../../../theme';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import moment from 'moment/min/moment-with-locales'
 
+//DOCUMENTATION
+//https://momentjs.com/
+//https://reactnative.dev/docs/touchablewithoutfeedback
+
+//STYLES
+//ViewStyle
 const CONTAINER: ViewStyle = {
     flexDirection: "column",
-    flex: 1,
-    alignSelf: "stretch"
 }
 
+const ROW: ViewStyle = {
+    flexDirection: "row",
+    paddingHorizontal: 20,
+    backgroundColor: "#fff",
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderColor: "#f4f4f4",
+    justifyContent: "space-between"
+}
+
+const ROW_LEFT: ViewStyle = {
+    justifyContent: "center",
+}
+
+const ROW_RIGHT: ViewStyle = {
+    alignItems: "flex-end",
+    justifyContent: "center",
+}
+
+//TextStyle
 const TEXT_SERVICE: TextStyle = {
     color: "#444",
     fontSize: 16,
@@ -21,52 +47,47 @@ const TEXT_DATE: TextStyle = {
     paddingBottom: 5,
 }
 
-let BONUS_COUNT: TextStyle = {
-    fontSize: 35,
+const BONUS_COUNT: TextStyle = {
+    fontSize: 25,
     color: color.green,
     fontWeight: "bold"
     
 }
 
-const ROW: ViewStyle = {
-    flexDirection: "row",
-    paddingHorizontal: 20,
-    backgroundColor: "#fff",
-    paddingVertical: 15,
-    alignSelf: 'stretch',
-    borderBottomWidth: 1,
-    borderColor: "#f4f4f4",
-}
-
-const ROW_LEFT: ViewStyle = {
-    flex: 1,
-    justifyContent: "center",
-}
-
-const ROW_RIGHT: ViewStyle = {
-    flex: 1,
-    alignItems: "flex-end",
-    justifyContent: "center",
-}
-
+//COMPONENT
 const BonusItem = (props) => {
+    const [isPressIn, setPressIn] = useState(false);
+
+    var TYPE;
+    switch (props.type) {
+        case 'MASTER':
+            TYPE = "Заказ мастера";
+            break;
+
+        case 'CLEANING':
+            TYPE = "Заказ клинеров";
+            break;
+
+        case "MOVERS":
+            TYPE = "Заказ грузчиков";
+            break;
+    }
+
     return (
-        <TouchableHighlight>
         <View style={CONTAINER}>
-            <View style={ROW}>
-                
-                <View style={ROW_LEFT}>
-                    <Text style={TEXT_SERVICE}>{props.type}</Text>
-                    <Text style={TEXT_DATE}>26 ноября 2019 г.</Text>
-                </View>
-                <View style={ROW_RIGHT}>
-                    <Text style={BONUS_COUNT}> +{props.count}</Text>
-                </View>
-                
-            </View>
-            
+            <TouchableWithoutFeedback
+                onPressIn={() => setPressIn(!isPressIn)}
+                onPressOut={() => setPressIn(!isPressIn)}
+                style={{...ROW, backgroundColor: (isPressIn ? "#f2f2f2" : "#fff")}}>
+                    <View style={ROW_LEFT}>
+                        <Text style={TEXT_SERVICE}>{TYPE}</Text>
+                        <Text style={TEXT_DATE}>{moment(props.date).locale('ru').format('LL')}</Text>
+                    </View>
+                    <View style={ROW_RIGHT}>
+                        <Text style={BONUS_COUNT}> +{props.count}</Text>
+                    </View>
+            </TouchableWithoutFeedback>
         </View>
-        </TouchableHighlight>
     );
 }
 
