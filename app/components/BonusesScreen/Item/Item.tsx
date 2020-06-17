@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Text, TextStyle, View, ViewStyle } from 'react-native';
 import { color } from '../../../theme';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { RectButton } from 'react-native-gesture-handler';
 import moment from 'moment/min/moment-with-locales'
 
 //DOCUMENTATION
@@ -55,7 +55,7 @@ const BONUS_COUNT: TextStyle = {
 }
 
 //COMPONENT
-const BonusItem = (props) => {
+const Item = (props) => {
     const [isPressIn, setPressIn] = useState(false);
 
     var TYPE;
@@ -75,10 +75,8 @@ const BonusItem = (props) => {
 
     return (
         <View style={CONTAINER}>
-            <TouchableWithoutFeedback
-                onPressIn={() => setPressIn(!isPressIn)}
-                onPressOut={() => setPressIn(!isPressIn)}
-                style={{...ROW, backgroundColor: (isPressIn ? "#f2f2f2" : "#fff")}}>
+            <RectButton 
+                style={ROW}>
                     <View style={ROW_LEFT}>
                         <Text style={TEXT_SERVICE}>{TYPE}</Text>
                         <Text style={TEXT_DATE}>{moment(props.date).locale('ru').format('LL')}</Text>
@@ -86,9 +84,9 @@ const BonusItem = (props) => {
                     <View style={ROW_RIGHT}>
                         <Text style={BONUS_COUNT}> +{props.count}</Text>
                     </View>
-            </TouchableWithoutFeedback>
+            </RectButton>
         </View>
     );
 }
 
-export default BonusItem;
+export default Item;

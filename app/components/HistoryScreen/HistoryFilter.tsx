@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, ViewStyle, TouchableOpacity, Text, TextStyle } from 'react-native';
+import { RectButton, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 
 const CONTAINER: ViewStyle = {
@@ -49,11 +50,11 @@ const HistoryFilter = () => {
             >
                 <Text style={BUTTON_TEXT}>Мастера</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-                style={BUTTON}
-            >
+
+                <RectButton style={BUTTON}>
                 <Text style={BUTTON_TEXT}>Клининг</Text>
-            </TouchableOpacity>
+                </RectButton>
+
         </View>
     )
 }

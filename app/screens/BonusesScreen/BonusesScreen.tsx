@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, ViewStyle, FlatList } from 'react-native';
-import BonusItem from '../../components/BonusesScreen/BonusItem/BonusItem';
+import BonusItem from '../../components/BonusesScreen/Item/Item';
 import Balance from '../../components/BonusesScreen/Balance/Balance';
 
 //DOCUMENTATION

@@ -1,16 +1,15 @@
 import React from 'react'
-import { View, ViewStyle } from 'react-native';
+import { View, ViewStyle, Text } from 'react-native';
 import { color } from '../../theme';
 import HistoryGroup from '../../components/HistoryScreen/HistoryGroup/HistoryGroup';
 import { DATE_FILTER } from '../../constants/filters';
-import { ScrollView } from 'react-native-gesture-handler';
-import { Button, Text, Item, Input } from 'native-base';
+import { ScrollView, RectButton, BaseButton } from 'react-native-gesture-handler';
 import HistoryFilter from '../../components/HistoryScreen/HistoryFilter';
 
 const CONTAINER: ViewStyle = {
   flexDirection: "column",
   flex: 1,
-  alignItems: 'flex-start',
+  alignItems: 'stretch',
   justifyContent: 'flex-start',
   paddingTop: 0,
   alignSelf: 'stretch',
@@ -18,9 +17,8 @@ const CONTAINER: ViewStyle = {
 }
 
 
-
 const HistoryScreen = (props) => {
-  let HistoryGroups = DATE_FILTER(props.data).map(n => <HistoryGroup
+  const HistoryGroups = DATE_FILTER(props.data).map(n => <HistoryGroup
     date={n.date}
     key={n.id}
     data={props.data} />);

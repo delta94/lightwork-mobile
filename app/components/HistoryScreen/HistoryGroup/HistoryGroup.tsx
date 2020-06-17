@@ -1,9 +1,10 @@
 import React from 'react'
 import { Text, TextStyle, View, ViewStyle } from 'react-native'
-import HistoryItem from './HistoryItem/HistoryItem'
+import Item from './Item/Item'
 import moment from 'moment/min/moment-with-locales'
+
 const TEXT: TextStyle = {
-    fontFamily: "Lato-Bold"
+    
 }
 
 const TEXT_DATE: TextStyle = {
@@ -23,8 +24,8 @@ const ROW: ViewStyle = {
 }
 
 const HistoryGroup = (props) => {
-    let HistoryItems = props.data.map(n => {
-        if (n.date == props.date) return <HistoryItem
+    const HistoryItems = props.data.map(n => {
+        if (n.date == props.date) return <Item
             type={n.type}
             key={n.id}
             price={n.price} />
