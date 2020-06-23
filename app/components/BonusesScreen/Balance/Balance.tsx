@@ -7,8 +7,8 @@ const CONTAINER: ViewStyle = {
     paddingHorizontal: 20,
     paddingTop: 10,
     backgroundColor: "#fff",
-    paddingBottom: 5,
-    flexDirection: "column"
+    flexDirection: "column",
+    paddingBottom: 20,
 }
 
 //TextStyles

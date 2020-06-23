@@ -2,6 +2,9 @@ import React from 'react'
 import { View, ViewStyle, FlatList, Button } from 'react-native';
 import BonusItem from '../../components/BonusesScreen/Item/Item';
 import Balance from '../../components/BonusesScreen/Balance/Balance';
+import { DATE_FILTER } from '../../constants/filters';
+import DateGroup from '../../components/BonusesScreen/DateGroup/DateGroup';
+import { ScrollView } from 'react-native-gesture-handler';
 
 //DOCUMENTATION
 //https://reactnative.dev/docs/flatlist
@@ -36,25 +39,17 @@ const DATA = [
 const BALANCE = 35990
 
 //COMPONENT
-const BonusesScreen = ({navigation}) => {
+const BonusesScreen = (props) => {
+  const DateGroups = DATE_FILTER(props.data).map(n => <DateGroup
+    date={n.date}
+    key={n.id}
+    data={props.data} />);
   return ( 
-      <View style={CONTAINER}> 
-          <FlatList 
-            style={FLATLIST}
-            data={DATA}
-            ListHeaderComponent={
-              <Balance 
-                balance={BALANCE}
-              />
-            }
-            keyExtractor={item => "bonus-item-"+item.id}
-            renderItem={({ item }) => 
-              <BonusItem 
-                type={item.type} 
-                count={item.bonusCount}
-                date={item.date}
-              />}
-          />
+      <View style={CONTAINER}>
+        <ScrollView>
+          <Balance balance={BALANCE}/>
+          {DateGroups}
+        </ScrollView> 
       </View>
   );
 }

@@ -21,6 +21,8 @@ const IMAGES = {
         mover: require("../../assets/images/history-mover.png"),
         master: require("../../assets/images/history-master.png"),
         cleaning: require("../../assets/images/history-cleaning.png"),
+        grey: require("../../assets/images/history-grey.png"),
+        dark: require("../../assets/images/history-dark.png")
     },
     main: {
         card: require("../../assets/images/card.png")

@@ -11,7 +11,7 @@ import HistoryScreenContainer from './screens/HistoryScreen/HistoryScreenContain
 import MainScreen from './screens/MainScreen/MainScreen';
 import HistoryDetailsScreen from "./screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreen";
 import HelpScreen from './screens/HelpScreen/HelpScreen';
-import BonusesScreen from './screens/BonusesScreen/BonusesScreen';
+import BonusesScreenContainer from './screens/BonusesScreen/BonusesScreenContainer';
 
 
 
@@ -59,7 +59,7 @@ const BonusesStackScreen = () => {
     <BonusesStack.Navigator>
       <BonusesStack.Screen
         name="Bonuses"
-        component={BonusesScreen}
+        component={BonusesScreenContainer}
         options={{
           title: 'Бонусы',
           headerStyle: {
