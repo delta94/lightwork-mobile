@@ -1,22 +1,27 @@
-import React, { useState } from 'react'
-import BonusesScreen from './screens/BonusesScreen/BonusesScreen';
+import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HistoryScreen from './screens/HistoryScreen/HistoryScreen';
-import { Image, ImageStyle } from 'react-native';
-import { AppLoading } from 'expo';
-import HistoryDetailsScreen from "./screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreen";
-import { useFonts } from '@use-expo/font';
-import HelpScreen from './screens/HelpScreen/HelpScreen';
+import { Image, ImageStyle, View, ViewStyle } from 'react-native';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { color } from './theme/color';
 import IMAGES from './constants/images';
+
+//SCREENS
 import HistoryScreenContainer from './screens/HistoryScreen/HistoryScreenContainer';
 import MainScreen from './screens/MainScreen/MainScreen';
+import HistoryDetailsScreen from "./screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreen";
+import HelpScreen from './screens/HelpScreen/HelpScreen';
+import BonusesScreen from './screens/BonusesScreen/BonusesScreen';
+
+
 
 const TAB_ICON: ImageStyle = {
-  width: 30,
-  height: 30,
+  width: 25,
+  height: 25,
+}
+
+const ICON_DIVIDER: ViewStyle = {
+  padding: 10,
 }
 
 const HistoryStack = createStackNavigator();
@@ -104,9 +109,9 @@ const MainStackScreen = () => {
   )
 }
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
-let App = () => {
+const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -132,16 +137,24 @@ let App = () => {
                 ? IMAGES.navigation.main.active
                 : IMAGES.navigation.main.normal;
             }
-            return <Image
+            return (
+            <View>
+              <Image
               style={TAB_ICON}
               source={iconName}
-            />;
+            />
+            <View style={ICON_DIVIDER}></View>
+            </View>);
           },
         })}
-        tabBarOptions={{
-          activeTintColor: color.green,
-          inactiveTintColor: "#555",
-        }}>
+        activeColor={color.green}
+        inactiveColor="#555"
+        barStyle={{ 
+          backgroundColor: '#fff',
+          }}
+        shifting={false}
+        >
+        
         <Tab.Screen
           name="Bonuses"
           component={BonusesStackScreen}

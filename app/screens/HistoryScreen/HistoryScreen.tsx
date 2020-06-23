@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, ViewStyle, Text } from 'react-native';
+import { View, ViewStyle, Text, Button } from 'react-native';
 import { color } from '../../theme';
 import HistoryGroup from '../../components/HistoryScreen/HistoryGroup/HistoryGroup';
 import { DATE_FILTER } from '../../constants/filters';
@@ -26,6 +26,10 @@ const HistoryScreen = (props) => {
     <ScrollView>      
       <View style={CONTAINER}>
         <HistoryFilter />
+        <Button
+          title="Go to Details"
+          onPress={() => props.navigation.navigate('Details')}
+        />
         {HistoryGroups}
       </View>
     </ScrollView>

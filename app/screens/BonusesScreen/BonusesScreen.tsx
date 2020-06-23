@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, ViewStyle, FlatList } from 'react-native';
+import { View, ViewStyle, FlatList, Button } from 'react-native';
 import BonusItem from '../../components/BonusesScreen/Item/Item';
 import Balance from '../../components/BonusesScreen/Balance/Balance';
 
@@ -36,7 +36,7 @@ const DATA = [
 const BALANCE = 35990
 
 //COMPONENT
-const BonusesScreen = () => {
+const BonusesScreen = ({navigation}) => {
   return ( 
       <View style={CONTAINER}> 
           <FlatList 

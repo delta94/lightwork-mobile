@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
 import HistoryScreen from './HistoryScreen';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
         data: state.historyScreen,
-        date: state.historyScreen.map(n => { return n.date })
+        date: state.historyScreen.map(n => { return n.date }),
+        navigation: ownProps.navigation
     }
 }
 
