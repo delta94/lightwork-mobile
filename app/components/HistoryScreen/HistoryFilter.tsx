@@ -1,61 +1,96 @@
-import React from 'react'
-import { View, ViewStyle, TouchableOpacity, Text, TextStyle } from 'react-native';
-import { RectButton, TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import React, { useState, useEffect } from 'react'
+import { View, ViewStyle, Text, TextStyle, FlatList } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
+import { color } from '../../theme';
+
+//DATA
+const BUTTONS = [
+    {
+        id: 1,
+        title: "Все",
+        color: color.yellow,
+        textColor: color.black,
+        type: "ALL"
+    },
+    {
+        id: 2,
+        title: "Грузчики",
+        color: color.green,
+        textColor: color.white,
+        type: "MOVERS"
+    },
+    {
+        id: 3,
+        title: "Мастера",
+        color: color.orange,
+        textColor: color.white,
+        type: "MASTER"
+    },
+    {
+        id: 4,
+        title: "Клининг",
+        color: color.blue,
+        textColor: color.white,
+        type: "CLEANING"
+    },
+]
 
 
+//STYLES
+//ViewStyles
 const CONTAINER: ViewStyle = {
     alignSelf: "auto",
     flexDirection: "row",
-    paddingHorizontal: 20,
+    paddingLeft: 0,
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderColor: "#eee"
+    borderColor: "#eee",
+    backgroundColor: "#fff"
+}
+
+const FLATLIST: ViewStyle = {
+    marginLeft: 20,
 }
 
 const BUTTON = {
     borderRadius: 20,
     marginEnd: 10,
     backgroundColor: "#f4f4f4",
-    color: "#000",
 }
 
-const ACTIVE_BUTTON: ViewStyle = {
-    ...BUTTON,
-    backgroundColor: "#ffc606",
-    borderColor: "#ffc606",
-}
-
+//TextStyles
 const BUTTON_TEXT: TextStyle = {
     paddingVertical: 10,
     paddingHorizontal: 20,
 }
 
 
-const HistoryFilter = () => {
+//COMPONENT
+const HistoryFilter = (props) => {
+    const [activeType, setActive] = useState("ALL");
+    useEffect(() => {   
+        props.setValue(activeType) 
+    })
     return (
-        <View style={CONTAINER}>
-        
-            <TouchableOpacity
-                style={ACTIVE_BUTTON}
-            >
-                <Text style={BUTTON_TEXT}>Все</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                style={BUTTON}
-            >
-                <Text style={BUTTON_TEXT}>Грузчики</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                style={BUTTON}
-            >
-                <Text style={BUTTON_TEXT}>Мастера</Text>
-            </TouchableOpacity>
-
-                <RectButton style={BUTTON}>
-                <Text style={BUTTON_TEXT}>Клининг</Text>
-                </RectButton>
-
-        </View>
+            <View style={CONTAINER}>
+                <FlatList 
+                    style={FLATLIST}
+                    data={BUTTONS}
+                    showsHorizontalScrollIndicator={false}
+                    renderItem={({ item }) => {
+                        return (
+                        <RectButton 
+                            style={{...BUTTON, backgroundColor: (activeType == item.type ? item.color : "#f4f4f4" )}}
+                            onPress={() => setActive(item.type)}>
+                            <Text style={{...BUTTON_TEXT, color: (activeType == item.type ? item.textColor : "#000" )}}>
+                                {item.title}
+                            </Text>
+                        </RectButton>
+                    )}}
+                    keyExtractor={item => "filter-button-"+item.id}
+                    horizontal
+                />
+            </View>
     )
 }
 

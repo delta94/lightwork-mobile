@@ -1,35 +1,38 @@
-import React from 'react'
-import { View, ViewStyle, Text, Button } from 'react-native';
-import { color } from '../../theme';
+import React, { useState } from 'react'
+import { View, ViewStyle } from 'react-native';
 import HistoryGroup from '../../components/HistoryScreen/HistoryGroup/HistoryGroup';
-import { DATE_FILTER } from '../../constants/filters';
-import { ScrollView, RectButton, BaseButton } from 'react-native-gesture-handler';
+import { DATE_FILTER, TYPE_FILTER } from '../../constants/filters';
+import { ScrollView } from 'react-native-gesture-handler';
 import HistoryFilter from '../../components/HistoryScreen/HistoryFilter';
 
+//STYLES
+//ViewStyles
 const CONTAINER: ViewStyle = {
   flexDirection: "column",
-  flex: 1,
   alignItems: 'stretch',
   justifyContent: 'flex-start',
   paddingTop: 0,
   alignSelf: 'stretch',
-  backgroundColor: color.white
 }
 
-
+//COMPONENT
 const HistoryScreen = (props) => {
-  const HistoryGroups = DATE_FILTER(props.data).map(n => <HistoryGroup
-    date={n.date}
-    key={n.id}
-    data={props.data} />);
+  const [value, setValue] = useState("ALL");
+  const FILTERED_DATA = TYPE_FILTER(props.data, value)
+  const HistoryGroups = DATE_FILTER(FILTERED_DATA).map(n => {
+      return (
+        <HistoryGroup
+        date={n.date}
+        key={n.id}
+        data={FILTERED_DATA} 
+        navigation={props.navigation}
+        activeType={value} />
+      )
+  });
   return (
     <ScrollView>      
       <View style={CONTAINER}>
-        <HistoryFilter />
-        <Button
-          title="Go to Details"
-          onPress={() => props.navigation.navigate('Details')}
-        />
+        <HistoryFilter setValue={setValue}/>
         {HistoryGroups}
       </View>
     </ScrollView>

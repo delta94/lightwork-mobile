@@ -1,4 +1,4 @@
-export const DATE_FILTER = data => {
+export const DATE_FILTER = (data) => {
     const uniqueDate = [];
     let stepDate = [];
     let i = 0;
@@ -12,3 +12,18 @@ export const DATE_FILTER = data => {
     });
     return uniqueDate
 }
+
+export const TYPE_FILTER = (data, value) => {
+    let NEW_DATA = [];
+    if (value == "ALL") {
+      NEW_DATA = data
+    }
+    else {
+      data.map(d => {
+        if (d.type == value) {
+          NEW_DATA.push(d)
+        }
+      })
+    }
+    return NEW_DATA
+  }

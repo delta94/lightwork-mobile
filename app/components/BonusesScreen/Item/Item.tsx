@@ -58,7 +58,7 @@ const TEXT_VIEW: ViewStyle = {
 //TextStyle
 const TEXT_SERVICE: TextStyle = {
     color: "#565656",
-    fontSize: 17,
+    fontSize: 16,
     marginTop: 0,
     fontFamily: "Lato-Bold",
 }

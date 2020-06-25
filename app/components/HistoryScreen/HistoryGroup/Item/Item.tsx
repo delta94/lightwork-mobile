@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, TextStyle, View, ViewStyle, Image, ImageStyle } from 'react-native';
 import IMAGES from '../../../../constants/images';
 import { color } from '../../../../theme/color';
+import { RectButton } from 'react-native-gesture-handler';
 
 const TEXT: TextStyle = {
     fontFamily: "Lato"
@@ -15,8 +16,14 @@ let IMAGE_STYLE: ViewStyle = {
 
 const TEXT_DATE: TextStyle = {
     ...TEXT,
-    color: "#000",
+    color: "#565656",
     fontSize: 16,
+    fontFamily: "Lato-Bold",
+}
+
+const TEXT_TITLE: TextStyle = {
+    color: "#777",
+    fontSize: 14,
 }
 
 const TYPE_ROW: ViewStyle = {
@@ -24,12 +31,13 @@ const TYPE_ROW: ViewStyle = {
 }
 
 const ROW: ViewStyle = {
-    paddingHorizontal: 0,
-    backgroundColor: "#fff",
-    marginVertical: 3,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    borderBottomColor: "#eee",
+    borderBottomWidth: 1,
 }
 
 const TYPE_IMAGE: ImageStyle = {
@@ -40,7 +48,8 @@ const TYPE_IMAGE: ImageStyle = {
 const CONTAINER: ViewStyle = {
     alignItems: "stretch",
     flexDirection: "column",
-    marginVertical: 5,
+    
+    backgroundColor: "#fff",
 }
 
 const ROW_LEFT: ViewStyle = {
@@ -57,7 +66,7 @@ const TEXT_PRICE: TextStyle = {
     color: color.greenDark
 }
 
-const HistoryItem = (props) => {
+const Item = (props) => {
     var TYPE;
     var IMAGE;
     switch (props.type) {
@@ -88,15 +97,18 @@ const HistoryItem = (props) => {
             }
             break;
     }
-
     return (
-        <View style={CONTAINER}>
+        <RectButton style={CONTAINER} onPress={() => props.navigation.navigate('Details', {
+            itemId: props.id,
+            price: props.price,
+        })}>
             <View style={ROW}>
                 <View style={ROW_LEFT}>
                     <View style={IMAGE_STYLE}>
                         <Image style={TYPE_IMAGE} source={IMAGE} />
                     </View>
                     <View style={TYPE_ROW}>
+                        <Text style={TEXT_TITLE}>Оплата Услуги</Text>
                         <Text style={TEXT_DATE}>{TYPE}</Text>
                     </View>
                 </View>
@@ -104,8 +116,8 @@ const HistoryItem = (props) => {
                     <Text style={TEXT_PRICE}>{props.price} ₸</Text>
                 </View>
             </View>
-        </View>
+        </RectButton>  
     );
 }
 
-export default HistoryItem;
+export default Item;

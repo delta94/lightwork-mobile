@@ -1,40 +1,62 @@
 import React from 'react'
-import { Text, TextStyle, View, ViewStyle } from 'react-native'
+import { Text, TextStyle, View, ViewStyle, FlatList } from 'react-native'
 import Item from './Item/Item'
 import moment from 'moment/min/moment-with-locales'
 
-const TEXT: TextStyle = {
-    
-}
-
-const TEXT_DATE: TextStyle = {
-    ...TEXT, 
-    color: "#333",
-    fontSize: 20,
-    fontWeight: "900",
-    marginBottom: 10
-}
-
-const ROW: ViewStyle = {
-    marginVertical: 7,
+//STYLES
+//ViewStyles
+const CONTAINER: ViewStyle = {
     flexDirection: "column",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
     alignSelf: "stretch"
 }
 
+const HEADER: ViewStyle = {
+    paddingHorizontal: 20,
+    paddingVertical: 5,
+}
+
+//TextStyles
+const TEXT_DATE: TextStyle = {
+    color: "#888",
+    fontFamily: "Lato",
+    fontSize: 14,
+}
+
+//COMPONENT
 const HistoryGroup = (props) => {
     const HistoryItems = props.data.map(n => {
         if (n.date == props.date) return <Item
             type={n.type}
             key={n.id}
-            price={n.price} />
+            price={n.price} 
+            data={props.data}
+            navigation={props.navigation} 
+            activeType={props.activeType}/>
     })
     return (
-        <View style={ROW}>
-            <Text style={TEXT_DATE}>{moment(props.date).locale('ru').format('LL')}</Text>
-
-            {HistoryItems}
+        <View style={CONTAINER}>
+            <View style={HEADER}>
+                <Text style={TEXT_DATE}>{moment(props.date).locale('ru').format('LL')}</Text>
+            </View>
+            <FlatList 
+                data={props.data}
+                renderItem={({item}) => {
+                    if (item.date == props.date) {
+                        return (
+                            <Item
+                            type={item.type}
+                            key={item.id}
+                            price={item.price} 
+                            data={props.data}
+                            navigation={props.navigation} 
+                            activeType={props.activeType}/>
+                        )
+                    }
+                    else {
+                        return <View></View>
+                    }
+                }}
+            />
         </View>
     );
 }

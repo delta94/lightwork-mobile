@@ -30,6 +30,7 @@ const TEXT_MUTED: TextStyle = {
     fontSize: 16,
 }
 
+//COMPONENT
 const Balance = (props) => {
     return (
         <View style={CONTAINER}>
