@@ -12,6 +12,7 @@ import MainScreen from './screens/MainScreen/MainScreen';
 import HistoryDetailsScreen from "./screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreen";
 import HelpScreen from './screens/HelpScreen/HelpScreen';
 import BonusesScreenContainer from './screens/BonusesScreen/BonusesScreenContainer';
+import HistoryDetailsScreenContainer from './screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreenContainer';
 
 
 
@@ -40,7 +41,7 @@ const HistoryStackScreen = () => {
         }}
       />
       <HistoryStack.Screen name="Details"
-        component={HistoryDetailsScreen}
+        component={HistoryDetailsScreenContainer}
         options={{
           title: 'Детали',
           headerStyle: {
