@@ -76,13 +76,6 @@ const BONUS_COUNT: TextStyle = {
     
 }
 
-const BONUS_SYMBOL: TextStyle = {
-    ...BONUS_COUNT,
-    fontSize: 11,
-    borderColor: color.green,
-    borderTopWidth: 2,
-    alignSelf: "flex-end"
-}
 
 //COMPONENT
 const Item = (props) => {
@@ -117,8 +110,7 @@ const Item = (props) => {
                         </View>
                     </View>
                     <View style={ROW_RIGHT}>
-                        <Text style={BONUS_COUNT}> + {props.bonusCount} </Text>
-                        <Text style={BONUS_SYMBOL}>Б</Text>
+                        <Text style={BONUS_COUNT}> + {props.bonusCount} Б</Text>
                     </View>
             </RectButton>
         </View>

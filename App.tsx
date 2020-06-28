@@ -17,7 +17,7 @@ const fontsLoad = () => {
   });
 }
 
-let App = () => {
+const App = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false)
   if (!fontsLoaded) {
     return <AppLoading

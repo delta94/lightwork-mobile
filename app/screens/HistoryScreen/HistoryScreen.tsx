@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { View, ViewStyle } from 'react-native';
+import { View, ViewStyle, ScrollView  } from 'react-native';
 import HistoryGroup from '../../components/HistoryScreen/HistoryGroup/HistoryGroup';
 import { DATE_FILTER, TYPE_FILTER } from '../../constants/filters';
-import { ScrollView } from 'react-native-gesture-handler';
 import HistoryFilter from '../../components/HistoryScreen/HistoryFilter';
 
 //STYLES
@@ -16,7 +15,7 @@ const CONTAINER: ViewStyle = {
 }
 
 //COMPONENT
-const HistoryScreen = (props) => {
+const HistoryScreen = (props: any) => {
   const [value, setValue] = useState("ALL");
   const FILTERED_DATA = TYPE_FILTER(props.data, value)
   const HistoryGroups = DATE_FILTER(FILTERED_DATA).map(n => {

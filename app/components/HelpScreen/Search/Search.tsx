@@ -6,6 +6,7 @@ import { SearchBar } from 'react-native-elements';
 //https://react-native-elements.github.io/react-native-elements/docs/searchbar.html
 
 //STYLES
+//ViewStyles
 const CONTAINER: ViewStyle = {
     flexDirection: "column",
     alignSelf: "stretch",
@@ -26,6 +27,7 @@ const INPUT: ViewStyle = {
     height: 20,
 }
 
+//TextStyles
 const INPUT_TEXT: TextStyle = {
     fontSize: 16,
 }

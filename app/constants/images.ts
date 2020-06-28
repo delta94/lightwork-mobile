@@ -22,7 +22,23 @@ const IMAGES = {
         master: require("../../assets/images/history-master.png"),
         cleaning: require("../../assets/images/history-cleaning.png"),
         grey: require("../../assets/images/history-grey.png"),
-        dark: require("../../assets/images/history-dark.png")
+        dark: require("../../assets/images/history-dark.png"),
+        details: {
+            type: {
+                mover: require("../../assets/images/history-mover.png"),
+                master: require("../../assets/images/history-master.png"),
+                cleaning: require("../../assets/images/history-cleaning.png"),
+            },
+            status: {
+                active: require("../../assets/images/history-status-active.png"),
+                done: require("../../assets/images/history-status-done.png"),
+                failed: require("../../assets/images/history-status-failed.png"),
+            },
+            bonuses: require("../../assets/images/history-details-bonuses.png"),
+            date: require("../../assets/images/history-details-date.png"),
+            money: require("../../assets/images/history-details-money.png"),
+            duration: require("../../assets/images/history-details-time.png"),
+        }
     },
     main: {
         card: require("../../assets/images/card.png")

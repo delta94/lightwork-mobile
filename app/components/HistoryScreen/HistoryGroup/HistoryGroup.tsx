@@ -24,15 +24,6 @@ const TEXT_DATE: TextStyle = {
 
 //COMPONENT
 const HistoryGroup = (props) => {
-    const HistoryItems = props.data.map(n => {
-        if (n.date == props.date) return <Item
-            type={n.type}
-            key={n.id}
-            price={n.price} 
-            data={props.data}
-            navigation={props.navigation} 
-            activeType={props.activeType}/>
-    })
     return (
         <View style={CONTAINER}>
             <View style={HEADER}>
@@ -46,10 +37,14 @@ const HistoryGroup = (props) => {
                             <Item
                             type={item.type}
                             key={item.id}
+                            id={item.id}
                             price={item.price} 
                             data={props.data}
                             navigation={props.navigation} 
-                            activeType={props.activeType}/>
+                            activeType={props.activeType}
+                            bonusCount={item.bonusCount}
+                            duration={item.duration}
+                            status={item.status}/>
                         )
                     }
                     else {

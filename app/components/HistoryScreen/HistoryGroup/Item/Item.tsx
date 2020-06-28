@@ -101,7 +101,12 @@ const Item = (props) => {
         <RectButton style={CONTAINER} onPress={() => props.navigation.navigate('Details', {
             itemId: props.id,
             price: props.price,
-        })}>
+            bonusCount: props.bonusCount,
+            type: props.type,
+            date: props.date,
+            duration: props.duration,
+            status: props.status,
+        })}>     
             <View style={ROW}>
                 <View style={ROW_LEFT}>
                     <View style={IMAGE_STYLE}>

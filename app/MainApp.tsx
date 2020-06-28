@@ -9,7 +9,6 @@ import IMAGES from './constants/images';
 //SCREENS
 import HistoryScreenContainer from './screens/HistoryScreen/HistoryScreenContainer';
 import MainScreen from './screens/MainScreen/MainScreen';
-import HistoryDetailsScreen from "./screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreen";
 import HelpScreen from './screens/HelpScreen/HelpScreen';
 import BonusesScreenContainer from './screens/BonusesScreen/BonusesScreenContainer';
 import HistoryDetailsScreenContainer from './screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreenContainer';
@@ -154,8 +153,15 @@ const App = () => {
           backgroundColor: '#fff',
           }}
         shifting={false}
+        initialRouteName="Main"
         >
-        
+        <Tab.Screen
+          name="Main"
+          component={MainStackScreen}
+          options={{
+            title: 'Главная',
+          }}
+        />
         <Tab.Screen
           name="Bonuses"
           component={BonusesStackScreen}
@@ -175,13 +181,6 @@ const App = () => {
           component={HelpStackScreen}
           options={{
             title: 'Помощь',
-          }}
-        />
-        <Tab.Screen
-          name="Main"
-          component={MainStackScreen}
-          options={{
-            title: 'Главная',
           }}
         />
       </Tab.Navigator>
