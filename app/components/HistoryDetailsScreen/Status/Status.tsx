@@ -57,7 +57,7 @@ const Status = (props: any) => {
         case "failed":
             STATUS_IMAGE = IMAGES.history.details.status.failed
             STATUS_TEXT = "Заказ отклонен"
-            TEXT_COLOR = color.black
+            TEXT_COLOR = color.red
             break;
     }
     return (
