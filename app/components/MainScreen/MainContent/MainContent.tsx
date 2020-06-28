@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ViewStyle, Text, View } from 'react-native';
 import Balance from './Balance/Balance';
 import Orders from './Orders/Orders';
-import OrdersContainer from './Orders/OrdersContainer';
+import { color } from '../../../theme/color';
 
 const RADIUS = 20
 const CONTAINER: ViewStyle = {
     borderTopLeftRadius: RADIUS,
     borderTopRightRadius: RADIUS,
-    marginTop: -20,
+    backgroundColor: color.backGrey
 }
 
 const GROUP: ViewStyle = {

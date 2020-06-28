@@ -5,6 +5,7 @@ import { Image, ImageStyle, View, ViewStyle } from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { color } from './theme/color';
 import IMAGES from './constants/images';
+import {BottomTabHeight} from "./constants/constants"
 
 //SCREENS
 import HistoryScreenContainer from './screens/HistoryScreen/HistoryScreenContainer';
@@ -151,6 +152,7 @@ const App = () => {
         inactiveColor="#555"
         barStyle={{ 
           backgroundColor: '#fff',
+          height: BottomTabHeight,
           }}
         shifting={false}
         initialRouteName="Main"

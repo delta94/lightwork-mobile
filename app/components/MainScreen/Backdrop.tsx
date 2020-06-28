@@ -4,10 +4,11 @@ import { color } from '../../theme';
 
 
 const CONTAINER: ViewStyle = {
+    flexDirection: "column",
     backgroundColor: color.green,
     padding: 20,
-    paddingTop: 100,
-    paddingBottom: 40,
+    justifyContent: "flex-end",
+    height: "40%"
 }
 
 const BALANCE_TITLE: TextStyle = {
