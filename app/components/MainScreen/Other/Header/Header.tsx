@@ -1,7 +1,7 @@
 import React from 'react'
 import { ViewStyle, Text, TextStyle } from 'react-native';
 import { View } from 'native-base';
-import { color } from '../../../../../theme/color';
+import { color } from '../../../../theme/color';
 
 const CONTAINER: ViewStyle = {
 
@@ -11,8 +11,11 @@ const ROW: ViewStyle = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingTop: 3,
-    paddingBottom: 10,
+    paddingTop: 20,
+    paddingBottom: 20,
+    paddingHorizontal: 20,
+    borderBottomColor: color.backGrey,
+    borderBottomWidth: 1,
 }
 
 const TEXT: TextStyle = {
@@ -24,18 +27,12 @@ const TITLE: TextStyle = {
     fontWeight: "bold",
 }
 
-const LINK: TextStyle = {
-    ...TEXT,
-    fontWeight: "bold",
-    color: color.green,
-}
 
 
 const Header = () => {
     return (
         <View style={ROW}>
-            <Text style={TITLE}>Последние заказы</Text>
-            <Text style={LINK}>Все</Text>
+            <Text style={TITLE}>Прочее</Text>
         </View>
     )
 }

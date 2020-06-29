@@ -22,7 +22,7 @@ const Orders = (props) => {
             price={n.price} />
     })
     return (
-        <View>
+        <View style={CONTAINER}>
             <Header />
             {Items}
         </View>
