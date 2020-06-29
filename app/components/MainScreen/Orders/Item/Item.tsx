@@ -1,7 +1,8 @@
 import React from 'react'
 import { Text, TextStyle, View, ViewStyle, Image, ImageStyle } from 'react-native';
-import IMAGES from '../../../../../constants/images';
-import { color } from '../../../../../theme/color';
+import IMAGES from '../../../../constants/images';
+import { color } from '../../../../theme/color';
+import { RectButton } from 'react-native-gesture-handler';
 
 const TEXT: TextStyle = {
     fontFamily: "Lato"
@@ -24,9 +25,8 @@ const TYPE_ROW: ViewStyle = {
 }
 
 const ROW: ViewStyle = {
-    paddingHorizontal: 0,
-    backgroundColor: "#fff",
-    marginVertical: 3,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between"
@@ -40,7 +40,6 @@ const TYPE_IMAGE: ImageStyle = {
 const CONTAINER: ViewStyle = {
     alignItems: "stretch",
     flexDirection: "column",
-    marginVertical: 5,
 }
 
 const ROW_LEFT: ViewStyle = {
@@ -90,21 +89,24 @@ let Item = (props) => {
     }
 
     return (
-        <View style={CONTAINER}>
-            <View style={ROW}>
-                <View style={ROW_LEFT}>
-                    <View style={IMAGE_STYLE}>
-                        <Image style={TYPE_IMAGE} source={IMAGE} />
+        <RectButton style={CONTAINER}>
+            <View >
+                <View style={ROW}>
+                    <View style={ROW_LEFT}>
+                        <View style={IMAGE_STYLE}>
+                            <Image style={TYPE_IMAGE} source={IMAGE} />
+                        </View>
+                        <View style={TYPE_ROW}>
+                            <Text style={TEXT_DATE}>{TYPE}</Text>
+                        </View>
                     </View>
-                    <View style={TYPE_ROW}>
-                        <Text style={TEXT_DATE}>{TYPE}</Text>
+                    <View style={PRICE_ROW}>
+                        <Text style={TEXT_PRICE}>{props.price} ₸</Text>
                     </View>
-                </View>
-                <View style={PRICE_ROW}>
-                    <Text style={TEXT_PRICE}>{props.price} ₸</Text>
                 </View>
             </View>
-        </View>
+        </RectButton>
+        
     );
 }
 

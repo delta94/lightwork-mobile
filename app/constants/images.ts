@@ -41,7 +41,10 @@ const IMAGES = {
         }
     },
     main: {
-        card: require("../../assets/images/card.png")
+        card: require("../../assets/images/card.png"),
+        help: require("../../assets/images/main-help.png"),
+        offer: require("../../assets/images/main-offer.png"),
+        chat: require("../../assets/images/main-chat.png"),
     }
 }
 

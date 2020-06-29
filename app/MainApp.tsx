@@ -153,6 +153,7 @@ const App = () => {
         barStyle={{ 
           backgroundColor: '#fff',
           height: BottomTabHeight,
+          justifyContent: "center"
           }}
         shifting={false}
         initialRouteName="Main"
