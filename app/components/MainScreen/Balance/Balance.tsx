@@ -7,7 +7,8 @@ import IMAGES from '../../../constants/images';
 //STYLES
 //ViewStyles
 const CONTAINER: ViewStyle = {
-    padding: 20,
+    paddingHorizontal: 20,
+    paddingBottom: 20,
 }
 
 const ROW: ViewStyle = {

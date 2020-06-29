@@ -45,6 +45,10 @@ const IMAGES = {
         help: require("../../assets/images/main-help.png"),
         offer: require("../../assets/images/main-offer.png"),
         chat: require("../../assets/images/main-chat.png"),
+        header: {
+            user: require("../../assets/images/main-header-user.png"),
+            chat: require("../../assets/images/main-header-chat.png")
+        }
     }
 }
 

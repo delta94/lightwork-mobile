@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Image, ImageStyle, View, ViewStyle } from 'react-native';
+import { Image, ImageStyle, View, ViewStyle, Text } from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { color } from './theme/color';
 import IMAGES from './constants/images';
@@ -13,6 +13,8 @@ import MainScreen from './screens/MainScreen/MainScreen';
 import HelpScreen from './screens/HelpScreen/HelpScreen';
 import BonusesScreenContainer from './screens/BonusesScreen/BonusesScreenContainer';
 import HistoryDetailsScreenContainer from './screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreenContainer';
+import MapScreen from './screens/MapScreen/MapScreen';
+import Header from './components/MainScreen/Header/Header';
 
 
 
@@ -103,10 +105,33 @@ const MainStackScreen = () => {
           title: 'Главная',
           headerStyle: {
             backgroundColor: '#6cc769',
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+          },
+          headerTintColor: '#fff',
+          headerTitle:() => <Header />,
+        }} 
+        />
+    </MainStack.Navigator>
+  )
+}
+
+const MapStack = createStackNavigator();
+
+const MapStackScreen = () => {
+  return (
+    <MapStack.Navigator>
+      <MapStack.Screen
+        name="Map"
+        component={MapScreen}
+        options={{
+          title: 'Заказать',
+          headerStyle: {
+            backgroundColor: '#6cc769',
           },
           headerTintColor: '#fff',
         }} />
-    </MainStack.Navigator>
+    </MapStack.Navigator>
   )
 }
 
@@ -134,6 +159,11 @@ const App = () => {
                 : IMAGES.navigation.help.normal;
             }
             else if (route.name === 'Main') {
+              iconName = focused
+                ? IMAGES.navigation.main.active
+                : IMAGES.navigation.main.normal;
+            }
+            else if (route.name === 'Map') {
               iconName = focused
                 ? IMAGES.navigation.main.active
                 : IMAGES.navigation.main.normal;
@@ -170,6 +200,13 @@ const App = () => {
           component={BonusesStackScreen}
           options={{
             title: 'Бонусы',
+          }}
+        />
+        <Tab.Screen
+          name="Map"
+          component={MapStackScreen}
+          options={{
+            title: 'Заказать',
           }}
         />
         <Tab.Screen

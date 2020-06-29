@@ -1,5 +1,5 @@
 import React from "react"
-import { ViewStyle, View, Image, Text } from 'react-native';
+import { ViewStyle, View, Image, Text, TextStyle, ImageStyle } from 'react-native';
 import { RectButton } from "react-native-gesture-handler";
 
 const CONTAINER: ViewStyle = {

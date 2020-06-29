@@ -19,6 +19,13 @@ const CONTAINER: ViewStyle = {
   flex: 1,
 }
 
+const BOTTOM_HEADER: ViewStyle = {
+  height: 10,
+  borderTopLeftRadius: 10,
+  borderTopRightRadius: 10,
+  backgroundColor: "#fff"
+}
+
 const BOTTOM_SHEET: ViewStyle = {
   backgroundColor: color.backGrey
 }
@@ -31,36 +38,39 @@ const GROUP: ViewStyle = {
   backgroundColor: "#fff",
 }
 
-
-
-
+//COMPONENT
 const MainScreen = ({navigation}) => {
-  const _renderContent = () => (
-    <View style={BOTTOM_SHEET}>
-      <View style={GROUP}>
-          <Balance navigation={navigation}/>
-      </View>
-      <View style={DIVIDER}></View>
-      <View style={GROUP}>
-          <Orders />
-      </View>
-      <View style={DIVIDER}></View>
-      <View style={GROUP}>
-          <Other />
-      </View>
-    </View>
-  )
     const windowHeight = Dimensions.get('window').height;
     const headerHeight = useHeaderHeight();
     const viewHeight = windowHeight - headerHeight - BottomTabHeight
     const initialHeight = (viewHeight + 15) * 0.6
+    const _renderHeader = () => (
+      <View style={BOTTOM_HEADER}>
+      </View>
+    )
+    const _renderContent = () => (
+      <View style={BOTTOM_SHEET}>
+        <View style={GROUP}>
+            <Balance navigation={navigation}/>
+        </View>
+        <View style={DIVIDER}></View>
+        <View style={GROUP}>
+            <Orders />
+        </View>
+        <View style={DIVIDER}></View>
+        <View style={GROUP}>
+            <Other />
+        </View>
+      </View>
+    )
+    
     return (  
     <View style={CONTAINER}>
         <BottomSheet
           enabledBottomClamp
           snapPoints = {[initialHeight, viewHeight]}
           renderContent = {_renderContent}
-          borderRadius={10}
+          renderHeader = {_renderHeader}
         />
         <Backdrop />
     </View>
