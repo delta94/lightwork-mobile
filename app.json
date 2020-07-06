@@ -22,10 +22,11 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.lightwork.kz",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.company",
+      "package": "com.lightwork.kz",
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyCyAFuJxFI639VYNAdvtAVy6NWp49Xieb0"

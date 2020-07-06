@@ -9,6 +9,7 @@ import IMAGES from '../../../constants/images';
 const CONTAINER: ViewStyle = {
     paddingHorizontal: 20,
     paddingBottom: 20,
+    paddingTop: 10,
 }
 
 const ROW: ViewStyle = {
