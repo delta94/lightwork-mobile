@@ -49,6 +49,19 @@ const IMAGES = {
             user: require("../../assets/images/main-header-user.png"),
             chat: require("../../assets/images/main-header-chat.png")
         }
+    },
+    order: {
+        place: {
+            cleaning: require("../../assets/images/order-place-cl.png"),
+            mover: require("../../assets/images/order-place-mv.png"),
+            master: require("../../assets/images/order-place-ms.png"),
+        },
+        type: {
+            cleaning: require("../../assets/images/order-type-cl.png"),
+            mover: require("../../assets/images/order-type-mv.png"),
+            master: require("../../assets/images/order-type-ms.png"),
+            tick: require("../../assets/images/order-type-tick.png"),
+        }
     }
 }
 

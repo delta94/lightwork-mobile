@@ -1,34 +1,37 @@
-import React from "react"
-import { ViewStyle, View, Text  } from 'react-native';
-import BottomSheet from 'reanimated-bottom-sheet';
-import { color } from "../../../theme";
+import React, { useState } from 'react';
+import { View, ViewStyle } from 'react-native';
+
+import Address from './Address/Address';
+import OrderType from './OrderType/OrderType';
+import TypeCleaning from './TypeCleaning/TypeCleaning';
+import TypeMaster from './TypeMaster/TypeMaster';
+import TypeMover from './TypeMover/TypeMover';
 
 const CONTAINER: ViewStyle ={
-
+    backgroundColor: "#fff",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
 }
 
-
-
 const OrderSheet = () => {
-    const _renderHeader = () => {
-        return (
-            <View></View>
-        )
+    const [activeType, setType] = useState("CLEANING");
+
+    let OrderOptions;
+    if (activeType == "CLEANING") {
+        OrderOptions = <TypeCleaning />
     }
-    const _renderContent = () => {
-        return (
-            <View style={{height: 200, backgroundColor: "#fff"}}>
-                <Text>Text</Text>
-            </View>
-        )
+    else if (activeType == "MASTER") {
+        OrderOptions = <TypeMaster />
     }
-    return (
-        <View>
-            <BottomSheet 
-            snapPoints = {[100, 400]}
-            renderContent = {_renderContent}
-            renderHeader = {_renderHeader} 
-            />
+    else if (activeType == "MOVERS") {
+        OrderOptions = <TypeMover />
+    }
+
+    return (  
+        <View style={CONTAINER}>
+            <Address activeType={activeType} />
+            <OrderType activeType={activeType} setType={setType} />
+            {OrderOptions}
         </View>
     )
 }

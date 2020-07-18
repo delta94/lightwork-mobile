@@ -1,49 +1,48 @@
-import React, { useState } from "react"
-import { ViewStyle, Text } from 'react-native';
-import { View } from "react-native-animatable";
-import MapView, { Marker } from 'react-native-maps';
-import Map from "../../components/MapScreen/Map/Map";
-import OrderSheet from "../../components/MapScreen/OrderSheet/OrderSheet";
+import { useHeaderHeight } from '@react-navigation/stack';
+import React, { useState } from 'react';
+import { ViewStyle } from 'react-native';
+import { View } from 'react-native-animatable';
 import BottomSheet from 'reanimated-bottom-sheet';
-import { color } from "../../theme";
+
+import Header from '../../components/MapScreen/Header/Header';
+import Map from '../../components/MapScreen/Map/Map';
+import OrderSheet from '../../components/MapScreen/OrderSheet/OrderSheet';
+import { WindowHeight, BottomTabHeight } from '../../constants/constants';
+import { color } from '../../theme';
 
 const CONTAINER: ViewStyle ={
-    flex: 1,
 }
 
-const BOTTOM_HEADER: ViewStyle = {
-    height: 10,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-    backgroundColor: "#fff"
-  }
   
 const BOTTOM_SHEET: ViewStyle = {
     backgroundColor: color.white
 }
 
 const MapScreen = () => {
+    const headerHeight = useHeaderHeight();
+    const viewHeight = WindowHeight - headerHeight - BottomTabHeight
     const _renderHeader = () => {
         return (
-            <View style={BOTTOM_HEADER}></View>
+            <Header />
         )
     }
     const _renderContent = () => {
         return (
-            <View style={BOTTOM_SHEET}>
-                <Text>Text</Text>
-            </View>
+            <OrderSheet />
         )
     }
     return (
-        <View style={CONTAINER}>
+       
+        <View style={{height: viewHeight}}>
             <Map />
-            <BottomSheet 
-            snapPoints = {[100, 400]}
-            renderContent = {_renderContent}
-            renderHeader = {_renderHeader} 
+            <BottomSheet
+                snapPoints = {[100, "70%"]}
+                renderContent = {_renderContent}
+                renderHeader = {_renderHeader} 
+                overdragResistanceFactor={0}
             />
         </View>
+        
     )
 }
 

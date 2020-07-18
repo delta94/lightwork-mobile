@@ -4,7 +4,7 @@ import Backdrop from '../../components/MainScreen/Backdrop';
 import { ScrollView } from 'react-native-gesture-handler';
 import BottomSheet from 'reanimated-bottom-sheet'
 import { useHeaderHeight } from '@react-navigation/stack';
-import { BottomTabHeight } from '../../constants/constants';
+import { BottomTabHeight, WindowHeight, HeaderHeight } from '../../constants/constants';
 import Balance from '../../components/MainScreen/Balance/Balance';
 import Orders from '../../components/MainScreen/Orders/Orders';
 import { color } from '../../theme';
@@ -40,9 +40,8 @@ const GROUP: ViewStyle = {
 
 //COMPONENT
 const MainScreen = ({navigation}) => {
-    const windowHeight = Dimensions.get('window').height;
     const headerHeight = useHeaderHeight();
-    const viewHeight = windowHeight - headerHeight - BottomTabHeight
+    const viewHeight = WindowHeight - headerHeight - BottomTabHeight
     const initialHeight = (viewHeight + 15) * 0.6
     const _renderHeader = () => (
       <View style={BOTTOM_HEADER}>
