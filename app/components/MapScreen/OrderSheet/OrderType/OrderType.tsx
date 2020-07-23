@@ -84,11 +84,6 @@ const DATA = [
 ]
 
 const OrderType = (props: any) => {
-    const Divider = () => {
-        return (
-            <View style={DIVIDER}></View>
-        )
-    }
     return (
         <View style={CONTAINER}>
             <Text style={TITLE}>Выберите направление</Text>

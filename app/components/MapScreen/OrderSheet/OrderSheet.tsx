@@ -14,7 +14,7 @@ const CONTAINER: ViewStyle ={
 }
 
 const OrderSheet = () => {
-    const [activeType, setType] = useState("CLEANING");
+    const [activeType, setType] = useState("MOVERS");
 
     let OrderOptions;
     if (activeType == "CLEANING") {

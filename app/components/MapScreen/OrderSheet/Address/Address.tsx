@@ -65,7 +65,7 @@ const Address = (props: any) => {
                 <View style={COL_100}>
                     <TextField 
                         label="Адрес"
-                        contentInset={{ top: 0 }}
+                        contentInset={{ top: 0, label: 0, input: 4 }}
                         tintColor={ACTIVE_COLOR}
                         containerStyle={TEXT_FIELD}
                     />
