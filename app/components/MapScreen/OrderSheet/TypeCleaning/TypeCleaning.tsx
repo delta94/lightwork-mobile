@@ -1,5 +1,8 @@
 import React from "react"
-import { ViewStyle, View, Text } from 'react-native';
+import { ViewStyle, View } from 'react-native';
+import Type from "./Type/Type";
+import { TextField } from 'react-native-material-textfield';
+import { color } from "../../../../theme";
 
 const CONTAINER: ViewStyle = {
 
@@ -8,7 +11,19 @@ const CONTAINER: ViewStyle = {
 const TypeCleaning = () => {
     return (
         <View>
-            <Text>leaning</Text>
+            <Type />
+            <TextField  label="Комментарий к заказу"
+            contentInset={{ top: 0, label: 0, input: 4 }}
+            tintColor={color.orange}
+            />
+            <TextField  label="Промокод"
+            contentInset={{ top: 0, label: 0, input: 4 }}
+            tintColor={color.green}
+            />
+            <TextField  label="Бонусы"
+            contentInset={{ top: 0, label: 0, input: 4 }}
+            tintColor={color.green}
+            />
         </View>
     )
 }

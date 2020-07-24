@@ -35,7 +35,7 @@ const ROW: ViewStyle = {
     flexDirection: "row",
     paddingHorizontal: 20,
     backgroundColor: "#fff",
-    paddingVertical: 10,
+    paddingVertical: 15,
     borderBottomWidth: 1,
     borderColor: "#f4f4f4",
     justifyContent: "space-between",

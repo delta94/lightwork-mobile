@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ViewStyle, View, Text } from 'react-native';
+import { ViewStyle, View } from 'react-native';
 import Count from './Count/Count';
 import Gazzelle from './Gazzelle/Gazzelle';
 import GazzelleType from './Gazzelle/GazzelleType/GazzelleType';

@@ -6,12 +6,15 @@ import OrderType from './OrderType/OrderType';
 import TypeCleaning from './TypeCleaning/TypeCleaning';
 import TypeMaster from './TypeMaster/TypeMaster';
 import TypeMover from './TypeMover/TypeMover';
+import { color } from '../../../theme';
 
 const CONTAINER: ViewStyle ={
     backgroundColor: "#fff",
     paddingHorizontal: 20,
     paddingVertical: 10,
 }
+
+
 
 const OrderSheet = () => {
     const [activeType, setType] = useState("MOVERS");
@@ -32,6 +35,7 @@ const OrderSheet = () => {
             <Address activeType={activeType} />
             <OrderType activeType={activeType} setType={setType} />
             {OrderOptions}
+
         </View>
     )
 }
