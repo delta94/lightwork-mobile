@@ -31,7 +31,8 @@
         "googleMaps": {
           "apiKey": "AIzaSyCyAFuJxFI639VYNAdvtAVy6NWp49Xieb0"
         }
-      }
+      },
+      "permissions": ["LOCATION", "CAMERA_ROLL"]
     },
     "description": ""
   }
