@@ -1,6 +1,5 @@
 import React from "react"
-import { ViewStyle } from 'react-native';
-import MapView from "react-native-maps";
+import { ViewStyle, View } from 'react-native';
 
 const CONTAINER: ViewStyle = {
 
@@ -8,18 +7,12 @@ const CONTAINER: ViewStyle = {
 
 const Map = () => {
     return (
-        <MapView
+        <View
                 style={{
                     flex: 1,
                 }}
-                initialRegion={{
-                    latitude: 49.957579,
-                    longitude: 82.597765,
-                    latitudeDelta: 0.0922,
-                    longitudeDelta: 0.0421,
-                  }}
             >
-        </MapView>
+        </View>
     )
 }
 
