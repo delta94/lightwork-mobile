@@ -1,4 +1,6 @@
 rootProject.name = 'LightworkMobile'
+include ':react-native-yamap'
+project(':react-native-yamap').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-yamap/android')
 
 apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 includeUnimodulesProjects()

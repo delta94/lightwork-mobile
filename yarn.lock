@@ -5173,7 +5173,7 @@ jest@~25.2.6:
     import-local "^3.0.2"
     jest-cli "^25.2.7"
 
-jetifier@^1.6.2:
+jetifier@^1.6.2, jetifier@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/jetifier/-/jetifier-1.6.6.tgz#fec8bff76121444c12dc38d2dad6767c421dab68"
   integrity sha512-JNAkmPeB/GS2tCRqUzRPsTOHpGDah7xP18vGJfIjZC+W2sxEHbxgJxetIjIqhjQ3yYbYNEELkM/spKLtwoOSUQ==
@@ -5460,7 +5460,7 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@^4.15.0, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.6.0:
+lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.6.0:
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
@@ -6753,14 +6753,6 @@ query-string@6.10.1:
     split-on-first "^1.0.0"
     strict-uri-encode "^2.0.0"
 
-query-string@^4.2.3:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/query-string/-/query-string-4.3.4.tgz#bbb693b9ca915c232515b228b1a02b609043dbeb"
-  integrity sha1-u7aTucqRXCMlFbIosaArYJBD2+s=
-  dependencies:
-    object-assign "^4.1.0"
-    strict-uri-encode "^1.0.0"
-
 query-string@^5.0.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/query-string/-/query-string-5.1.1.tgz#a78c012b71c17e05f2e3fa2319dd330682efb3cb"
@@ -6887,11 +6879,6 @@ react-native-iphone-x-helper@^1.0.3, react-native-iphone-x-helper@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
-
-react-native-maps@0.26.1:
-  version "0.26.1"
-  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.26.1.tgz#6ec316259b38d259c8974448d894bd7a23101da4"
-  integrity sha512-p4VTB8YB5ZmOmDRCUpoHZkm05amZwhIo04AJMBbB9+JAR2PNNfpo0vceoWX0Mag4wnePkdzPomeWMplr/wimTg==
 
 react-native-material-textfield@^0.16.1:
   version "0.16.1"
@@ -7047,14 +7034,6 @@ react-native-yamap@^1.0.18:
   version "1.0.18"
   resolved "https://registry.yarnpkg.com/react-native-yamap/-/react-native-yamap-1.0.18.tgz#87f4a11af39c4720ecb494d6111e20ed8ac39be5"
   integrity sha512-zNRMc+ZKzG7CzuZduLax8hi2GkShE4ZdqIxKQxa82QsjXOuj/lqealaOMVRCVZnNDI2ksqpc6N1A+qXQlSsmhQ==
-
-react-native-yandexmapkit@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/react-native-yandexmapkit/-/react-native-yandexmapkit-0.1.4.tgz#3429e18f8fbac63d1742cae61af9d8b7243238f3"
-  integrity sha1-NCnhj4+6xj0XQsrmGvnYtyQyOPM=
-  dependencies:
-    lodash "^4.15.0"
-    query-string "^4.2.3"
 
 react-native@~0.61.5:
   version "0.61.5"
