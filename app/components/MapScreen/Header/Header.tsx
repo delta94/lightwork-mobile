@@ -18,7 +18,7 @@ const TEXT: TextStyle = {
 }
 
 
-const Header = () => {
+const Header = (props: any) => {
     return (
         <View style={CONTAINER}>
             <Text style={TEXT}>

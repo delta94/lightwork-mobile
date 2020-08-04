@@ -1,6 +1,6 @@
 import { useHeaderHeight } from '@react-navigation/stack';
 import React, { useState } from 'react';
-import { ViewStyle } from 'react-native';
+import { ViewStyle, TouchableWithoutFeedback } from 'react-native';
 import { View } from 'react-native-animatable';
 import BottomSheet from 'reanimated-bottom-sheet';
 
@@ -34,7 +34,7 @@ const MapScreen = () => {
     return (
        
         <View style={{height: viewHeight}}>
-            <Map />
+            <Map />     
             <BottomSheet
                 snapPoints = {[100, "70%"]}
                 renderContent = {_renderContent}
