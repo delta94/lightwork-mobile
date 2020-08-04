@@ -7030,10 +7030,10 @@ react-native-web@~0.11.7:
     prop-types "^15.6.0"
     react-timer-mixin "^0.13.4"
 
-react-native-yamap@^1.0.18:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/react-native-yamap/-/react-native-yamap-1.0.18.tgz#87f4a11af39c4720ecb494d6111e20ed8ac39be5"
-  integrity sha512-zNRMc+ZKzG7CzuZduLax8hi2GkShE4ZdqIxKQxa82QsjXOuj/lqealaOMVRCVZnNDI2ksqpc6N1A+qXQlSsmhQ==
+react-native-yamap@^1.0.19:
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/react-native-yamap/-/react-native-yamap-1.0.19.tgz#cfae8348a8408dc572032df5a36d4ef3177fd13c"
+  integrity sha512-W2QITbSwbP7lPqx45kr5rISoAa822F8rFR/ektwVeuSVAkdgKnt13T3X9bRhvQOy89BnxtxMz8e7D9awOspvsw==
 
 react-native@~0.61.5:
   version "0.61.5"
