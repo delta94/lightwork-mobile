@@ -61,6 +61,9 @@ const IMAGES = {
             mover: require("../../assets/images/order-type-mv.png"),
             master: require("../../assets/images/order-type-ms.png"),
             tick: require("../../assets/images/order-type-tick.png"),
+        },
+        map: {
+            marker: require("../../assets/images/map-marker.png")
         }
     }
 }

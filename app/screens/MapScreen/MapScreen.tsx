@@ -1,6 +1,6 @@
 import { useHeaderHeight } from '@react-navigation/stack';
 import React, { useState } from 'react';
-import { ViewStyle, TouchableWithoutFeedback } from 'react-native';
+import { ViewStyle, Image } from 'react-native';
 import { View } from 'react-native-animatable';
 import BottomSheet from 'reanimated-bottom-sheet';
 
@@ -9,6 +9,8 @@ import Map from '../../components/MapScreen/Map/Map';
 import OrderSheet from '../../components/MapScreen/OrderSheet/OrderSheet';
 import { WindowHeight, BottomTabHeight } from '../../constants/constants';
 import { color } from '../../theme';
+import {  } from 'native-base';
+import IMAGES from '../../constants/images';
 
 const CONTAINER: ViewStyle ={
 }
@@ -41,6 +43,9 @@ const MapScreen = () => {
                 renderHeader = {_renderHeader} 
                 overdragResistanceFactor={0}
             />
+            <View style={{position: "absolute", top: "50%",  left: "50%", marginLeft: -25, marginTop: -50, height: 50, width: 50,}}>
+                <Image source={IMAGES.order.map.marker} style={{height: "100%", width: "100%"}} />
+            </View>
         </View>
         
     )
