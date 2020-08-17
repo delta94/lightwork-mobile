@@ -11,6 +11,8 @@ import { WindowHeight, BottomTabHeight } from '../../constants/constants';
 import { color } from '../../theme';
 import {  } from 'native-base';
 import IMAGES from '../../constants/images';
+import Marker from '../../components/MapScreen/Marker/Marker';
+import MarkerShadow from '../../components/MapScreen/MarkerShadow/MarkerShadow';
 
 const CONTAINER: ViewStyle ={
 }
@@ -21,6 +23,7 @@ const BOTTOM_SHEET: ViewStyle = {
 }
 
 const MapScreen = () => {
+    const [isCamChange, setCamChange] = useState(0)
     const headerHeight = useHeaderHeight();
     const viewHeight = WindowHeight - headerHeight - BottomTabHeight
     const _renderHeader = () => {
@@ -36,16 +39,22 @@ const MapScreen = () => {
     return (
        
         <View style={{height: viewHeight}}>
-            <Map />     
+            <Map
+                setCamChange={setCamChange} 
+            />  
+            <Marker 
+                isCamChange={isCamChange}
+            />
+            <MarkerShadow
+                isCamChange={isCamChange} 
+            />
             <BottomSheet
                 snapPoints = {[100, "70%"]}
                 renderContent = {_renderContent}
                 renderHeader = {_renderHeader} 
                 overdragResistanceFactor={0}
             />
-            <View style={{position: "absolute", top: "50%",  left: "50%", marginLeft: -25, marginTop: -50, height: 50, width: 50,}}>
-                <Image source={IMAGES.order.map.marker} style={{height: "100%", width: "100%"}} />
-            </View>
+            
         </View>
         
     )

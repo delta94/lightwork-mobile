@@ -63,7 +63,8 @@ const IMAGES = {
             tick: require("../../assets/images/order-type-tick.png"),
         },
         map: {
-            marker: require("../../assets/images/map-marker.png")
+            marker: require("../../assets/images/map-marker.png"),
+            shadow: require("../../assets/images/map-marker-shadow.png")
         }
     }
 }

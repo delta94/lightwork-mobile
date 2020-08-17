@@ -7,7 +7,7 @@ const CONTAINER: ViewStyle = {
 
 }
 
-const Map = () => {
+const Map = (props: any) => {
     YaMap.init('c9fe7024-671e-49c8-945c-4b9a87c59902');
     Geocoder.init('40b91bc7-54e7-4f40-9a3c-221c3a00cc02');
     YaMap.setLocale('ru_RU');
@@ -18,16 +18,16 @@ const Map = () => {
     const [timerId, setTimerId] = useState()
 
     const _onMapPress = (p: any) => {  
-      _getGeo(p.nativeEvent)
       YA_MAP.current.setCenter(p.nativeEvent, activeZoom, 0, 0, 0.5)
     }
     const _onTouchEnd = () => {
       console.log("END")
       setPressIn(false)
+      props.setCamChange(0)
     }
     
     const _onTouchStart = () => {
-      console.log("START")
+      props.setCamChange(1)
       setPressIn(true)
       
     }
@@ -39,14 +39,17 @@ const Map = () => {
 
     const _onCameraPositionChange = (p: any) => {
       setPoint(p.nativeEvent.point)
-      setZoom(p.nativeEvent.zoom)
+
+      //CamChanging
       if (timerId) clearTimeout(timerId)
+
+      //CamChangeEnd
       const time = () => {
-        console.log("CameraChangeEnd")
+        _getGeo(activePoint)
         setTimerId(null)
       }
-      setTimerId(setTimeout(time, 1000))
-      
+
+      setTimerId(setTimeout(time, 1000))    
     }
     return (
       <YaMap
@@ -60,7 +63,6 @@ const Map = () => {
         onMapPress={(point) => {_onMapPress(point)}}
         style={{ flex: 1, }}
       >
-        <Marker point={activePoint}/>
       </YaMap>
     )
 }
