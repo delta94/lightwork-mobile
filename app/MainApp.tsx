@@ -1,61 +1,62 @@
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { Image, ImageStyle, View, ViewStyle, Text } from 'react-native';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { color } from './theme/color';
-import IMAGES from './constants/images';
-import {BottomTabHeight} from "./constants/constants"
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { Image, ImageStyle, View, ViewStyle } from 'react-native'
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
+import { color } from './theme/color'
+import IMAGES from './constants/images'
+import { BottomTabHeight } from './constants/constants'
 
-//SCREENS
-import HistoryScreenContainer from './screens/HistoryScreen/HistoryScreenContainer';
-import MainScreen from './screens/MainScreen/MainScreen';
-import HelpScreen from './screens/HelpScreen/HelpScreen';
-import BonusesScreenContainer from './screens/BonusesScreen/BonusesScreenContainer';
-import HistoryDetailsScreenContainer from './screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreenContainer';
-import MapScreen from './screens/MapScreen/MapScreen';
-import Header from './components/MainScreen/Header/Header';
-
-
+// SCREENS
+import HistoryScreenContainer from './screens/HistoryScreen/HistoryScreenContainer'
+import MainScreen from './screens/MainScreen/MainScreen'
+import HelpScreen from './screens/HelpScreen/HelpScreen'
+import BonusesScreenContainer from './screens/BonusesScreen/BonusesScreenContainer'
+import HistoryDetailsScreenContainer from './screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreenContainer'
+import MapScreen from './screens/MapScreen/MapScreen'
+import Header from './components/MainScreen/Header/Header'
 
 const TAB_ICON: ImageStyle = {
   width: 25,
-  height: 25,
+  height: 25
 }
 
 const ICON_DIVIDER: ViewStyle = {
-  padding: 10,
+  padding: 10
 }
 
-const HistoryStack = createStackNavigator();
+const HistoryStack = createStackNavigator()
 
 const HistoryStackScreen = () => {
   return (
     <HistoryStack.Navigator>
-      <HistoryStack.Screen name="History"
+      <HistoryStack.Screen
+        name="History"
         component={HistoryScreenContainer}
         options={{
           title: 'История',
           headerStyle: {
-            backgroundColor: '#6cc769',
+            backgroundColor: '#6cc769'
           },
-          headerTintColor: '#fff',
+          headerTintColor: '#fff'
         }}
       />
-      <HistoryStack.Screen name="Details"
+      <HistoryStack.Screen
+        name="Details"
         component={HistoryDetailsScreenContainer}
         options={{
           title: 'Детали',
           headerStyle: {
-            backgroundColor: '#6cc769',
+            backgroundColor: '#6cc769'
           },
-          headerTintColor: '#fff',
-        }} />
+          headerTintColor: '#fff'
+        }}
+      />
     </HistoryStack.Navigator>
   )
 }
 
-const BonusesStack = createStackNavigator();
+const BonusesStack = createStackNavigator()
 
 const BonusesStackScreen = () => {
   return (
@@ -66,15 +67,16 @@ const BonusesStackScreen = () => {
         options={{
           title: 'Бонусы',
           headerStyle: {
-            backgroundColor: '#6cc769',
+            backgroundColor: '#6cc769'
           },
-          headerTintColor: '#fff',
-        }} />
+          headerTintColor: '#fff'
+        }}
+      />
     </BonusesStack.Navigator>
   )
 }
 
-const HelpStack = createStackNavigator();
+const HelpStack = createStackNavigator()
 
 const HelpStackScreen = () => {
   return (
@@ -85,15 +87,16 @@ const HelpStackScreen = () => {
         options={{
           title: 'Помощь',
           headerStyle: {
-            backgroundColor: '#6cc769',
+            backgroundColor: '#6cc769'
           },
-          headerTintColor: '#fff',
-        }} />
+          headerTintColor: '#fff'
+        }}
+      />
     </HelpStack.Navigator>
   )
 }
 
-const MainStack = createStackNavigator();
+const MainStack = createStackNavigator()
 
 const MainStackScreen = () => {
   return (
@@ -106,17 +109,17 @@ const MainStackScreen = () => {
           headerStyle: {
             backgroundColor: '#6cc769',
             elevation: 0, // remove shadow on Android
-            shadowOpacity: 0, // remove shadow on iOS
+            shadowOpacity: 0 // remove shadow on iOS
           },
           headerTintColor: '#fff',
-          headerTitle:() => <Header />,
-        }} 
-        />
+          headerTitle: () => <Header />
+        }}
+      />
     </MainStack.Navigator>
   )
 }
 
-const MapStack = createStackNavigator();
+const MapStack = createStackNavigator()
 
 const MapStackScreen = () => {
   return (
@@ -127,105 +130,101 @@ const MapStackScreen = () => {
         options={{
           title: 'Заказать',
           headerStyle: {
-            backgroundColor: '#6cc769',
+            backgroundColor: '#6cc769'
           },
-          headerTintColor: '#fff',
-        }} />
+          headerTintColor: '#fff'
+        }}
+      />
     </MapStack.Navigator>
   )
 }
 
-const Tab = createMaterialBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator()
 
 const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
+        screenOptions={({ route }: any) => ({
+          tabBarIcon: ({ focused }: any) => {
+            let iconName
             if (route.name === 'Bonuses') {
               iconName = focused
                 ? IMAGES.navigation.bonuses.active
-                : IMAGES.navigation.bonuses.normal;
+                : IMAGES.navigation.bonuses.normal
             } else if (route.name === 'History') {
               iconName = focused
                 ? IMAGES.navigation.history.active
-                : IMAGES.navigation.history.normal;
-            }
-            else if (route.name === 'Help') {
+                : IMAGES.navigation.history.normal
+            } else if (route.name === 'Help') {
               iconName = focused
                 ? IMAGES.navigation.help.active
-                : IMAGES.navigation.help.normal;
-            }
-            else if (route.name === 'Main') {
+                : IMAGES.navigation.help.normal
+            } else if (route.name === 'Main') {
               iconName = focused
                 ? IMAGES.navigation.main.active
-                : IMAGES.navigation.main.normal;
-            }
-            else if (route.name === 'Map') {
+                : IMAGES.navigation.main.normal
+            } else if (route.name === 'Map') {
               iconName = focused
                 ? IMAGES.navigation.main.active
-                : IMAGES.navigation.main.normal;
+                : IMAGES.navigation.main.normal
             }
             return (
-            <View>
-              <Image
-              style={TAB_ICON}
-              source={iconName}
-            />
-            <View style={ICON_DIVIDER}></View>
-            </View>);
-          },
+              <View>
+                <Image style={TAB_ICON} source={iconName} />
+                <View style={ICON_DIVIDER}></View>
+              </View>
+            )
+          }
         })}
         activeColor={color.green}
         inactiveColor="#555"
-        barStyle={{ 
+        barStyle={{
           backgroundColor: '#fff',
           height: BottomTabHeight,
-          justifyContent: "center",
-          }}
+          justifyContent: 'center'
+        }}
         shifting={false}
         initialRouteName="Main"
-        >
+      >
         <Tab.Screen
           name="Main"
           component={MainStackScreen}
           options={{
-            title: 'Главная',
+            title: 'Главная'
           }}
         />
         <Tab.Screen
           name="Bonuses"
           component={BonusesStackScreen}
           options={{
-            title: 'Бонусы',
+            title: 'Бонусы'
           }}
         />
         <Tab.Screen
           name="Map"
           component={MapStackScreen}
           options={{
-            title: 'Заказать',
+            title: 'Заказать'
           }}
         />
         <Tab.Screen
           name="History"
           component={HistoryStackScreen}
           options={{
-            title: 'История',
+            title: 'История'
           }}
         />
         <Tab.Screen
           name="Help"
           component={HelpStackScreen}
           options={{
-            title: 'Помощь',
+            title: 'Помощь'
           }}
         />
       </Tab.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
-export default App;
+export default App
