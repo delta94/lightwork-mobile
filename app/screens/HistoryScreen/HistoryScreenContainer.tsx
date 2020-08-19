@@ -1,20 +1,20 @@
-import { connect } from "react-redux";
-import HistoryScreen from './HistoryScreen';
+import { connect } from 'react-redux'
+import HistoryScreen from './HistoryScreen'
 
 const mapStateToProps = (state, ownProps) => {
-    return {
-        data: state.historyScreen,
-        date: state.historyScreen.map(n => { return n.date }),
-        navigation: ownProps.navigation
-    }
+  return {
+    data: state.historyScreen,
+    date: state.historyScreen.map(n => { return n.date }),
+    navigation: ownProps.navigation
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
+  return {
 
-    }
+  }
 }
 
-const HistoryScreenContainer = connect(mapStateToProps, mapDispatchToProps)(HistoryScreen);
+const HistoryScreenContainer = connect(mapStateToProps, mapDispatchToProps)(HistoryScreen)
 
-export default HistoryScreenContainer;
+export default HistoryScreenContainer

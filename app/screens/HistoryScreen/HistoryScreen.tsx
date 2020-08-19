@@ -1,41 +1,41 @@
 import React, { useState } from 'react'
-import { View, ViewStyle, ScrollView  } from 'react-native';
-import HistoryGroup from '../../components/HistoryScreen/HistoryGroup/HistoryGroup';
-import { DATE_FILTER, TYPE_FILTER } from '../../constants/filters';
-import HistoryFilter from '../../components/HistoryScreen/HistoryFilter';
+import { View, ViewStyle, ScrollView } from 'react-native'
+import HistoryGroup from '../../components/HistoryScreen/HistoryGroup/HistoryGroup'
+import { DATE_FILTER, TYPE_FILTER } from '../../constants/filters'
+import HistoryFilter from '../../components/HistoryScreen/HistoryFilter'
 
-//STYLES
-//ViewStyles
+// STYLES
+// ViewStyles
 const CONTAINER: ViewStyle = {
-  flexDirection: "column",
+  flexDirection: 'column',
   alignItems: 'stretch',
   justifyContent: 'flex-start',
   paddingTop: 0,
-  alignSelf: 'stretch',
+  alignSelf: 'stretch'
 }
 
-//COMPONENT
+// COMPONENT
 const HistoryScreen = (props: any) => {
-  const [value, setValue] = useState("ALL");
+  const [value, setValue] = useState('ALL')
   const FILTERED_DATA = TYPE_FILTER(props.data, value)
   const HistoryGroups = DATE_FILTER(FILTERED_DATA).map(n => {
-      return (
-        <HistoryGroup
+    return (
+      <HistoryGroup
         date={n.date}
         key={n.id}
-        data={FILTERED_DATA} 
+        data={FILTERED_DATA}
         navigation={props.navigation}
         activeType={value} />
-      )
-  });
+    )
+  })
   return (
-    <ScrollView>      
+    <ScrollView>
       <View style={CONTAINER}>
         <HistoryFilter setValue={setValue}/>
         {HistoryGroups}
       </View>
     </ScrollView>
-  );
+  )
 }
 
-export default HistoryScreen;
+export default HistoryScreen

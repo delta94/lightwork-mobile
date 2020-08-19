@@ -34,42 +34,40 @@ const Lorem = () => (
   </View>
 )
 
-
 const MainScreen = () => {
-    const renderHeader = (name: any) => (
-      <View
-        style={{
-          width: '100%',
-          backgroundColor: 'blue',
-          height: 40,
-          borderWidth: 2,
-        }}
-      >
-        <Text>{name}</Text>
-      </View>
-    )
-  
-    const renderInner = () => (
-      <View>
-        
-        <Lorem />
-  
-      </View>
-    )
-  
-    return (
-    <View style={styles.container}>
-        
-          <BottomSheet
-            enabledBottomClamp={true}
-            snapPoints={[100, 600]}
-            renderContent={renderInner}
-          />
-          <Text>Head</Text>
+  const renderHeader = (name: any) => (
+    <View
+      style={{
+        width: '100%',
+        backgroundColor: 'blue',
+        height: 40,
+        borderWidth: 2
+      }}
+    >
+      <Text>{name}</Text>
     </View>
-    )
-  }
+  )
 
+  const renderInner = () => (
+    <View>
+
+      <Lorem />
+
+    </View>
+  )
+
+  return (
+    <View style={styles.container}>
+
+      <BottomSheet
+        enabledBottomClamp={true}
+        snapPoints={[100, 600]}
+        renderContent={renderInner}
+      />
+      <Text>Head</Text>
+    </View>
+  )
+}
 
 export default MainScreen
 
@@ -78,10 +76,10 @@ const IMAGE_SIZE = 200
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: 'red'
   },
   box: {
     width: IMAGE_SIZE,
-    height: IMAGE_SIZE,
-  },
+    height: IMAGE_SIZE
+  }
 })
