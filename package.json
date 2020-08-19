@@ -10,6 +10,12 @@
     "lint:check": "./node_modules/.bin/eslint \"./app/**/*.{js,ts,tsx,jsx}\"",
     "pretty:check": "./node_modules/.bin/prettier --check \"./app/**/*.{js,ts,tsx,jsx}\""
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./node_modules/.bin/eslint \"./app/**/*.{js,ts,tsx,jsx}\" --fix",
+      "pre-push": "yarn run type-check"
+    }
+  },
   "dependencies": {
     "@ant-design/react-native": "^3.3.0",
     "@react-native-community/datetimepicker": "2.2.2",
@@ -60,6 +66,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
     "jest": "~25.2.6",
     "jetifier": "^1.6.6",
     "prettier": "2.0.5",
