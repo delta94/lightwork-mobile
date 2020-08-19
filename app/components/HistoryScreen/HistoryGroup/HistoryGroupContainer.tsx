@@ -4,16 +4,19 @@ import HistoryGroup from './HistoryGroup'
 const mapStateToProps = (state) => {
   return {
     data: state.historyScreen,
-    date: state.historyScreen.map(n => { return n.date })
+    date: state.historyScreen.map((n) => {
+      return n.date
+    }),
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-
-  }
+  return {}
 }
 
-const HistoryGroupContainer = connect(mapStateToProps, mapDispatchToProps)(HistoryGroup)
+const HistoryGroupContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HistoryGroup)
 
 export default HistoryGroupContainer

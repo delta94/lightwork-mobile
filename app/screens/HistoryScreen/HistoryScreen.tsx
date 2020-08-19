@@ -11,27 +11,28 @@ const CONTAINER: ViewStyle = {
   alignItems: 'stretch',
   justifyContent: 'flex-start',
   paddingTop: 0,
-  alignSelf: 'stretch'
+  alignSelf: 'stretch',
 }
 
 // COMPONENT
 const HistoryScreen = (props: any) => {
   const [value, setValue] = useState('ALL')
   const FILTERED_DATA = TYPE_FILTER(props.data, value)
-  const HistoryGroups = DATE_FILTER(FILTERED_DATA).map(n => {
+  const HistoryGroups = DATE_FILTER(FILTERED_DATA).map((n) => {
     return (
       <HistoryGroup
         date={n.date}
         key={n.id}
         data={FILTERED_DATA}
         navigation={props.navigation}
-        activeType={value} />
+        activeType={value}
+      />
     )
   })
   return (
     <ScrollView>
       <View style={CONTAINER}>
-        <HistoryFilter setValue={setValue}/>
+        <HistoryFilter setValue={setValue} />
         {HistoryGroups}
       </View>
     </ScrollView>

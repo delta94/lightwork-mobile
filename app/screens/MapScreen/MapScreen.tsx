@@ -9,16 +9,15 @@ import Map from '../../components/MapScreen/Map/Map'
 import OrderSheet from '../../components/MapScreen/OrderSheet/OrderSheet'
 import { WindowHeight, BottomTabHeight } from '../../constants/constants'
 import { color } from '../../theme'
-import { } from 'native-base'
+import {} from 'native-base'
 import IMAGES from '../../constants/images'
 import Marker from '../../components/MapScreen/Marker/Marker'
 import MarkerShadow from '../../components/MapScreen/MarkerShadow/MarkerShadow'
 
-const CONTAINER: ViewStyle = {
-}
+const CONTAINER: ViewStyle = {}
 
 const BOTTOM_SHEET: ViewStyle = {
-  backgroundColor: color.white
+  backgroundColor: color.white,
 }
 
 const MapScreen = () => {
@@ -26,36 +25,23 @@ const MapScreen = () => {
   const headerHeight = useHeaderHeight()
   const viewHeight = WindowHeight - headerHeight - BottomTabHeight
   const _renderHeader = () => {
-    return (
-      <Header />
-    )
+    return <Header />
   }
   const _renderContent = () => {
-    return (
-      <OrderSheet />
-    )
+    return <OrderSheet />
   }
   return (
-
     <View style={{ height: viewHeight }}>
-      <Map
-        setCamChange={setCamChange}
-      />
-      <Marker
-        isCamChange={isCamChange}
-      />
-      <MarkerShadow
-        isCamChange={isCamChange}
-      />
+      <Map setCamChange={setCamChange} />
+      <Marker isCamChange={isCamChange} />
+      <MarkerShadow isCamChange={isCamChange} />
       <BottomSheet
-        snapPoints = {[100, '70%']}
-        renderContent = {_renderContent}
-        renderHeader = {_renderHeader}
+        snapPoints={[100, '70%']}
+        renderContent={_renderContent}
+        renderHeader={_renderHeader}
         overdragResistanceFactor={0}
       />
-
     </View>
-
   )
 }
 

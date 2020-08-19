@@ -5,9 +5,9 @@ import { AppLoading } from 'expo'
 import * as Font from 'expo-font'
 import BonusesScreen from '../screens/BonusesScreen/BonusesScreen'
 
-function useFonts (fontMap) {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
-  (async () => {
+function useFonts(fontMap) {
+  const [fontsLoaded, setFontsLoaded] = useState(false)
+  ;(async () => {
     await Font.loadAsync(fontMap)
     setFontsLoaded(true)
   })()
@@ -19,7 +19,7 @@ const Stack = createStackNavigator()
 const App = () => {
   const [fontsLoaded] = useFonts({
     Lato: './theme/fonts/Lato-Regular.ttf',
-    'Lato-Bold': './theme/fonts/Lato-Bold.ttf'
+    'Lato-Bold': './theme/fonts/Lato-Bold.ttf',
   })
 
   if (!fontsLoaded) {
@@ -34,10 +34,11 @@ const App = () => {
             options={{
               title: 'Бонусы',
               headerStyle: {
-                backgroundColor: '#6cc769'
+                backgroundColor: '#6cc769',
               },
-              headerTintColor: '#fff'
-            }}/>
+              headerTintColor: '#fff',
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     )

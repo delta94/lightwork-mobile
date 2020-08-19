@@ -7,17 +7,17 @@ const CONTAINER: ViewStyle = {
   backgroundColor: color.green,
   padding: 20,
   justifyContent: 'flex-end',
-  height: '40%'
+  height: '40%',
 }
 
 const BALANCE_TITLE: TextStyle = {
   color: color.white,
-  fontSize: 20
+  fontSize: 20,
 }
 
 const BALANCE: TextStyle = {
   color: color.white,
-  fontSize: 50
+  fontSize: 50,
 }
 
 const Backdrop = () => {

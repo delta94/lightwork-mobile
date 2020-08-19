@@ -1,5 +1,12 @@
 import React from 'react'
-import { ViewStyle, View, Text, TextStyle, Image, ImageStyle } from 'react-native'
+import {
+  ViewStyle,
+  View,
+  Text,
+  TextStyle,
+  Image,
+  ImageStyle,
+} from 'react-native'
 import { BorderlessButton } from 'react-native-gesture-handler'
 import { color } from '../../../theme'
 import IMAGES from '../../../constants/images'
@@ -9,50 +16,50 @@ import IMAGES from '../../../constants/images'
 const CONTAINER: ViewStyle = {
   paddingHorizontal: 20,
   paddingBottom: 20,
-  paddingTop: 10
+  paddingTop: 10,
 }
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'space-between',
-  paddingVertical: 5
+  paddingVertical: 5,
 }
 
 const CARD_ROW: ViewStyle = {
   flexDirection: 'row',
-  alignItems: 'center'
+  alignItems: 'center',
 }
 
 const DIVIDER: ViewStyle = {
-  paddingVertical: 5
+  paddingVertical: 5,
 }
 
 // TextStyles
 const TEXT: TextStyle = {
-  fontSize: 17
+  fontSize: 17,
 }
 
 const TITLE: TextStyle = {
   ...TEXT,
-  fontWeight: 'bold'
+  fontWeight: 'bold',
 }
 
 const CODE: TextStyle = {
   ...TEXT,
-  color: '#666'
+  color: '#666',
 }
 
 const LINK: TextStyle = {
   ...TEXT,
   fontWeight: 'bold',
-  color: color.green
+  color: color.green,
 }
 
 // ImageStyles
 const IMAGE: ImageStyle = {
   width: 35,
-  marginRight: 10
+  marginRight: 10,
 }
 
 // COMPONENT
@@ -62,7 +69,9 @@ const Balance = (props) => {
       <View>
         <View style={ROW}>
           <Text style={TITLE}>Мои бонусы</Text>
-          <BorderlessButton onPress={() => props.navigation.navigate('Bonuses')}>
+          <BorderlessButton
+            onPress={() => props.navigation.navigate('Bonuses')}
+          >
             <Text style={LINK}>Все</Text>
           </BorderlessButton>
         </View>

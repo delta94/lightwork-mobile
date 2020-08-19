@@ -5,8 +5,8 @@
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "./node_modules/.bin/eslint \"./app//*.{js,ts,tsx,jsx}\" --fix",
-    "pretty:fix": "./node_modules/.bin/prettier --write \"./app//*.{js,ts,tsx,jsx}\"",
+    "lint:fix": "./node_modules/.bin/eslint \"./app/**/*.{js,ts,tsx,jsx}\" --fix",
+    "pretty:fix": "./node_modules/.bin/prettier --write \"./app/**/*.{js,ts,tsx,jsx}\"",
     "lint:check": "./node_modules/.bin/eslint \"./app//*.{js,ts,tsx,jsx}\"",
     "pretty:check": "./node_modules/.bin/prettier --check \"./app//*.{js,ts,tsx,jsx}\""
   },

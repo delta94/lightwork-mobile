@@ -4,16 +4,17 @@ import HistoryDetailsScreen from './HistoryDetailsScreen'
 const mapStateToProps = (state, ownProps) => {
   return {
     navigation: ownProps.navigation,
-    route: ownProps.route
+    route: ownProps.route,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-
-  }
+  return {}
 }
 
-const HistoryDetailsScreenContainer = connect(mapStateToProps, mapDispatchToProps)(HistoryDetailsScreen)
+const HistoryDetailsScreenContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HistoryDetailsScreen)
 
 export default HistoryDetailsScreenContainer

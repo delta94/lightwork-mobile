@@ -4,29 +4,30 @@ import Item from '../Item/Item'
 import moment from 'moment/min/moment-with-locales'
 
 // STYLES
-const CONTAINER: ViewStyle = {
-
-}
+const CONTAINER: ViewStyle = {}
 
 const HEADER: ViewStyle = {
   paddingHorizontal: 20,
-  paddingVertical: 5
+  paddingVertical: 5,
 }
 
 const TEXT_DATE: TextStyle = {
   color: '#888',
   fontFamily: 'Lato',
-  fontSize: 14
+  fontSize: 14,
 }
 
 const DateGroup = (props) => {
-  const Items = props.data.map(n => {
+  const Items = props.data.map((n) => {
     if (n.date == props.date) {
-      return <Item
-        type={n.type}
-        bonusCount={n.bonusCount}
-        key={n.id}
-        price={n.price} />
+      return (
+        <Item
+          type={n.type}
+          bonusCount={n.bonusCount}
+          key={n.id}
+          price={n.price}
+        />
+      )
     }
   })
   return (

@@ -14,22 +14,22 @@ const CONTAINER: ViewStyle = {
   paddingVertical: 5,
   borderBottomWidth: 1,
   borderColor: '#f4f4f4',
-  paddingHorizontal: 10
+  paddingHorizontal: 10,
 }
 
 const INPUT_CONTAINER: ViewStyle = {
   width: '100%',
-  backgroundColor: '#fff'
+  backgroundColor: '#fff',
 }
 
 const INPUT: ViewStyle = {
   backgroundColor: '#e5e4ea',
-  height: 20
+  height: 20,
 }
 
 // TextStyles
 const INPUT_TEXT: TextStyle = {
-  fontSize: 16
+  fontSize: 16,
 }
 
 // COMPONENT
@@ -38,7 +38,7 @@ const Search = (props) => {
     <View style={CONTAINER}>
       <SearchBar
         placeholder="Что ищете?"
-        onChangeText={text => props.setValue(text)}
+        onChangeText={(text) => props.setValue(text)}
         value={props.value}
         platform="ios"
         lightTheme={true}

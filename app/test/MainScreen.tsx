@@ -41,7 +41,7 @@ const MainScreen = () => {
         width: '100%',
         backgroundColor: 'blue',
         height: 40,
-        borderWidth: 2
+        borderWidth: 2,
       }}
     >
       <Text>{name}</Text>
@@ -50,15 +50,12 @@ const MainScreen = () => {
 
   const renderInner = () => (
     <View>
-
       <Lorem />
-
     </View>
   )
 
   return (
     <View style={styles.container}>
-
       <BottomSheet
         enabledBottomClamp={true}
         snapPoints={[100, 600]}
@@ -76,10 +73,10 @@ const IMAGE_SIZE = 200
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red'
+    backgroundColor: 'red',
   },
   box: {
     width: IMAGE_SIZE,
-    height: IMAGE_SIZE
-  }
+    height: IMAGE_SIZE,
+  },
 })

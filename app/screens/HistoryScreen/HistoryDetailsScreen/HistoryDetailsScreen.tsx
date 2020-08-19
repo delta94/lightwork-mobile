@@ -1,5 +1,12 @@
 import React from 'react'
-import { Text, View, ViewStyle, TextStyle, Image, ImageStyle } from 'react-native'
+import {
+  Text,
+  View,
+  ViewStyle,
+  TextStyle,
+  Image,
+  ImageStyle,
+} from 'react-native'
 import moment from 'moment/min/moment-with-locales'
 import IMAGES from '../../../constants/images'
 import Status from '../../../components/HistoryDetailsScreen/Status/Status'
@@ -11,7 +18,7 @@ const CONTAINER: ViewStyle = {
   flexDirection: 'column',
   alignSelf: 'stretch',
   flex: 1,
-  paddingVertical: 20
+  paddingVertical: 20,
 }
 
 const ROW: ViewStyle = {
@@ -20,35 +27,35 @@ const ROW: ViewStyle = {
   justifyContent: 'flex-start',
   paddingLeft: 20,
   marginVertical: 10,
-  alignItems: 'flex-end'
+  alignItems: 'flex-end',
 }
 
 const ITEM_IMAGE: ViewStyle = {
-  paddingVertical: 4
+  paddingVertical: 4,
 }
 
 const ITEM: ViewStyle = {
   borderBottomColor: '#eee',
   borderBottomWidth: 1,
   width: '100%',
-  marginLeft: 20
+  marginLeft: 20,
 }
 
 // TextStyles
 const TEXT_TITLE: TextStyle = {
   fontSize: 16,
-  color: '#555'
+  color: '#555',
 }
 
 const TEXT_DESCR: TextStyle = {
   fontSize: 18,
-  paddingBottom: 2
+  paddingBottom: 2,
 }
 
 // ImageStyles
 const IMG_TYPE: ImageStyle = {
   width: 30,
-  height: 30
+  height: 30,
 }
 
 // COMPONENT
@@ -60,7 +67,7 @@ const HistoryDetailsScreen = (props: any) => {
     price,
     bonusCount,
     type,
-    date
+    date,
   } = props.route.params
   let TYPE
   let TYPE_IMAGE
@@ -84,50 +91,45 @@ const HistoryDetailsScreen = (props: any) => {
     {
       title: 'Описание',
       descr: TYPE,
-      image: TYPE_IMAGE
+      image: TYPE_IMAGE,
     },
     {
       title: 'Бонусы',
       descr: bonusCount + ' Б',
-      image: IMAGES.history.details.bonuses
+      image: IMAGES.history.details.bonuses,
     },
     {
       title: 'Сумма списания',
       descr: price + ' ₸',
-      image: IMAGES.history.details.money
+      image: IMAGES.history.details.money,
     },
     {
       title: 'Длительность заказа',
       descr: duration,
-      image: IMAGES.history.details.duration
+      image: IMAGES.history.details.duration,
     },
     {
       title: 'Дата',
       descr: moment(date).locale('ru').format('LL'),
-      image: IMAGES.history.details.date
-    }
+      image: IMAGES.history.details.date,
+    },
   ]
-  const ITEMS = DATA.map(n => {
+  const ITEMS = DATA.map((n) => {
     return (
       <View style={ROW} key={itemId}>
         <View style={ITEM_IMAGE}>
-          <Image source={n.image} style={IMG_TYPE}/>
+          <Image source={n.image} style={IMG_TYPE} />
         </View>
         <View style={ITEM}>
-          <Text style={TEXT_TITLE}>
-            {n.title}
-          </Text>
-          <Text style={TEXT_DESCR}>
-            {n.descr}
-          </Text>
+          <Text style={TEXT_TITLE}>{n.title}</Text>
+          <Text style={TEXT_DESCR}>{n.descr}</Text>
         </View>
       </View>
-
     )
   })
   return (
     <View style={CONTAINER}>
-      <Status status={status}/>
+      <Status status={status} />
       {ITEMS}
     </View>
   )

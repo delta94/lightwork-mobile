@@ -3,9 +3,7 @@ import { ViewStyle, Text, TextStyle } from 'react-native'
 import { View } from 'native-base'
 import { color } from '../../../../theme/color'
 
-const CONTAINER: ViewStyle = {
-
-}
+const CONTAINER: ViewStyle = {}
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
@@ -15,22 +13,22 @@ const ROW: ViewStyle = {
   paddingBottom: 20,
   paddingHorizontal: 20,
   borderBottomColor: color.backGrey,
-  borderBottomWidth: 1
+  borderBottomWidth: 1,
 }
 
 const TEXT: TextStyle = {
-  fontSize: 17
+  fontSize: 17,
 }
 
 const TITLE: TextStyle = {
   ...TEXT,
-  fontWeight: 'bold'
+  fontWeight: 'bold',
 }
 
 const LINK: TextStyle = {
   ...TEXT,
   fontWeight: 'bold',
-  color: color.green
+  color: color.green,
 }
 
 const Header = () => {

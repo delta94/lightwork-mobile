@@ -3,9 +3,7 @@ import { ViewStyle, View } from 'react-native'
 import YaMap, { Marker, Geocoder } from 'react-native-yamap'
 import IMAGES from '../../../constants/images'
 
-const CONTAINER: ViewStyle = {
-
-}
+const CONTAINER: ViewStyle = {}
 
 const Map = (props: any) => {
   YaMap.init('c9fe7024-671e-49c8-945c-4b9a87c59902')
@@ -13,7 +11,7 @@ const Map = (props: any) => {
   YaMap.setLocale('ru_RU')
   const [activePoint, setPoint] = useState({
     lat: 49.94304358239562,
-    lon: 82.62278467147178
+    lon: 82.62278467147178,
   })
   const [activeZoom, setZoom] = useState(10)
   const [isPressIn, setPressIn] = useState(false)

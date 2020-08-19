@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
-import { ViewStyle, View, Text, TextStyle, TouchableWithoutFeedback } from 'react-native'
+import {
+  ViewStyle,
+  View,
+  Text,
+  TextStyle,
+  TouchableWithoutFeedback,
+} from 'react-native'
 import { color } from '../../../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
 
@@ -7,47 +13,61 @@ const CONTAINER: ViewStyle = {
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  marginTop: 10
+  marginTop: 10,
 }
 
-const TITLE: TextStyle = {
-
-}
+const TITLE: TextStyle = {}
 
 const COUNT_PICKER: ViewStyle = {
   backgroundColor: '#fff',
   flexDirection: 'row',
   borderRadius: 15,
   borderWidth: 1,
-  borderColor: color.backGrey
+  borderColor: color.backGrey,
 }
 
 const ITEM: ViewStyle = {
   alignSelf: 'stretch',
   padding: 8,
-  paddingHorizontal: 30
+  paddingHorizontal: 30,
 }
 
 const Gazzelle = (props: any) => {
   const a = [
     {
       title: 'Да',
-      flag: true
+      flag: true,
     },
     {
       title: 'Нет',
-      flag: false
-    }]
+      flag: false,
+    },
+  ]
   const Items = a.map((n, index) => {
     return (
-      <View style={[{ overflow: 'hidden' }, index == 0
-        ? { borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }
-        : { borderTopRightRadius: 15, borderBottomRightRadius: 15 }]} key={'picker-item-' + index} >
-        <RectButton style={[n.flag == props.isGazzelle
-          ? { backgroundColor: color.green }
-          : { backgroundColor: '#fff' }]}
-        onPress={() => props.setGazzelle(n.flag)}>
-          <Text style={{ ...ITEM, color: (n.flag == props.isGazzelle) ? color.white : color.black }} >
+      <View
+        style={[
+          { overflow: 'hidden' },
+          index == 0
+            ? { borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }
+            : { borderTopRightRadius: 15, borderBottomRightRadius: 15 },
+        ]}
+        key={'picker-item-' + index}
+      >
+        <RectButton
+          style={[
+            n.flag == props.isGazzelle
+              ? { backgroundColor: color.green }
+              : { backgroundColor: '#fff' },
+          ]}
+          onPress={() => props.setGazzelle(n.flag)}
+        >
+          <Text
+            style={{
+              ...ITEM,
+              color: n.flag == props.isGazzelle ? color.white : color.black,
+            }}
+          >
             {n.title}
           </Text>
         </RectButton>
@@ -56,12 +76,8 @@ const Gazzelle = (props: any) => {
   })
   return (
     <View style={CONTAINER}>
-      <Text style={TITLE}>
-                Газель
-      </Text>
-      <View style={COUNT_PICKER}>
-        {Items}
-      </View>
+      <Text style={TITLE}>Газель</Text>
+      <View style={COUNT_PICKER}>{Items}</View>
     </View>
   )
 }

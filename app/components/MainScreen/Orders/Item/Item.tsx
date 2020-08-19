@@ -1,27 +1,34 @@
 import React from 'react'
-import { Text, TextStyle, View, ViewStyle, Image, ImageStyle } from 'react-native'
+import {
+  Text,
+  TextStyle,
+  View,
+  ViewStyle,
+  Image,
+  ImageStyle,
+} from 'react-native'
 import IMAGES from '../../../../constants/images'
 import { color } from '../../../../theme/color'
 import { RectButton } from 'react-native-gesture-handler'
 
 const TEXT: TextStyle = {
-  fontFamily: 'Lato'
+  fontFamily: 'Lato',
 }
 
 let IMAGE_STYLE: ViewStyle = {
   borderRadius: 100,
   backgroundColor: '#E2FFBB',
-  padding: 7
+  padding: 7,
 }
 
 const TEXT_DATE: TextStyle = {
   ...TEXT,
   color: '#000',
-  fontSize: 16
+  fontSize: 16,
 }
 
 const TYPE_ROW: ViewStyle = {
-  marginLeft: 10
+  marginLeft: 10,
 }
 
 const ROW: ViewStyle = {
@@ -29,31 +36,30 @@ const ROW: ViewStyle = {
   paddingVertical: 15,
   flexDirection: 'row',
   alignItems: 'center',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
 }
 
 const TYPE_IMAGE: ImageStyle = {
   width: 26,
-  height: 26
+  height: 26,
 }
 
 const CONTAINER: ViewStyle = {
   alignItems: 'stretch',
-  flexDirection: 'column'
+  flexDirection: 'column',
 }
 
 const ROW_LEFT: ViewStyle = {
   flexDirection: 'row',
-  alignItems: 'center'
+  alignItems: 'center',
 }
 
-const PRICE_ROW: ViewStyle = {
-}
+const PRICE_ROW: ViewStyle = {}
 
 const TEXT_PRICE: TextStyle = {
   fontSize: 17,
   fontFamily: 'Lato-Bold',
-  color: color.greenDark
+  color: color.greenDark,
 }
 
 const Item = (props) => {
@@ -65,7 +71,7 @@ const Item = (props) => {
       IMAGE = IMAGES.history.master
       IMAGE_STYLE = {
         ...IMAGE_STYLE,
-        backgroundColor: color.orangeLight
+        backgroundColor: color.orangeLight,
       }
       break
 
@@ -74,7 +80,7 @@ const Item = (props) => {
       IMAGE = IMAGES.history.cleaning
       IMAGE_STYLE = {
         ...IMAGE_STYLE,
-        backgroundColor: color.blueLight
+        backgroundColor: color.blueLight,
       }
       break
 
@@ -83,14 +89,14 @@ const Item = (props) => {
       IMAGE = IMAGES.history.mover
       IMAGE_STYLE = {
         ...IMAGE_STYLE,
-        backgroundColor: color.greenLight
+        backgroundColor: color.greenLight,
       }
       break
   }
 
   return (
     <RectButton style={CONTAINER}>
-      <View >
+      <View>
         <View style={ROW}>
           <View style={ROW_LEFT}>
             <View style={IMAGE_STYLE}>
@@ -106,7 +112,6 @@ const Item = (props) => {
         </View>
       </View>
     </RectButton>
-
   )
 }
 

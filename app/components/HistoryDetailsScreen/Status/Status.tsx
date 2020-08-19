@@ -1,5 +1,12 @@
 import React from 'react'
-import { ViewStyle, Image, View, Text, TextStyle, ImageStyle } from 'react-native'
+import {
+  ViewStyle,
+  Image,
+  View,
+  Text,
+  TextStyle,
+  ImageStyle,
+} from 'react-native'
 import IMAGES from '../../../constants/images'
 import { color } from '../../../theme'
 
@@ -11,29 +18,29 @@ const ROW: ViewStyle = {
   justifyContent: 'flex-start',
   paddingLeft: 20,
   marginVertical: 10,
-  alignItems: 'center'
+  alignItems: 'center',
 }
 
 const ITEM_IMAGE: ViewStyle = {
   paddingVertical: 4,
-  paddingHorizontal: 3
+  paddingHorizontal: 3,
 }
 
 const ITEM: ViewStyle = {
   width: '100%',
-  marginLeft: 20
+  marginLeft: 20,
 }
 
 // TextStyles
 const TEXT: TextStyle = {
   fontSize: 16,
-  color: '#555'
+  color: '#555',
 }
 
 // ImageStyles
 const IMG_STATUS: ImageStyle = {
   width: 25,
-  height: 25
+  height: 25,
 }
 
 // COMPONENT
@@ -44,8 +51,7 @@ const Status = (props: any) => {
   switch (props.status) {
     case 'active':
       STATUS_IMAGE = IMAGES.history.details.status.active
-      STATUS_TEXT = 'В процессе',
-      TEXT_COLOR = color.yellow
+      ;(STATUS_TEXT = 'В процессе'), (TEXT_COLOR = color.yellow)
       break
 
     case 'done':
@@ -63,12 +69,10 @@ const Status = (props: any) => {
   return (
     <View style={ROW}>
       <View style={ITEM_IMAGE}>
-        <Image source={STATUS_IMAGE} style={IMG_STATUS}/>
+        <Image source={STATUS_IMAGE} style={IMG_STATUS} />
       </View>
       <View style={ITEM}>
-        <Text style={{ ...TEXT, color: TEXT_COLOR }}>
-          {STATUS_TEXT}
-        </Text>
+        <Text style={{ ...TEXT, color: TEXT_COLOR }}>{STATUS_TEXT}</Text>
       </View>
     </View>
   )
