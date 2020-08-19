@@ -14,12 +14,12 @@ const CONTAINER: ViewStyle = {
   flexDirection: 'column',
   flex: 1,
   alignItems: 'stretch',
-  paddingTop: 0,
+  paddingTop: 0
 }
 
 const FLATLIST: ViewStyle = {
   flexDirection: 'column',
-  alignSelf: 'stretch',
+  alignSelf: 'stretch'
 }
 
 // DATA
@@ -33,7 +33,7 @@ const DATA = [
   { id: 7, type: 'MOVERS', bonusCount: 89, date: '11/12/2019', price: 2500 },
   { id: 8, type: 'CLEANING', bonusCount: 12, date: '11/09/2019', price: 6500 },
   { id: 9, type: 'MASTER', bonusCount: 204, date: '11/09/2019', price: 3000 },
-  { id: 10, type: 'MASTER', bonusCount: 84, date: '11/07/2019', price: 3000 },
+  { id: 10, type: 'MASTER', bonusCount: 84, date: '11/07/2019', price: 3000 }
 ]
 
 const BALANCE = 35990

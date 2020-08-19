@@ -5,7 +5,7 @@ import {
   Text,
   ImageStyle,
   Image,
-  TextStyle,
+  TextStyle
 } from 'react-native'
 import { color } from '../../../theme'
 import IMAGES from '../../../constants/images'
@@ -13,43 +13,43 @@ import IMAGES from '../../../constants/images'
 const CONTAINER: ViewStyle = {
   alignItems: 'center',
   justifyContent: 'space-between',
-  flexDirection: 'row',
+  flexDirection: 'row'
 }
 
 const ROW: ViewStyle = {
   alignItems: 'center',
-  flexDirection: 'row',
+  flexDirection: 'row'
 }
 
 const INFO: ViewStyle = {
-  paddingLeft: 10,
+  paddingLeft: 10
 }
 
 const TEXT_NAME: TextStyle = {
   color: '#fff',
   fontSize: 16,
-  fontFamily: 'Lato-Bold',
+  fontFamily: 'Lato-Bold'
 }
 
 const TEXT_NUMBER: TextStyle = {
   color: color.white,
-  fontSize: 12,
+  fontSize: 12
 }
 
 const USER_IMAGE: ViewStyle = {
   borderRadius: 100,
   backgroundColor: '#e4e4e4',
-  padding: 6,
+  padding: 6
 }
 
 const IMG_USER: ImageStyle = {
   width: 25,
-  height: 25,
+  height: 25
 }
 
 const IMG_CHAT: ImageStyle = {
   width: 38,
-  height: 38,
+  height: 38
 }
 
 const Header = () => {

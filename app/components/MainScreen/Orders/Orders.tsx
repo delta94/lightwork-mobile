@@ -9,7 +9,7 @@ const CONTAINER: ViewStyle = {}
 const initialState = [
   { id: 1, type: 'MOVERS', bonusCount: 30, date: '11/25/2019', price: 3000 },
   { id: 2, type: 'MASTER', bonusCount: 21, date: '11/25/2019', price: 2500 },
-  { id: 3, type: 'CLEANING', bonusCount: 60, date: '11/25/2019', price: 5000 },
+  { id: 3, type: 'CLEANING', bonusCount: 60, date: '11/25/2019', price: 5000 }
 ]
 
 const Orders = (props) => {

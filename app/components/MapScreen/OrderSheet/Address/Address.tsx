@@ -8,30 +8,30 @@ const CONTAINER: ViewStyle = {}
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
-  alignItems: 'center',
+  alignItems: 'center'
 }
 
 const COL: ViewStyle = {
   flexDirection: 'column',
-  paddingRight: 10,
+  paddingRight: 10
 }
 
 const COL_100: ViewStyle = {
   ...COL,
-  flex: 1,
+  flex: 1
 }
 
 const TEXT_FIELD: ViewStyle = {
-  paddingLeft: 0,
+  paddingLeft: 0
 }
 
 const DIVIDER: ViewStyle = {
-  paddingHorizontal: 5,
+  paddingHorizontal: 5
 }
 
 const IMG_TYPE: ImageStyle = {
   width: 35,
-  height: 35,
+  height: 35
 }
 
 const Address = (props: any) => {

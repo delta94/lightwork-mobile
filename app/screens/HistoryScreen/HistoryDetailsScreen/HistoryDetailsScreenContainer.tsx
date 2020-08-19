@@ -4,7 +4,7 @@ import HistoryDetailsScreen from './HistoryDetailsScreen'
 const mapStateToProps = (state, ownProps) => {
   return {
     navigation: ownProps.navigation,
-    route: ownProps.route,
+    route: ownProps.route
   }
 }
 

@@ -4,7 +4,7 @@ import {
   View,
   Text,
   TextStyle,
-  TouchableWithoutFeedback,
+  TouchableWithoutFeedback
 } from 'react-native'
 import { color } from '../../../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
@@ -13,7 +13,7 @@ const CONTAINER: ViewStyle = {
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  marginTop: 10,
+  marginTop: 10
 }
 
 const TITLE: TextStyle = {}
@@ -23,25 +23,25 @@ const COUNT_PICKER: ViewStyle = {
   flexDirection: 'row',
   borderRadius: 15,
   borderWidth: 1,
-  borderColor: color.backGrey,
+  borderColor: color.backGrey
 }
 
 const ITEM: ViewStyle = {
   alignSelf: 'stretch',
   padding: 8,
-  paddingHorizontal: 30,
+  paddingHorizontal: 30
 }
 
 const Gazzelle = (props: any) => {
   const a = [
     {
       title: 'Да',
-      flag: true,
+      flag: true
     },
     {
       title: 'Нет',
-      flag: false,
-    },
+      flag: false
+    }
   ]
   const Items = a.map((n, index) => {
     return (
@@ -50,7 +50,7 @@ const Gazzelle = (props: any) => {
           { overflow: 'hidden' },
           index == 0
             ? { borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }
-            : { borderTopRightRadius: 15, borderBottomRightRadius: 15 },
+            : { borderTopRightRadius: 15, borderBottomRightRadius: 15 }
         ]}
         key={'picker-item-' + index}
       >
@@ -58,14 +58,14 @@ const Gazzelle = (props: any) => {
           style={[
             n.flag == props.isGazzelle
               ? { backgroundColor: color.green }
-              : { backgroundColor: '#fff' },
+              : { backgroundColor: '#fff' }
           ]}
           onPress={() => props.setGazzelle(n.flag)}
         >
           <Text
             style={{
               ...ITEM,
-              color: n.flag == props.isGazzelle ? color.white : color.black,
+              color: n.flag == props.isGazzelle ? color.white : color.black
             }}
           >
             {n.title}

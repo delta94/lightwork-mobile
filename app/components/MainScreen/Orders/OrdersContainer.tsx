@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
     data: state.historyScreen,
     date: state.historyScreen.map((n) => {
       return n.date
-    }),
+    })
   }
 }
 

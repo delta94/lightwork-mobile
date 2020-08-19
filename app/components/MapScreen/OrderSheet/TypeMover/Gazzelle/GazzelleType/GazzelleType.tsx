@@ -5,13 +5,13 @@ import { color } from '../../../../../../theme'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 
 const CONTAINER: ViewStyle = {
-  paddingVertical: 10,
+  paddingVertical: 10
 }
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
   alignContent: 'flex-start',
-  marginTop: 10,
+  marginTop: 10
 }
 
 const COL: ViewStyle = {
@@ -20,28 +20,28 @@ const COL: ViewStyle = {
   flex: 1,
   borderColor: color.backGrey,
   borderWidth: 1,
-  borderRadius: 10,
+  borderRadius: 10
 }
 
 const CARD: ViewStyle = {
   alignItems: 'center',
-  paddingTop: 15,
+  paddingTop: 15
 }
 
 const TITLE: TextStyle = {
-  fontSize: 14,
+  fontSize: 14
 }
 
 const TEXT: TextStyle = {
   textAlign: 'center',
-  textAlignVertical: 'center',
+  textAlignVertical: 'center'
 }
 
 const TEXT_VIEW: ViewStyle = {
   flexDirection: 'column',
   alignContent: 'stretch',
   paddingTop: 5,
-  paddingBottom: 10,
+  paddingBottom: 10
 }
 
 const STATUS: ViewStyle = {
@@ -54,7 +54,7 @@ const STATUS: ViewStyle = {
   borderRadius: 100,
   backgroundColor: color.backGrey,
   alignSelf: 'flex-end',
-  position: 'absolute',
+  position: 'absolute'
 }
 
 const DATA = [
@@ -62,20 +62,20 @@ const DATA = [
     id: 1,
     title: '3 метра',
     size: 3,
-    image: IMAGES.order.type.mover,
+    image: IMAGES.order.type.mover
   },
   {
     id: 2,
     title: '4 метра',
     size: 4,
-    image: IMAGES.order.type.mover,
+    image: IMAGES.order.type.mover
   },
   {
     id: 3,
     title: '5 метров',
     size: 5,
-    image: IMAGES.order.type.mover,
-  },
+    image: IMAGES.order.type.mover
+  }
 ]
 
 const GazzelleType = (props: any) => {
@@ -94,8 +94,8 @@ const GazzelleType = (props: any) => {
                     index == 1
                       ? { marginHorizontal: 5 }
                       : index == 0
-                      ? { marginRight: 5 }
-                      : { marginLeft: 5 },
+                        ? { marginRight: 5 }
+                        : { marginLeft: 5 }
                   ]}
                 >
                   <TouchableWithoutFeedback
@@ -110,7 +110,7 @@ const GazzelleType = (props: any) => {
                         backgroundColor:
                           props.activeSize == item.size
                             ? color.green
-                            : color.backGrey,
+                            : color.backGrey
                       }}
                     >
                       <Image

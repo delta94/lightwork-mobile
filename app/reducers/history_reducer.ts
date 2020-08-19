@@ -22,7 +22,7 @@ const initialState: historyState = [
     date: '11/25/2019',
     price: 3000,
     duration: '02:00',
-    status: 'active',
+    status: 'active'
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const initialState: historyState = [
     date: '11/25/2019',
     price: 2500,
     duration: '01:00',
-    status: 'done',
+    status: 'done'
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const initialState: historyState = [
     date: '11/25/2019',
     price: 5000,
     duration: '03:00',
-    status: 'done',
+    status: 'done'
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const initialState: historyState = [
     date: '11/12/2019',
     price: 10000,
     duration: '05:00',
-    status: 'failed',
+    status: 'failed'
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const initialState: historyState = [
     date: '11/12/2019',
     price: 1500,
     duration: '01:00',
-    status: 'done',
+    status: 'done'
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ const initialState: historyState = [
     date: '11/12/2019',
     price: 4500,
     duration: '03:00',
-    status: 'done',
+    status: 'done'
   },
   {
     id: 7,
@@ -76,7 +76,7 @@ const initialState: historyState = [
     date: '11/12/2019',
     price: 2500,
     duration: '01:00',
-    status: 'done',
+    status: 'done'
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ const initialState: historyState = [
     date: '11/09/2019',
     price: 6500,
     duration: '05:00',
-    status: 'done',
+    status: 'done'
   },
   {
     id: 9,
@@ -94,7 +94,7 @@ const initialState: historyState = [
     date: '11/09/2019',
     price: 3000,
     duration: '02:00',
-    status: 'done',
+    status: 'done'
   },
   {
     id: 10,
@@ -103,8 +103,8 @@ const initialState: historyState = [
     date: '11/07/2019',
     price: 3000,
     duration: '02:00',
-    status: 'done',
-  },
+    status: 'done'
+  }
 ]
 
 const historyReducer = (state = initialState, action) => {

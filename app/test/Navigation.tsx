@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-function DetailsScreen() {
+function DetailsScreen () {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Details!</Text>
@@ -12,7 +12,7 @@ function DetailsScreen() {
   )
 }
 
-function HomeScreen({ navigation }) {
+function HomeScreen ({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Home screen</Text>
@@ -24,7 +24,7 @@ function HomeScreen({ navigation }) {
   )
 }
 
-function SettingsScreen({ navigation }) {
+function SettingsScreen ({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Settings screen</Text>
@@ -38,7 +38,7 @@ function SettingsScreen({ navigation }) {
 
 const HomeStack = createStackNavigator()
 
-function HomeStackScreen() {
+function HomeStackScreen () {
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen name="Home" component={HomeScreen} />
@@ -49,7 +49,7 @@ function HomeStackScreen() {
 
 const SettingsStack = createStackNavigator()
 
-function SettingsStackScreen() {
+function SettingsStackScreen () {
   return (
     <SettingsStack.Navigator>
       <SettingsStack.Screen name="Settings" component={SettingsScreen} />
@@ -60,7 +60,7 @@ function SettingsStackScreen() {
 
 const Tab = createBottomTabNavigator()
 
-export default function App() {
+export default function App () {
   return (
     <NavigationContainer>
       <Tab.Navigator>

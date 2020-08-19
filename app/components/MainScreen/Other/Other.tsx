@@ -13,20 +13,20 @@ const DATA = [
     id: '1',
     title: 'Помощь',
     text: 'Ответы на распространенные вопросы',
-    image: IMAGES.main.help,
+    image: IMAGES.main.help
   },
   {
     id: '2',
     title: 'Стать исполнителем',
     text: 'Начать принимать заказы прямо сейчас',
-    image: IMAGES.main.offer,
+    image: IMAGES.main.offer
   },
   {
     id: '3',
     title: 'Связь с нами',
     text: 'Напишите нам прямо сейчас',
-    image: IMAGES.main.chat,
-  },
+    image: IMAGES.main.chat
+  }
 ]
 
 const Other = () => {

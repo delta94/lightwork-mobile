@@ -1,10 +1,10 @@
 import { combineReducers, createStore } from 'redux'
 import historyReducer from './history_reducer'
 
-let reducers = combineReducers({
-  historyScreen: historyReducer,
+const reducers = combineReducers({
+  historyScreen: historyReducer
 })
 
-let store = createStore(reducers)
+const store = createStore(reducers)
 
 export default store

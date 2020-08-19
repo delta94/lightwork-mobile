@@ -13,13 +13,13 @@ const CONTAINER: ViewStyle = {
   width: MARKER_WIDTH,
   transform: [
     { translateX: -MARKER_WIDTH / 2 },
-    { translateY: -MARKER_WIDTH / 2 },
-  ],
+    { translateY: -MARKER_WIDTH / 2 }
+  ]
 }
 
 const IMG: ImageStyle = {
   height: '100%',
-  width: '100%',
+  width: '100%'
 }
 
 const MarkerShadow = (props: any) => {
@@ -28,18 +28,18 @@ const MarkerShadow = (props: any) => {
   useEffect(() => {
     Animated.timing(value, {
       toValue: props.isCamChange,
-      duration: 500,
+      duration: 500
     }).start()
   }, [props.isCamChange])
 
   const shadowSize = value.interpolate({
     inputRange: [0, 1],
-    outputRange: [MARKER_WIDTH, MARKER_WIDTH * 3],
+    outputRange: [MARKER_WIDTH, MARKER_WIDTH * 3]
   })
 
   const shadowTranslate = value.interpolate({
     inputRange: [0, 1],
-    outputRange: [-MARKER_WIDTH / 2, (-MARKER_WIDTH * 3) / 2],
+    outputRange: [-MARKER_WIDTH / 2, (-MARKER_WIDTH * 3) / 2]
   })
 
   return (
@@ -50,8 +50,8 @@ const MarkerShadow = (props: any) => {
         height: shadowSize,
         transform: [
           { translateX: shadowTranslate },
-          { translateY: shadowTranslate },
-        ],
+          { translateY: shadowTranslate }
+        ]
       }}
     >
       <Image source={IMAGES.order.map.shadow} style={IMG} />

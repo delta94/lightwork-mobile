@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
     date: state.historyScreen.map((n) => {
       return n.date
     }),
-    navigation: ownProps.navigation,
+    navigation: ownProps.navigation
   }
 }
 

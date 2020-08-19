@@ -7,7 +7,7 @@ const CONTAINER: ViewStyle = {
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  marginBottom: 10,
+  marginBottom: 10
 }
 
 const TITLE: TextStyle = {}
@@ -17,12 +17,12 @@ const COUNT_PICKER: ViewStyle = {
   flexDirection: 'row',
   borderRadius: 15,
   borderWidth: 1,
-  borderColor: color.backGrey,
+  borderColor: color.backGrey
 }
 
 const ITEM: ViewStyle = {
   alignSelf: 'stretch',
-  padding: 8,
+  padding: 8
 }
 
 const Count = () => {
@@ -38,8 +38,8 @@ const Count = () => {
           n == 1
             ? { borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }
             : n == 10
-            ? { borderTopRightRadius: 15, borderBottomRightRadius: 15 }
-            : {},
+              ? { borderTopRightRadius: 15, borderBottomRightRadius: 15 }
+              : {}
         ]}
         key={'picker-item-' + n}
       >
@@ -47,7 +47,7 @@ const Count = () => {
           style={[
             n == count
               ? { backgroundColor: color.orange }
-              : { backgroundColor: '#fff' },
+              : { backgroundColor: '#fff' }
           ]}
           onPress={() => setCount(n)}
         >

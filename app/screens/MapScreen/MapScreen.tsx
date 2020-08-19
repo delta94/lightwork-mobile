@@ -17,7 +17,7 @@ import MarkerShadow from '../../components/MapScreen/MarkerShadow/MarkerShadow'
 const CONTAINER: ViewStyle = {}
 
 const BOTTOM_SHEET: ViewStyle = {
-  backgroundColor: color.white,
+  backgroundColor: color.white
 }
 
 const MapScreen = () => {

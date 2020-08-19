@@ -8,13 +8,13 @@ const CONTAINER: ViewStyle = {}
 
 const HEADER: ViewStyle = {
   paddingHorizontal: 20,
-  paddingVertical: 5,
+  paddingVertical: 5
 }
 
 const TEXT_DATE: TextStyle = {
   color: '#888',
   fontFamily: 'Lato',
-  fontSize: 14,
+  fontSize: 14
 }
 
 const DateGroup = (props) => {

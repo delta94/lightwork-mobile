@@ -8,12 +8,12 @@ const CONTAINER: ViewStyle = {
   paddingTop: 10,
   backgroundColor: '#fff',
   flexDirection: 'column',
-  paddingBottom: 20,
+  paddingBottom: 20
 }
 
 // TextStyles
 const TEXT: TextStyle = {
-  fontFamily: 'Lato',
+  fontFamily: 'Lato'
 }
 
 const BONUS_COUNT: TextStyle = {
@@ -21,13 +21,13 @@ const BONUS_COUNT: TextStyle = {
   color: '#444',
   fontSize: 52,
   fontWeight: '500',
-  fontFamily: 'Lato-Bold',
+  fontFamily: 'Lato-Bold'
 }
 
 const TEXT_MUTED: TextStyle = {
   ...TEXT,
   color: '#666',
-  fontSize: 16,
+  fontSize: 16
 }
 
 // COMPONENT

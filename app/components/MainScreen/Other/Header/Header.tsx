@@ -13,16 +13,16 @@ const ROW: ViewStyle = {
   paddingBottom: 20,
   paddingHorizontal: 20,
   borderBottomColor: color.backGrey,
-  borderBottomWidth: 1,
+  borderBottomWidth: 1
 }
 
 const TEXT: TextStyle = {
-  fontSize: 17,
+  fontSize: 17
 }
 
 const TITLE: TextStyle = {
   ...TEXT,
-  fontWeight: 'bold',
+  fontWeight: 'bold'
 }
 
 const Header = () => {

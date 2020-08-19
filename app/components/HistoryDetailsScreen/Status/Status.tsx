@@ -5,7 +5,7 @@ import {
   View,
   Text,
   TextStyle,
-  ImageStyle,
+  ImageStyle
 } from 'react-native'
 import IMAGES from '../../../constants/images'
 import { color } from '../../../theme'
@@ -18,29 +18,29 @@ const ROW: ViewStyle = {
   justifyContent: 'flex-start',
   paddingLeft: 20,
   marginVertical: 10,
-  alignItems: 'center',
+  alignItems: 'center'
 }
 
 const ITEM_IMAGE: ViewStyle = {
   paddingVertical: 4,
-  paddingHorizontal: 3,
+  paddingHorizontal: 3
 }
 
 const ITEM: ViewStyle = {
   width: '100%',
-  marginLeft: 20,
+  marginLeft: 20
 }
 
 // TextStyles
 const TEXT: TextStyle = {
   fontSize: 16,
-  color: '#555',
+  color: '#555'
 }
 
 // ImageStyles
 const IMG_STATUS: ImageStyle = {
   width: 25,
-  height: 25,
+  height: 25
 }
 
 // COMPONENT

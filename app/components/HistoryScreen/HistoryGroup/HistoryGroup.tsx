@@ -7,19 +7,19 @@ import moment from 'moment/min/moment-with-locales'
 // ViewStyles
 const CONTAINER: ViewStyle = {
   flexDirection: 'column',
-  alignSelf: 'stretch',
+  alignSelf: 'stretch'
 }
 
 const HEADER: ViewStyle = {
   paddingHorizontal: 20,
-  paddingVertical: 5,
+  paddingVertical: 5
 }
 
 // TextStyles
 const TEXT_DATE: TextStyle = {
   color: '#888',
   fontFamily: 'Lato',
-  fontSize: 14,
+  fontSize: 14
 }
 
 // COMPONENT

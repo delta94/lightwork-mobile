@@ -9,12 +9,12 @@ const CONTAINER: ViewStyle = {
   paddingHorizontal: 20,
   paddingVertical: 15,
   borderBottomColor: color.backGrey,
-  borderBottomWidth: 1,
+  borderBottomWidth: 1
 }
 
 const TEXT: TextStyle = {
   fontSize: 16,
-  fontWeight: 'bold',
+  fontWeight: 'bold'
 }
 
 const Header = (props: any) => {

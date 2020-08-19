@@ -5,7 +5,7 @@ import {
   Image,
   ImageStyle,
   Animated,
-  Button,
+  Button
 } from 'react-native'
 import { color } from '../../../theme'
 import IMAGES from '../../../constants/images'
@@ -18,12 +18,12 @@ const CONTAINER: ViewStyle = {
   left: '50%',
   height: MARKER_WIDTH,
   width: MARKER_WIDTH,
-  transform: [{ translateX: -MARKER_WIDTH / 2 }, { translateY: -MARKER_WIDTH }],
+  transform: [{ translateX: -MARKER_WIDTH / 2 }, { translateY: -MARKER_WIDTH }]
 }
 
 const IMG: ImageStyle = {
   height: '100%',
-  width: '100%',
+  width: '100%'
 }
 
 const Marker = (props: any) => {
@@ -32,13 +32,13 @@ const Marker = (props: any) => {
   useEffect(() => {
     Animated.timing(value, {
       toValue: props.isCamChange,
-      duration: 500,
+      duration: 500
     }).start()
   }, [props.isCamChange])
 
   const translateY = value.interpolate({
     inputRange: [0, 1],
-    outputRange: [-MARKER_WIDTH, -MARKER_WIDTH * 1.2],
+    outputRange: [-MARKER_WIDTH, -MARKER_WIDTH * 1.2]
   })
 
   return (

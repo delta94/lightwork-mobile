@@ -11,7 +11,7 @@ const CONTAINER: ViewStyle = {
   alignItems: 'stretch',
   justifyContent: 'flex-start',
   paddingTop: 0,
-  alignSelf: 'stretch',
+  alignSelf: 'stretch'
 }
 
 // COMPONENT

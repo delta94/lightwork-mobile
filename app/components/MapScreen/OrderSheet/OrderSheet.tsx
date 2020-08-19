@@ -11,7 +11,7 @@ import { color } from '../../../theme'
 const CONTAINER: ViewStyle = {
   backgroundColor: '#fff',
   paddingHorizontal: 20,
-  paddingVertical: 10,
+  paddingVertical: 10
 }
 
 const OrderSheet = () => {
