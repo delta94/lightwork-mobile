@@ -18,11 +18,11 @@ import Header from './components/MainScreen/Header/Header'
 
 const TAB_ICON: ImageStyle = {
   width: 25,
-  height: 25
+  height: 25,
 }
 
 const ICON_DIVIDER: ViewStyle = {
-  padding: 10
+  padding: 10,
 }
 
 const HistoryStack = createStackNavigator()
@@ -36,9 +36,9 @@ const HistoryStackScreen = () => {
         options={{
           title: 'История',
           headerStyle: {
-            backgroundColor: '#6cc769'
+            backgroundColor: '#6cc769',
           },
-          headerTintColor: '#fff'
+          headerTintColor: '#fff',
         }}
       />
       <HistoryStack.Screen
@@ -47,9 +47,9 @@ const HistoryStackScreen = () => {
         options={{
           title: 'Детали',
           headerStyle: {
-            backgroundColor: '#6cc769'
+            backgroundColor: '#6cc769',
           },
-          headerTintColor: '#fff'
+          headerTintColor: '#fff',
         }}
       />
     </HistoryStack.Navigator>
@@ -67,9 +67,9 @@ const BonusesStackScreen = () => {
         options={{
           title: 'Бонусы',
           headerStyle: {
-            backgroundColor: '#6cc769'
+            backgroundColor: '#6cc769',
           },
-          headerTintColor: '#fff'
+          headerTintColor: '#fff',
         }}
       />
     </BonusesStack.Navigator>
@@ -87,9 +87,9 @@ const HelpStackScreen = () => {
         options={{
           title: 'Помощь',
           headerStyle: {
-            backgroundColor: '#6cc769'
+            backgroundColor: '#6cc769',
           },
-          headerTintColor: '#fff'
+          headerTintColor: '#fff',
         }}
       />
     </HelpStack.Navigator>
@@ -109,10 +109,10 @@ const MainStackScreen = () => {
           headerStyle: {
             backgroundColor: '#6cc769',
             elevation: 0, // remove shadow on Android
-            shadowOpacity: 0 // remove shadow on iOS
+            shadowOpacity: 0, // remove shadow on iOS
           },
           headerTintColor: '#fff',
-          headerTitle: () => <Header />
+          headerTitle: () => <Header />,
         }}
       />
     </MainStack.Navigator>
@@ -130,9 +130,9 @@ const MapStackScreen = () => {
         options={{
           title: 'Заказать',
           headerStyle: {
-            backgroundColor: '#6cc769'
+            backgroundColor: '#6cc769',
           },
-          headerTintColor: '#fff'
+          headerTintColor: '#fff',
         }}
       />
     </MapStack.Navigator>
@@ -175,14 +175,14 @@ const App = () => {
                 <View style={ICON_DIVIDER}></View>
               </View>
             )
-          }
+          },
         })}
         activeColor={color.green}
         inactiveColor="#555"
         barStyle={{
           backgroundColor: '#fff',
           height: BottomTabHeight,
-          justifyContent: 'center'
+          justifyContent: 'center',
         }}
         shifting={false}
         initialRouteName="Main"
@@ -191,35 +191,35 @@ const App = () => {
           name="Main"
           component={MainStackScreen}
           options={{
-            title: 'Главная'
+            title: 'Главная',
           }}
         />
         <Tab.Screen
           name="Bonuses"
           component={BonusesStackScreen}
           options={{
-            title: 'Бонусы'
+            title: 'Бонусы',
           }}
         />
         <Tab.Screen
           name="Map"
           component={MapStackScreen}
           options={{
-            title: 'Заказать'
+            title: 'Заказать',
           }}
         />
         <Tab.Screen
           name="History"
           component={HistoryStackScreen}
           options={{
-            title: 'История'
+            title: 'История',
           }}
         />
         <Tab.Screen
           name="Help"
           component={HelpStackScreen}
           options={{
-            title: 'Помощь'
+            title: 'Помощь',
           }}
         />
       </Tab.Navigator>
