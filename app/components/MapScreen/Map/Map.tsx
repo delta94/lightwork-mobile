@@ -11,7 +11,7 @@ const Map = (props: any) => {
   YaMap.setLocale('ru_RU')
   const [activePoint, setPoint] = useState({
     lat: 49.94304358239562,
-    lon: 82.62278467147178
+    lon: 82.62278467147178,
   })
   const [activeZoom, setZoom] = useState(10)
   const [isPressIn, setPressIn] = useState(false)
