@@ -14,7 +14,9 @@ import IMAGES from '../../constants/images'
 import Marker from '../../components/MapScreen/Marker/Marker'
 import MarkerShadow from '../../components/MapScreen/MarkerShadow/MarkerShadow'
 
-const CONTAINER: ViewStyle = {}
+const CONTAINER: ViewStyle = {
+  flex: 1,
+}
 
 const BOTTOM_SHEET: ViewStyle = {
   backgroundColor: color.white
@@ -31,7 +33,7 @@ const MapScreen = () => {
     return <OrderSheet />
   }
   return (
-    <View style={{ height: viewHeight }}>
+    <View style={{...CONTAINER, height: viewHeight }}>
       <Map setCamChange={setCamChange} />
       <Marker isCamChange={isCamChange} />
       <MarkerShadow isCamChange={isCamChange} />

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { ViewStyle, View } from 'react-native'
 import YaMap, { Marker, Geocoder } from 'react-native-yamap'
 import IMAGES from '../../../constants/images'
@@ -13,23 +13,21 @@ const Map = (props: any) => {
     lat: 49.94304358239562,
     lon: 82.62278467147178,
   })
-  const [activeZoom, setZoom] = useState(10)
-  const [isPressIn, setPressIn] = useState(false)
+  
+  const [activeZoom, setZoom] = useState(13)
   const YA_MAP: any = useRef(null)
   const [timerId, setTimerId] = useState()
-
+  
   const _onMapPress = (p: any) => {
     YA_MAP.current.setCenter(p.nativeEvent, activeZoom, 0, 0, 0.5)
   }
   const _onTouchEnd = () => {
-    YA_MAP.current.getCameraPosition((p) => setZoom(p.zoom))
-    setPressIn(false)
+    YA_MAP.current.getCameraPosition((p: any) => setZoom(p.zoom))
     props.setCamChange(0)
   }
 
   const _onTouchStart = () => {
     props.setCamChange(1)
-    setPressIn(true)
   }
 
   const _getGeo = (p: any) => {
@@ -51,7 +49,9 @@ const Map = (props: any) => {
 
     setTimerId(setTimeout(time, 1000))
   }
-
+  useEffect(() => { 
+    YA_MAP.current.setCenter(activePoint, activeZoom)
+  }, []);
   return (
     <YaMap
       onTouchStart={() => _onTouchStart()}
@@ -67,7 +67,9 @@ const Map = (props: any) => {
         _onMapPress(point)
       }}
       style={{ flex: 1 }}
-    ></YaMap>
+    >
+      <Marker point={activePoint}/>
+    </YaMap>
   )
 }
 
