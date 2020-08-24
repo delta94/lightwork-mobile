@@ -2,10 +2,11 @@ import React from 'react'
 import { ViewStyle, View, Text, TextStyle } from 'react-native'
 import Item from '../Item/Item'
 import moment from 'moment/min/moment-with-locales'
-import { scale, fontSize } from '../../../constants/dimensions';
+import { scale, fontSize } from '../../../constants/dimensions'
+import { color } from '../../../theme/color'
 
 // STYLES
-//ViewStyles
+// ViewStyles
 const CONTAINER: ViewStyle = {}
 
 const HEADER: ViewStyle = {
@@ -13,14 +14,14 @@ const HEADER: ViewStyle = {
   paddingVertical: scale(5)
 }
 
-//TextStyles
+// TextStyles
 const TEXT_DATE: TextStyle = {
-  color: '#888',
+  color: color.textGrey,
   fontFamily: 'Lato',
   fontSize: fontSize.small
 }
 
-//COMPONENT
+// COMPONENT
 const DateGroup = (props: any) => {
   const Items = props.data.map((n: any) => {
     if (n.date === props.date) {

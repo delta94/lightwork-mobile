@@ -37,9 +37,9 @@ const HistoryStackScreen = () => {
         options={{
           title: 'История',
           headerStyle: {
-            backgroundColor: '#6cc769'
+            backgroundColor: color.green
           },
-          headerTintColor: '#fff'
+          headerTintColor: color.white
         }}
       />
       <HistoryStack.Screen
@@ -48,9 +48,9 @@ const HistoryStackScreen = () => {
         options={{
           title: 'Детали',
           headerStyle: {
-            backgroundColor: '#6cc769'
+            backgroundColor: color.green
           },
-          headerTintColor: '#fff'
+          headerTintColor: color.white
         }}
       />
     </HistoryStack.Navigator>
@@ -68,9 +68,9 @@ const BonusesStackScreen = () => {
         options={{
           title: 'Бонусы',
           headerStyle: {
-            backgroundColor: '#6cc769'
+            backgroundColor: color.green
           },
-          headerTintColor: '#fff'
+          headerTintColor: color.white
         }}
       />
     </BonusesStack.Navigator>
@@ -88,9 +88,9 @@ const HelpStackScreen = () => {
         options={{
           title: 'Помощь',
           headerStyle: {
-            backgroundColor: '#6cc769'
+            backgroundColor: color.green
           },
-          headerTintColor: '#fff'
+          headerTintColor: color.white
         }}
       />
     </HelpStack.Navigator>
@@ -108,11 +108,11 @@ const MainStackScreen = () => {
         options={{
           title: 'Главная',
           headerStyle: {
-            backgroundColor: '#6cc769',
+            backgroundColor: color.green,
             elevation: 0, // remove shadow on Android
             shadowOpacity: 0 // remove shadow on iOS
           },
-          headerTintColor: '#fff',
+          headerTintColor: color.white,
           // eslint-disable-next-line react/display-name
           headerTitle: () => <Header />
         }}
@@ -132,9 +132,9 @@ const MapStackScreen = () => {
         options={{
           title: 'Заказать',
           headerStyle: {
-            backgroundColor: '#6cc769'
+            backgroundColor: color.green
           },
-          headerTintColor: '#fff'
+          headerTintColor: color.white
         }}
       />
     </MapStack.Navigator>
@@ -181,9 +181,9 @@ const App = () => {
           }
         })}
         activeColor={color.green}
-        inactiveColor="#555"
+        inactiveColor={color.darkGrey}
         barStyle={{
-          backgroundColor: '#fff',
+          backgroundColor: color.white,
           height: BottomTabHeight,
           justifyContent: 'center'
         }}

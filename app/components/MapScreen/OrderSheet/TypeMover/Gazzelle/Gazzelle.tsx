@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 import { color } from '../../../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
-import { scale } from '../../../../../constants/dimensions';
+import { scale } from '../../../../../constants/dimensions'
 
 const CONTAINER: ViewStyle = {
   flexDirection: 'row',
@@ -58,7 +58,7 @@ const Gazzelle = (props: any) => {
           style={[
             n.flag === props.isGazzelle
               ? { backgroundColor: color.green }
-              : { backgroundColor: '#fff' }
+              : { backgroundColor: color.white }
           ]}
           onPress={() => props.setGazzelle(n.flag)}
         >

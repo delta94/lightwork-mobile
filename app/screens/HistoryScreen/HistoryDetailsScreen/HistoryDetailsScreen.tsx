@@ -10,8 +10,8 @@ import {
 import moment from 'moment/min/moment-with-locales'
 import IMAGES from '../../../constants/images'
 import Status from '../../../components/HistoryDetailsScreen/Status/Status'
-import { fontSize, scale } from '../../../constants/dimensions';
-import { color } from '../../../theme/color';
+import { fontSize, scale } from '../../../constants/dimensions'
+import { color } from '../../../theme/color'
 
 // STYLES
 // ViewStyles
@@ -37,7 +37,7 @@ const ITEM_IMAGE: ViewStyle = {
 }
 
 const ITEM: ViewStyle = {
-  borderBottomColor: '#eee',
+  borderBottomColor: color.backGrey,
   borderBottomWidth: 1,
   width: '100%',
   marginLeft: scale(20)

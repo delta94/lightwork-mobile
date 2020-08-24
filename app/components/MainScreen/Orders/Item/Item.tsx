@@ -18,7 +18,7 @@ const TEXT: TextStyle = {
 
 let IMAGE_STYLE: ViewStyle = {
   borderRadius: 100,
-  backgroundColor: '#E2FFBB',
+  backgroundColor: color.greenLight,
   padding: scale(7)
 }
 

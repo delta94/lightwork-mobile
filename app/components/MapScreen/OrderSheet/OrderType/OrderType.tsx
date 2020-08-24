@@ -3,7 +3,7 @@ import { ViewStyle, View, Image, Text, TextStyle, FlatList } from 'react-native'
 import IMAGES from '../../../../constants/images'
 import { color } from '../../../../theme'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
-import { scale, fontSize } from '../../../../constants/dimensions';
+import { scale, fontSize } from '../../../../constants/dimensions'
 
 const CONTAINER: ViewStyle = {
   paddingVertical: scale(10)

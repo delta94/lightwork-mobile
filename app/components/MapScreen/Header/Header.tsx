@@ -1,7 +1,7 @@
 import React from 'react'
 import { ViewStyle, View, Text, TextStyle } from 'react-native'
 import { color } from '../../../theme'
-import { scale, fontSize } from '../../../constants/dimensions';
+import { scale, fontSize } from '../../../constants/dimensions'
 
 const CONTAINER: ViewStyle = {
   borderTopLeftRadius: 10,
@@ -15,7 +15,7 @@ const CONTAINER: ViewStyle = {
 
 const TEXT: TextStyle = {
   fontSize: fontSize.regular,
-  color: color.black,
+  color: color.black
 }
 
 const Header = () => {

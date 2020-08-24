@@ -10,8 +10,8 @@ import {
 import Accordion from 'react-native-collapsible/Accordion'
 import * as Animatable from 'react-native-animatable'
 import { Entypo, Ionicons, MaterialIcons } from '@expo/vector-icons'
-import { scale, fontSize } from '../../../constants/dimensions';
-import { color } from '../../../theme/color';
+import { scale, fontSize } from '../../../constants/dimensions'
+import { color } from '../../../theme/color'
 
 // DOCUMENTATION
 // https://github.com/oblador/react-native-collapsible
@@ -27,20 +27,20 @@ const CONTAINER: ViewStyle = {
 const HEADER: ViewStyle = {
   flexDirection: 'row',
   padding: scale(20),
-  backgroundColor: '#fff',
+  backgroundColor: color.white,
   justifyContent: 'space-between',
   alignSelf: 'stretch'
 }
 
 const CONTENT: ViewStyle = {
-  backgroundColor: '#fff',
+  backgroundColor: color.white,
   paddingHorizontal: scale(20),
   paddingBottom: scale(20)
 }
 
 const DIVIDER: ViewStyle = {
   borderBottomWidth: 1,
-  borderColor: '#f4f4f4'
+  borderColor: color.backGrey
 }
 
 const ICON: ViewStyle = {
@@ -60,7 +60,7 @@ const ERROR_ICON: ViewStyle = {
 }
 
 const SUBHEADER: ViewStyle = {
-  backgroundColor: '#f4f4f4',
+  backgroundColor: color.backGrey,
   paddingVertical: scale(10),
   alignSelf: 'stretch',
   alignItems: 'center'

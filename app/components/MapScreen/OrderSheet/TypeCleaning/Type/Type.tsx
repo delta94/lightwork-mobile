@@ -5,8 +5,8 @@ import { color } from '../../../../../theme'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 import { scale } from '../../../../../constants/dimensions'
 
-//STYLES
-//ViewStyles
+// STYLES
+// ViewStyles
 const CONTAINER: ViewStyle = {}
 
 const ROW: ViewStyle = {
@@ -49,7 +49,7 @@ const STATUS: ViewStyle = {
   position: 'absolute'
 }
 
-//TextStyles
+// TextStyles
 const TEXT: TextStyle = {
   textAlign: 'center',
   textAlignVertical: 'center'

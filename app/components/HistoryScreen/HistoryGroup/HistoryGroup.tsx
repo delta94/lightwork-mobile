@@ -2,8 +2,8 @@ import React from 'react'
 import { Text, TextStyle, View, ViewStyle, FlatList } from 'react-native'
 import Item from './Item/Item'
 import moment from 'moment/min/moment-with-locales'
-import { scale, fontSize } from '../../../constants/dimensions';
-import { color } from '../../../theme/color';
+import { scale, fontSize } from '../../../constants/dimensions'
+import { color } from '../../../theme/color'
 
 // STYLES
 // ViewStyles

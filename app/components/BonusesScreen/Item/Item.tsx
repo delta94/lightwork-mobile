@@ -11,7 +11,7 @@ import { color } from '../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
 import moment from 'moment/min/moment-with-locales'
 import IMAGES from '../../../constants/images'
-import { scale, fontSize } from '../../../constants/dimensions';
+import { scale, fontSize } from '../../../constants/dimensions'
 
 // DOCUMENTATION
 // https://momentjs.com/
@@ -22,15 +22,15 @@ import { scale, fontSize } from '../../../constants/dimensions';
 const CONTAINER: ViewStyle = {
   flexDirection: 'column',
   borderBottomWidth: 1,
-  borderColor: '#f4f4f4'
+  borderColor: color.backGrey
 }
 
 const IMAGE_VIEW: ViewStyle = {
-  backgroundColor: '#f4f4f4',
+  backgroundColor: color.backGrey,
   borderRadius: 100,
   padding: scale(7),
   alignSelf: 'flex-start',
-  borderColor: '#e8e8e8',
+  borderColor: color.backGrey,
   borderWidth: 1
 }
 
@@ -42,10 +42,10 @@ const IMAGE: ImageStyle = {
 const ROW: ViewStyle = {
   flexDirection: 'row',
   paddingHorizontal: scale(20),
-  backgroundColor: '#fff',
+  backgroundColor: color.white,
   paddingVertical: scale(15),
   borderBottomWidth: 1,
-  borderColor: '#f4f4f4',
+  borderColor: color.backGrey,
   justifyContent: 'space-between'
 }
 
@@ -65,14 +65,14 @@ const TEXT_VIEW: ViewStyle = {
 
 // TextStyles
 const TEXT_SERVICE: TextStyle = {
-  color: '#565656',
+  color: color.textGrey,
   fontSize: fontSize.regularSmall,
   marginTop: 0,
   fontFamily: 'Lato-Bold'
 }
 
 const TEXT_DATE: TextStyle = {
-  color: '#777',
+  color: color.textLightGrey,
   fontSize: fontSize.smaller,
   paddingBottom: scale(5)
 }

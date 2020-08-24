@@ -44,8 +44,8 @@ const CONTAINER: ViewStyle = {
   paddingLeft: 0,
   paddingVertical: scale(10),
   borderBottomWidth: 1,
-  borderColor: '#eee',
-  backgroundColor: '#fff'
+  borderColor: color.backGrey,
+  backgroundColor: color.white
 }
 
 const FLATLIST: ViewStyle = {
@@ -55,7 +55,7 @@ const FLATLIST: ViewStyle = {
 const BUTTON = {
   borderRadius: 20,
   marginEnd: scale(10),
-  backgroundColor: '#f4f4f4'
+  backgroundColor: color.backGrey
 }
 
 // TextStyles
@@ -82,14 +82,14 @@ const HistoryFilter = (props: any) => {
               style={{
                 ...BUTTON,
                 backgroundColor:
-                  activeType === item.type ? item.color : '#f4f4f4'
+                  activeType === item.type ? item.color : color.backGrey
               }}
               onPress={() => setActive(item.type)}
             >
               <Text
                 style={{
                   ...BUTTON_TEXT,
-                  color: activeType === item.type ? item.textColor : '#000'
+                  color: activeType === item.type ? item.textColor : color.black
                 }}
               >
                 {item.title}

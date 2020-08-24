@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { ViewStyle, View, Text, TextStyle } from 'react-native'
 import { color } from '../../../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
-import { scale } from '../../../../../constants/dimensions';
+import { scale } from '../../../../../constants/dimensions'
 
 const CONTAINER: ViewStyle = {
   flexDirection: 'row',
@@ -48,7 +48,7 @@ const Count = () => {
           style={[
             n === count
               ? { backgroundColor: color.orange }
-              : { backgroundColor: '#fff' }
+              : { backgroundColor: color.white }
           ]}
           onPress={() => setCount(n)}
         >

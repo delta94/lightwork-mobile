@@ -10,14 +10,14 @@ import {
 import IMAGES from '../../../../constants/images'
 import { color } from '../../../../theme/color'
 import { RectButton } from 'react-native-gesture-handler'
-import { scale, fontSize } from '../../../../constants/dimensions';
+import { scale, fontSize } from '../../../../constants/dimensions'
 
 const TEXT: TextStyle = {
 }
 
 let IMAGE_STYLE: ViewStyle = {
   borderRadius: 100,
-  backgroundColor: '#E2FFBB',
+  backgroundColor: color.greenLight,
   padding: scale(7)
 }
 
@@ -43,7 +43,7 @@ const ROW: ViewStyle = {
   justifyContent: 'space-between',
   paddingVertical: scale(15),
   paddingHorizontal: scale(20),
-  borderBottomColor: '#eee',
+  borderBottomColor: color.backGrey,
   borderBottomWidth: 1
 }
 

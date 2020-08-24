@@ -17,7 +17,7 @@ const CONTAINER: ViewStyle = {
   alignSelf: 'stretch',
   backgroundColor: color.white,
   borderBottomWidth: 1,
-  borderColor: '#eee'
+  borderColor: color.backGrey
 }
 
 // DATA

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, TextStyle, View, ViewStyle } from 'react-native'
-import { scale, fontSize } from '../../../constants/dimensions';
-import { color } from '../../../theme/color';
+import { scale, fontSize } from '../../../constants/dimensions'
+import { color } from '../../../theme/color'
 
 // STYLES
 // ViewStyles
