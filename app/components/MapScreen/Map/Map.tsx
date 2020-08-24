@@ -9,13 +9,13 @@ const Map = (props: any) => {
   YaMap.setLocale('ru_RU')
   const [activePoint, setPoint] = useState({
     lat: 49.94304358239562,
-    lon: 82.62278467147178,
+    lon: 82.62278467147178
   })
-  
+
   const [activeZoom, setZoom] = useState(13)
   const YA_MAP: any = useRef(null)
   const [timerId, setTimerId] = useState()
-  
+
   const _onMapPress = (p: any) => {
     YA_MAP.current.setCenter(p.nativeEvent, activeZoom, 0, 0, 0.5)
   }
@@ -47,9 +47,9 @@ const Map = (props: any) => {
 
     setTimerId(setTimeout(time, 1000))
   }
-  useEffect(() => { 
+  useEffect(() => {
     YA_MAP.current.setCenter(activePoint, activeZoom)
-  }, []);
+  }, [])
   return (
     <YaMap
       onTouchStart={() => _onTouchStart()}

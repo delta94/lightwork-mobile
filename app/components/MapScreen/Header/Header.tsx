@@ -18,7 +18,7 @@ const TEXT: TextStyle = {
   fontWeight: 'bold'
 }
 
-const Header = (props: any) => {
+const Header = () => {
   return (
     <View style={CONTAINER}>
       <Text style={TEXT}>Оформление заказа</Text>

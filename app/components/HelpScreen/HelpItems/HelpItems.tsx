@@ -10,7 +10,7 @@ import {
 import Accordion from 'react-native-collapsible/Accordion'
 import * as Animatable from 'react-native-animatable'
 import { Entypo, Ionicons, MaterialIcons } from '@expo/vector-icons'
-import { scale } from '../../../constants/dimensions';
+import { scale } from '../../../constants/dimensions'
 
 // DOCUMENTATION
 // https://github.com/oblador/react-native-collapsible

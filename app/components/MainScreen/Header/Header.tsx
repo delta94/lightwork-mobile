@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import { color } from '../../../theme'
 import IMAGES from '../../../constants/images'
-import { scale } from '../../../constants/dimensions';
+import { scale } from '../../../constants/dimensions'
 
 const CONTAINER: ViewStyle = {
   alignItems: 'center',

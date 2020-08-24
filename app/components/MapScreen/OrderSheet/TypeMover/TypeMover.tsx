@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { ViewStyle, View } from 'react-native'
+import { View } from 'react-native'
 import Count from './Count/Count'
 import Gazzelle from './Gazzelle/Gazzelle'
 import GazzelleType from './Gazzelle/GazzelleType/GazzelleType'
 import { TextField } from 'react-native-material-textfield'
 import { color } from '../../../../theme/color'
-
-const CONTAINER: ViewStyle = {}
 
 const TypeMover = () => {
   const [isGazzelle, setGazzelle] = useState(true)

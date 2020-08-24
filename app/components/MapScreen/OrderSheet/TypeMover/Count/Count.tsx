@@ -29,14 +29,14 @@ const Count = () => {
   const a = []
   let i = 1
   while (a.push(i++) < 10);
-  const Items = a.map((n, index) => {
+  const Items = a.map((n) => {
     return (
       <View
         style={[
           { overflow: 'hidden' },
-          n == 1
+          n === 1
             ? { borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }
-            : n == 10
+            : n === 10
               ? { borderTopRightRadius: 15, borderBottomRightRadius: 15 }
               : {}
         ]}
@@ -44,14 +44,14 @@ const Count = () => {
       >
         <RectButton
           style={[
-            n == count
+            n === count
               ? { backgroundColor: color.green }
               : { backgroundColor: '#fff' }
           ]}
           onPress={() => setCount(n)}
         >
           <Text
-            style={{ ...ITEM, color: n == count ? color.white : color.black }}
+            style={{ ...ITEM, color: n === count ? color.white : color.black }}
           >
             {n}
           </Text>

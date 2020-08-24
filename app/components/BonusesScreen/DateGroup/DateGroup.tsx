@@ -2,7 +2,7 @@ import React from 'react'
 import { ViewStyle, View, Text, TextStyle } from 'react-native'
 import Item from '../Item/Item'
 import moment from 'moment/min/moment-with-locales'
-import { scale } from '../../../constants/dimensions';
+import { scale } from '../../../constants/dimensions'
 
 // STYLES
 const CONTAINER: ViewStyle = {}

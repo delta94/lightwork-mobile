@@ -30,7 +30,7 @@ const DATA = [
 
 const Other = () => {
   const Items = DATA.map((n) => {
-    return <Item id={n.id} title={n.title} text={n.text} image={n.image} key={"other-item-" + n.id} />
+    return <Item id={n.id} title={n.title} text={n.text} image={n.image} key={'other-item-' + n.id} />
   })
   return (
     <View style={CONTAINER}>

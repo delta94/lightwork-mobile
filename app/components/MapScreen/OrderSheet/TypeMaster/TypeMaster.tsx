@@ -1,11 +1,8 @@
 import React from 'react'
-import { ViewStyle } from 'react-native'
 import { View } from 'react-native-animatable'
 import Count from './Count/Count'
 import { TextField } from 'react-native-material-textfield'
 import { color } from '../../../../theme'
-
-const CONTAINER: ViewStyle = {}
 
 const TypeMaster = () => {
   return (

@@ -4,14 +4,14 @@ import BonusesScreen from './BonusesScreen'
 const mapStateToProps = (state, ownProps) => {
   return {
     data: state.historyScreen,
-    date: state.historyScreen.map((n) => {
+    date: state.historyScreen.map((n: any) => {
       return n.date
     }),
     navigation: ownProps.navigation
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = () => {
   return {}
 }
 

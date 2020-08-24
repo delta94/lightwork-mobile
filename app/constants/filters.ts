@@ -1,6 +1,6 @@
 export const DATE_FILTER = (data) => {
-  const uniqueDate = []
-  const stepDate = []
+  const uniqueDate: any = []
+  const stepDate: any = []
   let i = 0
   data.map((d) => {
     if (stepDate.indexOf(d.date) === -1) {
@@ -13,13 +13,13 @@ export const DATE_FILTER = (data) => {
   return uniqueDate
 }
 
-export const TYPE_FILTER = (data, value) => {
+export const TYPE_FILTER = (data: any, value: any) => {
   let NEW_DATA = []
-  if (value == 'ALL') {
+  if (value === 'ALL') {
     NEW_DATA = data
   } else {
-    data.map((d) => {
-      if (d.type == value) {
+    data.map((d: any) => {
+      if (d.type === value) {
         NEW_DATA.push(d)
       }
     })

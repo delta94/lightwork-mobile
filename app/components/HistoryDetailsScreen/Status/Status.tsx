@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import IMAGES from '../../../constants/images'
 import { color } from '../../../theme'
-import { scale } from '../../../constants/dimensions';
+import { scale } from '../../../constants/dimensions'
 
 // STYLES
 // ViewStyles

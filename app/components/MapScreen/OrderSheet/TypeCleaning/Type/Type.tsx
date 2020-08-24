@@ -67,7 +67,7 @@ const DATA = [
   }
 ]
 
-const Type = (props: any) => {
+const Type = () => {
   const [activeType, setType] = useState('Lite')
   return (
     <View style={CONTAINER}>
@@ -80,7 +80,7 @@ const Type = (props: any) => {
               <View
                 style={[
                   { ...COL },
-                  index == 0 ? { marginRight: 5 } : { marginLeft: 5 }
+                  index === 0 ? { marginRight: 5 } : { marginLeft: 5 }
                 ]}
               >
                 <TouchableWithoutFeedback
@@ -93,12 +93,12 @@ const Type = (props: any) => {
                     style={{
                       ...STATUS,
                       backgroundColor:
-                        activeType == item.title ? color.blue : color.backGrey
+                        activeType === item.title ? color.blue : color.backGrey
                     }}
                   >
                     <Image
                       source={
-                        activeType == item.title
+                        activeType === item.title
                           ? IMAGES.order.type.tick
                           : undefined
                       }

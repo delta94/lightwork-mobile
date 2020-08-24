@@ -2,7 +2,7 @@ import React from 'react'
 import { ViewStyle, Text, TextStyle } from 'react-native'
 import { View } from 'native-base'
 import { color } from '../../../../theme/color'
-import { scale } from '../../../../constants/dimensions';
+import { scale } from '../../../../constants/dimensions'
 
 const ROW: ViewStyle = {
   flexDirection: 'row',

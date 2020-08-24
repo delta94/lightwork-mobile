@@ -1,5 +1,4 @@
 import { Platform } from 'react-native'
-import { initFonts } from './fonts/index'
 
 /**
  * Just the font names.

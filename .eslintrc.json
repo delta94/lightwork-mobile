@@ -20,6 +20,7 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-unused-vars": ["error", { "varsIgnorePattern": "[ViewImageText]Style"}]
+        "no-unused-vars": ["error", { "varsIgnorePattern": "[ViewImageText]Style"}],
+        "react/display-name": ["error", { "ignoreTranspilerName": false }]
     }
 }

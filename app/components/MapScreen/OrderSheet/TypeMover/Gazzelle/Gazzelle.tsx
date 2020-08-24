@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   ViewStyle,
   View,
   Text,
-  TextStyle,
-  TouchableWithoutFeedback
+  TextStyle
 } from 'react-native'
 import { color } from '../../../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
@@ -48,7 +47,7 @@ const Gazzelle = (props: any) => {
       <View
         style={[
           { overflow: 'hidden' },
-          index == 0
+          index === 0
             ? { borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }
             : { borderTopRightRadius: 15, borderBottomRightRadius: 15 }
         ]}
@@ -56,7 +55,7 @@ const Gazzelle = (props: any) => {
       >
         <RectButton
           style={[
-            n.flag == props.isGazzelle
+            n.flag === props.isGazzelle
               ? { backgroundColor: color.green }
               : { backgroundColor: '#fff' }
           ]}
@@ -65,7 +64,7 @@ const Gazzelle = (props: any) => {
           <Text
             style={{
               ...ITEM,
-              color: n.flag == props.isGazzelle ? color.white : color.black
+              color: n.flag === props.isGazzelle ? color.white : color.black
             }}
           >
             {n.title}

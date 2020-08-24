@@ -1,5 +1,3 @@
-import * as types from '../constants/actions'
-
 interface historyItem {
   id: number
   type: 'MOVERS' | 'MASTER' | 'CLEANING'

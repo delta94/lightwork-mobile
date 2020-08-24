@@ -113,6 +113,7 @@ const MainStackScreen = () => {
             shadowOpacity: 0 // remove shadow on iOS
           },
           headerTintColor: '#fff',
+          // eslint-disable-next-line react/display-name
           headerTitle: () => <Header />
         }}
       />
@@ -147,6 +148,7 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }: any) => ({
+          // eslint-disable-next-line react/display-name
           tabBarIcon: ({ focused }: any) => {
             let iconName
             if (route.name === 'Bonuses') {

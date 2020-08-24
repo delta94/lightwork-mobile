@@ -3,7 +3,7 @@ import {
   ViewStyle,
   Image,
   ImageStyle,
-  Animated,
+  Animated
 } from 'react-native'
 import IMAGES from '../../../constants/images'
 

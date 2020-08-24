@@ -1,6 +1,6 @@
 import { useHeaderHeight } from '@react-navigation/stack'
 import React, { useState } from 'react'
-import { ViewStyle, Image } from 'react-native'
+import { ViewStyle } from 'react-native'
 import { View } from 'react-native-animatable'
 import BottomSheet from 'reanimated-bottom-sheet'
 
@@ -8,18 +8,11 @@ import Header from '../../components/MapScreen/Header/Header'
 import Map from '../../components/MapScreen/Map/Map'
 import OrderSheet from '../../components/MapScreen/OrderSheet/OrderSheet'
 import { WindowHeight, BottomTabHeight } from '../../constants/constants'
-import { color } from '../../theme'
-import {} from 'native-base'
-import IMAGES from '../../constants/images'
 import Marker from '../../components/MapScreen/Marker/Marker'
 import MarkerShadow from '../../components/MapScreen/MarkerShadow/MarkerShadow'
 
 const CONTAINER: ViewStyle = {
-  flex: 1,
-}
-
-const BOTTOM_SHEET: ViewStyle = {
-  backgroundColor: color.white
+  flex: 1
 }
 
 const MapScreen = () => {
@@ -33,7 +26,7 @@ const MapScreen = () => {
     return <OrderSheet />
   }
   return (
-    <View style={{...CONTAINER, height: viewHeight }}>
+    <View style={{ ...CONTAINER, height: viewHeight }}>
       <Map setCamChange={setCamChange} />
       <Marker isCamChange={isCamChange} />
       <MarkerShadow isCamChange={isCamChange} />

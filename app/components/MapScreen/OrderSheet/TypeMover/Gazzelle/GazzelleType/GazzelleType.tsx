@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ViewStyle, View, Image, Text, TextStyle, FlatList } from 'react-native'
 import IMAGES from '../../../../../../constants/images'
 import { color } from '../../../../../../theme'
@@ -26,10 +26,6 @@ const COL: ViewStyle = {
 const CARD: ViewStyle = {
   alignItems: 'center',
   paddingTop: 15
-}
-
-const TITLE: TextStyle = {
-  fontSize: 14
 }
 
 const TEXT: TextStyle = {
@@ -91,9 +87,9 @@ const GazzelleType = (props: any) => {
                 <View
                   style={[
                     { ...COL },
-                    index == 1
+                    index === 1
                       ? { marginHorizontal: 5 }
-                      : index == 0
+                      : index === 0
                         ? { marginRight: 5 }
                         : { marginLeft: 5 }
                   ]}
@@ -108,14 +104,14 @@ const GazzelleType = (props: any) => {
                       style={{
                         ...STATUS,
                         backgroundColor:
-                          props.activeSize == item.size
+                          props.activeSize === item.size
                             ? color.green
                             : color.backGrey
                       }}
                     >
                       <Image
                         source={
-                          props.activeSize == item.size
+                          props.activeSize === item.size
                             ? IMAGES.order.type.tick
                             : undefined
                         }

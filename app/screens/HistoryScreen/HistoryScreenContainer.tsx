@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import HistoryScreen from './HistoryScreen'
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state: any, ownProps: any) => {
   return {
     data: state.historyScreen,
     date: state.historyScreen.map((n) => {
@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = () => {
   return {}
 }
 

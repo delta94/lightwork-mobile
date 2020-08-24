@@ -4,8 +4,6 @@ import Type from './Type/Type'
 import { TextField } from 'react-native-material-textfield'
 import { color } from '../../../../theme'
 
-const CONTAINER: ViewStyle = {}
-
 const TypeCleaning = () => {
   return (
     <View>

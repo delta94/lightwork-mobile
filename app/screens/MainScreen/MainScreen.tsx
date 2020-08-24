@@ -5,7 +5,7 @@ import BottomSheet from 'reanimated-bottom-sheet'
 import { useHeaderHeight } from '@react-navigation/stack'
 import {
   BottomTabHeight,
-  WindowHeight,
+  WindowHeight
 } from '../../constants/constants'
 import Balance from '../../components/MainScreen/Balance/Balance'
 import Orders from '../../components/MainScreen/Orders/Orders'
@@ -26,11 +26,11 @@ const BOTTOM_HEADER: ViewStyle = {
   height: 10,
   borderTopLeftRadius: 10,
   borderTopRightRadius: 10,
-  backgroundColor: '#fff',
+  backgroundColor: '#fff'
 }
 
 const BOTTOM_SHEET: ViewStyle = {
-  backgroundColor: color.backGrey,
+  backgroundColor: color.backGrey
 }
 
 const DIVIDER: ViewStyle = {
@@ -65,15 +65,15 @@ const MainScreen = ({ navigation }: any) => {
 
   return (
     <>
-    <View style={CONTAINER}>
-      <Backdrop />
-    </View>
+      <View style={CONTAINER}>
+        <Backdrop />
+      </View>
       <BottomSheet
         enabledBottomClamp
         snapPoints={[initialHeight, viewHeight]}
         renderContent={_renderContent}
         renderHeader={_renderHeader}
-      />     
+      />
     </>
   )
 }
