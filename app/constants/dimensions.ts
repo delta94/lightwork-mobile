@@ -27,26 +27,18 @@ const widthRatio = localWidth / 390
 
 export const scale = (size: number) => widthRatio * size
 
-export const variables = {
-  fontSize: {
-    xxxSmall: (localWidth * 9) / 360,
-    xxSmall: (localWidth * 10) / 360,
-    xSmall: (localWidth * 11) / 360,
-    smaller: (localWidth * 12) / 360,
-    smallTwo: (localWidth * 12.5) / 360,
-    small: (localWidth * 13) / 360,
-    regularSmall: (localWidth * 14) / 360,
-    regular: (localWidth * 15) / 360,
-    mainRegular: (localWidth * 16) / 360,
-    large: (localWidth * 17) / 360,
-    extLarge: (localWidth * 20) / 360,
-    extraLarge: (localWidth * 32) / 360
-  },
-  shadowSmall: {
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.5,
-    shadowRadius: 2,
-    elevation: 4
-  }
+export const fontSize = {
+  xxxSmall: (localWidth * 9) / 360,
+  xxSmall: (localWidth * 10) / 360,
+  xSmall: (localWidth * 11) / 360,
+  smaller: (localWidth * 12) / 360,
+  smallTwo: (localWidth * 12.5) / 360,
+  small: (localWidth * 13) / 360,
+  regularSmall: (localWidth * 14) / 360,
+  regular: (localWidth * 15) / 360, // 17
+  mainRegular: (localWidth * 16) / 360,
+  large: (localWidth * 17) / 360,
+  extLarge: (localWidth * 20) / 360,
+  extraLarge: (localWidth * 32) / 360,
+  xExtraLarge: (localWidth * 45) / 360
 }

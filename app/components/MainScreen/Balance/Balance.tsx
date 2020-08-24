@@ -10,7 +10,7 @@ import {
 import { BorderlessButton } from 'react-native-gesture-handler'
 import { color } from '../../../theme'
 import IMAGES from '../../../constants/images'
-import { scale } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../constants/dimensions'
 
 // STYLES
 // ViewStyles
@@ -38,17 +38,18 @@ const DIVIDER: ViewStyle = {
 
 // TextStyles
 const TEXT: TextStyle = {
-  fontSize: 17
+  fontSize: fontSize.regular
 }
 
 const TITLE: TextStyle = {
   ...TEXT,
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  color: color.black
 }
 
 const CODE: TextStyle = {
   ...TEXT,
-  color: '#666'
+  color: color.textGrey
 }
 
 const LINK: TextStyle = {

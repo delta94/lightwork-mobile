@@ -1,8 +1,10 @@
 import React from 'react'
 import { View, ViewStyle, Text, TextStyle } from 'react-native'
 import { color } from '../../theme'
-import { scale } from '../../constants/dimensions'
+import { scale, fontSize } from '../../constants/dimensions'
 
+// STYLES
+// ViewStyles
 const CONTAINER: ViewStyle = {
   flexDirection: 'column',
   backgroundColor: color.green,
@@ -11,16 +13,18 @@ const CONTAINER: ViewStyle = {
   height: '40%'
 }
 
+// TextStyles
 const BALANCE_TITLE: TextStyle = {
   color: color.white,
-  fontSize: 20
+  fontSize: fontSize.large
 }
 
 const BALANCE: TextStyle = {
   color: color.white,
-  fontSize: 50
+  fontSize: fontSize.xExtraLarge
 }
 
+// COMPONENT
 const Backdrop = () => {
   return (
     <View style={CONTAINER}>

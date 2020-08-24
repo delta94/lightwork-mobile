@@ -10,7 +10,7 @@ import {
 import IMAGES from '../../../../constants/images'
 import { color } from '../../../../theme/color'
 import { RectButton } from 'react-native-gesture-handler'
-import { scale } from '../../../../constants/dimensions'
+import { scale, fontSize } from '../../../../constants/dimensions'
 
 const TEXT: TextStyle = {
   fontFamily: 'Lato'
@@ -24,8 +24,8 @@ let IMAGE_STYLE: ViewStyle = {
 
 const TEXT_DATE: TextStyle = {
   ...TEXT,
-  color: '#000',
-  fontSize: 16
+  color: color.black,
+  fontSize: fontSize.regular
 }
 
 const TYPE_ROW: ViewStyle = {
@@ -58,7 +58,7 @@ const ROW_LEFT: ViewStyle = {
 const PRICE_ROW: ViewStyle = {}
 
 const TEXT_PRICE: TextStyle = {
-  fontSize: 17,
+  fontSize: fontSize.regular,
   fontFamily: 'Lato-Bold',
   color: color.greenDark
 }

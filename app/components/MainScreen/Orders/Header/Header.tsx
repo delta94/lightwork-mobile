@@ -2,7 +2,7 @@ import React from 'react'
 import { ViewStyle, Text, TextStyle } from 'react-native'
 import { View } from 'native-base'
 import { color } from '../../../../theme/color'
-import { scale } from '../../../../constants/dimensions'
+import { scale, fontSize } from '../../../../constants/dimensions'
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
@@ -16,12 +16,13 @@ const ROW: ViewStyle = {
 }
 
 const TEXT: TextStyle = {
-  fontSize: 17
+  fontSize: fontSize.regular
 }
 
 const TITLE: TextStyle = {
   ...TEXT,
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  color: color.black
 }
 
 const LINK: TextStyle = {

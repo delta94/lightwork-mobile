@@ -26,7 +26,7 @@ const BOTTOM_HEADER: ViewStyle = {
   height: 10,
   borderTopLeftRadius: 10,
   borderTopRightRadius: 10,
-  backgroundColor: '#fff'
+  backgroundColor: color.white
 }
 
 const BOTTOM_SHEET: ViewStyle = {
@@ -38,7 +38,7 @@ const DIVIDER: ViewStyle = {
 }
 
 const GROUP: ViewStyle = {
-  backgroundColor: '#fff'
+  backgroundColor: color.white
 }
 
 // COMPONENT

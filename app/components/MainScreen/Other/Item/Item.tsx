@@ -8,7 +8,8 @@ import {
   ImageStyle
 } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
-import { scale } from '../../../../constants/dimensions'
+import { scale, fontSize } from '../../../../constants/dimensions'
+import { color } from '../../../../theme/color'
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
@@ -19,12 +20,13 @@ const ROW: ViewStyle = {
 }
 
 const TEXT: TextStyle = {
-  fontSize: 13,
-  color: '#555'
+  fontSize: fontSize.smaller,
+  color: color.textGrey
 }
 
 const TITLE: TextStyle = {
-  fontSize: 15
+  fontSize: fontSize.regularSmall,
+  color: color.black
 }
 
 // ImageStyles
