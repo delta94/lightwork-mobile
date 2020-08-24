@@ -23,13 +23,13 @@ let IMAGE_STYLE: ViewStyle = {
 
 const TEXT_DATE: TextStyle = {
   ...TEXT,
-  color: '#565656',
+  color: color.textGrey,
   fontSize: fontSize.regular,
   fontFamily: 'Lato-Bold'
 }
 
 const TEXT_TITLE: TextStyle = {
-  color: color.textGrey,
+  color: color.textLightGrey,
   fontSize: fontSize.small
 }
 
@@ -55,7 +55,7 @@ const TYPE_IMAGE: ImageStyle = {
 const CONTAINER: ViewStyle = {
   alignItems: 'stretch',
   flexDirection: 'column',
-  backgroundColor: '#fff'
+  backgroundColor: color.white
 }
 
 const ROW_LEFT: ViewStyle = {

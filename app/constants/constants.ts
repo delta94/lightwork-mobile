@@ -1,5 +1,7 @@
-import { Dimensions } from 'react-native'
+import { Dimensions, Platform, NativeModules } from 'react-native'
 
-export const BottomTabHeight = 50
+const { StatusBarManager } = NativeModules;
 
-export const WindowHeight = Dimensions.get('window').height
+export const BOTTOMTAB_HEIGHT = 50
+export const WINDOW_HEIGHT = Dimensions.get('window').height
+export const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBarManager.HEIGHT

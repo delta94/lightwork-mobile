@@ -4,8 +4,9 @@ import Backdrop from '../../components/MainScreen/Backdrop'
 import BottomSheet from 'reanimated-bottom-sheet'
 import { useHeaderHeight } from '@react-navigation/stack'
 import {
-  BottomTabHeight,
-  WindowHeight
+  STATUSBAR_HEIGHT,
+  BOTTOMTAB_HEIGHT,
+  WINDOW_HEIGHT
 } from '../../constants/constants'
 import Balance from '../../components/MainScreen/Balance/Balance'
 import Orders from '../../components/MainScreen/Orders/Orders'
@@ -43,9 +44,9 @@ const GROUP: ViewStyle = {
 
 // COMPONENT
 const MainScreen = ({ navigation }: any) => {
-  const headerHeight = useHeaderHeight()
-  const viewHeight = WindowHeight - headerHeight - BottomTabHeight
-  const initialHeight = (viewHeight + 15) * 0.6
+  const HEADER_HEIGHT = useHeaderHeight()
+  const VIEW_HEIGHT = WINDOW_HEIGHT - HEADER_HEIGHT - BOTTOMTAB_HEIGHT - STATUSBAR_HEIGHT
+  const INITIAL_HEIGHT = (VIEW_HEIGHT + 15) * 0.6
   const _renderHeader = () => <View style={BOTTOM_HEADER}></View>
   const _renderContent = () => (
     <View style={BOTTOM_SHEET}>
@@ -70,7 +71,7 @@ const MainScreen = ({ navigation }: any) => {
       </View>
       <BottomSheet
         enabledBottomClamp
-        snapPoints={[initialHeight, viewHeight]}
+        snapPoints={[INITIAL_HEIGHT, VIEW_HEIGHT]}
         renderContent={_renderContent}
         renderHeader={_renderHeader}
       />
