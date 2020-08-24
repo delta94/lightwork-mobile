@@ -1,11 +1,12 @@
 import React from 'react'
 import { View, ViewStyle, Text, TextStyle } from 'react-native'
 import { color } from '../../theme'
+import { scale } from '../../constants/dimensions'
 
 const CONTAINER: ViewStyle = {
   flexDirection: 'column',
   backgroundColor: color.green,
-  padding: 20,
+  padding: scale(20),
   justifyContent: 'flex-end',
   height: '40%'
 }

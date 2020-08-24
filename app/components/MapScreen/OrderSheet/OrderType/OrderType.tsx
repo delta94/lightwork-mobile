@@ -3,15 +3,16 @@ import { ViewStyle, View, Image, Text, TextStyle, FlatList } from 'react-native'
 import IMAGES from '../../../../constants/images'
 import { color } from '../../../../theme'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
+import { scale } from '../../../../constants/dimensions'
 
 const CONTAINER: ViewStyle = {
-  paddingVertical: 10
+  paddingVertical: scale(10)
 }
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
   alignContent: 'flex-start',
-  marginTop: 10
+  marginTop: scale(10)
 }
 
 const COL: ViewStyle = {
@@ -39,19 +40,15 @@ const TEXT: TextStyle = {
 const TEXT_VIEW: ViewStyle = {
   flexDirection: 'column',
   alignContent: 'stretch',
-  paddingTop: 5,
-  paddingBottom: 10
-}
-
-const DIVIDER: ViewStyle = {
-  paddingHorizontal: 5
+  paddingTop: scale(5),
+  paddingBottom: scale(10)
 }
 
 const STATUS: ViewStyle = {
   height: 22,
   width: 22,
-  marginRight: 10,
-  marginTop: 10,
+  marginRight: scale(10),
+  marginTop: scale(10),
   justifyContent: 'center',
   alignItems: 'center',
   borderRadius: 100,
@@ -96,9 +93,9 @@ const OrderType = (props: any) => {
               <View
                 style={[
                   { ...COL },
-                  index == 1
+                  index === 1
                     ? { marginHorizontal: 5 }
-                    : index == 0
+                    : index === 0
                       ? { marginRight: 5 }
                       : { marginLeft: 5 }
                 ]}
@@ -113,14 +110,14 @@ const OrderType = (props: any) => {
                     style={{
                       ...STATUS,
                       backgroundColor:
-                        props.activeType == item.type
+                        props.activeType === item.type
                           ? item.color
                           : color.backGrey
                     }}
                   >
                     <Image
                       source={
-                        props.activeType == item.type
+                        props.activeType === item.type
                           ? IMAGES.order.type.tick
                           : undefined
                       }

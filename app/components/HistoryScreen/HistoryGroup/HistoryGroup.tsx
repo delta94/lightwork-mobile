@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, TextStyle, View, ViewStyle, FlatList } from 'react-native'
 import Item from './Item/Item'
 import moment from 'moment/min/moment-with-locales'
+import { scale } from '../../../constants/dimensions'
 
 // STYLES
 // ViewStyles
@@ -11,8 +12,8 @@ const CONTAINER: ViewStyle = {
 }
 
 const HEADER: ViewStyle = {
-  paddingHorizontal: 20,
-  paddingVertical: 5
+  paddingHorizontal: scale(20),
+  paddingVertical: scale(5)
 }
 
 // TextStyles
@@ -23,7 +24,7 @@ const TEXT_DATE: TextStyle = {
 }
 
 // COMPONENT
-const HistoryGroup = (props) => {
+const HistoryGroup = (props: any) => {
   return (
     <View style={CONTAINER}>
       <View style={HEADER}>
@@ -34,7 +35,7 @@ const HistoryGroup = (props) => {
       <FlatList
         data={props.data}
         renderItem={({ item }) => {
-          if (item.date == props.date) {
+          if (item.date === props.date) {
             return (
               <Item
                 type={item.type}

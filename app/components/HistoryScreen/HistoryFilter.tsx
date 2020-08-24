@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { View, ViewStyle, Text, TextStyle, FlatList } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
 import { color } from '../../theme'
+import { scale } from '../../constants/dimensions'
 
 // DATA
 const BUTTONS = [
@@ -41,30 +42,30 @@ const CONTAINER: ViewStyle = {
   alignSelf: 'auto',
   flexDirection: 'row',
   paddingLeft: 0,
-  paddingVertical: 10,
+  paddingVertical: scale(10),
   borderBottomWidth: 1,
   borderColor: '#eee',
   backgroundColor: '#fff'
 }
 
 const FLATLIST: ViewStyle = {
-  marginLeft: 20
+  marginLeft: scale(20)
 }
 
 const BUTTON = {
   borderRadius: 20,
-  marginEnd: 10,
+  marginEnd: scale(10),
   backgroundColor: '#f4f4f4'
 }
 
 // TextStyles
 const BUTTON_TEXT: TextStyle = {
-  paddingVertical: 10,
-  paddingHorizontal: 20
+  paddingVertical: scale(10),
+  paddingHorizontal: scale(20)
 }
 
 // COMPONENT
-const HistoryFilter = (props) => {
+const HistoryFilter = (props: any) => {
   const [activeType, setActive] = useState('ALL')
   useEffect(() => {
     props.setValue(activeType)
@@ -81,14 +82,14 @@ const HistoryFilter = (props) => {
               style={{
                 ...BUTTON,
                 backgroundColor:
-                  activeType == item.type ? item.color : '#f4f4f4'
+                  activeType === item.type ? item.color : '#f4f4f4'
               }}
               onPress={() => setActive(item.type)}
             >
               <Text
                 style={{
                   ...BUTTON_TEXT,
-                  color: activeType == item.type ? item.textColor : '#000'
+                  color: activeType === item.type ? item.textColor : '#000'
                 }}
               >
                 {item.title}

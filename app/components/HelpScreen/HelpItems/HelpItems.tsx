@@ -10,6 +10,7 @@ import {
 import Accordion from 'react-native-collapsible/Accordion'
 import * as Animatable from 'react-native-animatable'
 import { Entypo, Ionicons, MaterialIcons } from '@expo/vector-icons'
+import { scale } from '../../../constants/dimensions';
 
 // DOCUMENTATION
 // https://github.com/oblador/react-native-collapsible
@@ -24,7 +25,7 @@ const CONTAINER: ViewStyle = {
 
 const HEADER: ViewStyle = {
   flexDirection: 'row',
-  padding: 20,
+  padding: scale(20),
   backgroundColor: '#fff',
   justifyContent: 'space-between',
   alignSelf: 'stretch'
@@ -32,8 +33,8 @@ const HEADER: ViewStyle = {
 
 const CONTENT: ViewStyle = {
   backgroundColor: '#fff',
-  paddingHorizontal: 20,
-  paddingBottom: 20
+  paddingHorizontal: scale(20),
+  paddingBottom: scale(20)
 }
 
 const DIVIDER: ViewStyle = {
@@ -42,7 +43,7 @@ const DIVIDER: ViewStyle = {
 }
 
 const ICON: ViewStyle = {
-  marginTop: 2,
+  marginTop: scale(2),
   alignSelf: 'flex-start'
 }
 
@@ -50,16 +51,16 @@ const ERROR: ViewStyle = {
   flexDirection: 'row',
   alignSelf: 'stretch',
   justifyContent: 'center',
-  paddingTop: 10
+  paddingTop: scale(10)
 }
 
 const ERROR_ICON: ViewStyle = {
-  paddingRight: 10
+  paddingRight: scale(10)
 }
 
 const SUBHEADER: ViewStyle = {
   backgroundColor: '#f4f4f4',
-  paddingVertical: 10,
+  paddingVertical: scale(10),
   alignSelf: 'stretch',
   alignItems: 'center'
 }
@@ -84,7 +85,7 @@ const SUBHEADER_TEXT: TextStyle = {
 }
 
 // FUNCTIONS
-const _renderHeader = (section, i, isActive, sections) => {
+const _renderHeader = (section :any, i: any, isActive: boolean) => {
   // AccordionHeader
   return (
     <View style={HEADER}>
@@ -103,7 +104,7 @@ const _renderHeader = (section, i, isActive, sections) => {
   )
 }
 
-const _renderContent = (section) => {
+const _renderContent = (section: any) => {
   // AccordionContent
   return (
     <View style={CONTENT}>
@@ -118,12 +119,11 @@ const _renderFooter = () => {
 }
 
 // COMPONENT
-const HelpItems = (props) => {
+const HelpItems = (props: any) => {
   // SetActiveSection
   const [activeSection, _updateSections] = useState([])
-  const [isPresIn, setPress] = useState(false)
-  if (props.value == '') {
-    if (props.isFocus == true) {
+  if (props.value === '') {
+    if (props.isFocus === true) {
       return (
         <View style={ERROR}>
           <Ionicons
@@ -154,8 +154,8 @@ const HelpItems = (props) => {
       )
     }
   }
-  if (props.value != '') {
-    if (props.sections.length == 0) {
+  if (props.value !== '') {
+    if (props.sections.length === 0) {
       return (
         <View style={ERROR}>
           <MaterialIcons

@@ -10,20 +10,21 @@ import {
 import { BorderlessButton } from 'react-native-gesture-handler'
 import { color } from '../../../theme'
 import IMAGES from '../../../constants/images'
+import { scale } from '../../../constants/dimensions'
 
 // STYLES
 // ViewStyles
 const CONTAINER: ViewStyle = {
-  paddingHorizontal: 20,
-  paddingBottom: 20,
-  paddingTop: 10
+  paddingHorizontal: scale(20),
+  paddingBottom: scale(20),
+  paddingTop: scale(10)
 }
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'space-between',
-  paddingVertical: 5
+  paddingVertical: scale(5)
 }
 
 const CARD_ROW: ViewStyle = {
@@ -32,7 +33,7 @@ const CARD_ROW: ViewStyle = {
 }
 
 const DIVIDER: ViewStyle = {
-  paddingVertical: 5
+  marginVertical: scale(5)
 }
 
 // TextStyles
@@ -59,11 +60,11 @@ const LINK: TextStyle = {
 // ImageStyles
 const IMAGE: ImageStyle = {
   width: 35,
-  marginRight: 10
+  marginRight: scale(10)
 }
 
 // COMPONENT
-const Balance = (props) => {
+const Balance = (props: any) => {
   return (
     <View style={CONTAINER}>
       <View>

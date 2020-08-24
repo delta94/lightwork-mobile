@@ -1,13 +1,14 @@
 import React from 'react'
 import { ViewStyle, View, Text, TextStyle } from 'react-native'
 import { color } from '../../../theme'
+import { scale } from '../../../constants/dimensions'
 
 const CONTAINER: ViewStyle = {
   borderTopLeftRadius: 10,
   borderTopRightRadius: 10,
   backgroundColor: '#fff',
-  paddingHorizontal: 20,
-  paddingVertical: 15,
+  paddingHorizontal: scale(20),
+  paddingVertical: scale(15),
   borderBottomColor: color.backGrey,
   borderBottomWidth: 1
 }

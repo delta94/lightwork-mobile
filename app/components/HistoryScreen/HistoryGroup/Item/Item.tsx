@@ -10,15 +10,15 @@ import {
 import IMAGES from '../../../../constants/images'
 import { color } from '../../../../theme/color'
 import { RectButton } from 'react-native-gesture-handler'
+import { scale } from '../../../../constants/dimensions'
 
 const TEXT: TextStyle = {
-  fontFamily: 'Lato'
 }
 
 let IMAGE_STYLE: ViewStyle = {
   borderRadius: 100,
   backgroundColor: '#E2FFBB',
-  padding: 7
+  padding: scale(7)
 }
 
 const TEXT_DATE: TextStyle = {
@@ -34,15 +34,15 @@ const TEXT_TITLE: TextStyle = {
 }
 
 const TYPE_ROW: ViewStyle = {
-  marginLeft: 10
+  marginLeft: scale(10)
 }
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'space-between',
-  paddingVertical: 15,
-  paddingHorizontal: 20,
+  paddingVertical: scale(15),
+  paddingHorizontal: scale(20),
   borderBottomColor: '#eee',
   borderBottomWidth: 1
 }
@@ -55,7 +55,6 @@ const TYPE_IMAGE: ImageStyle = {
 const CONTAINER: ViewStyle = {
   alignItems: 'stretch',
   flexDirection: 'column',
-
   backgroundColor: '#fff'
 }
 
@@ -72,7 +71,7 @@ const TEXT_PRICE: TextStyle = {
   color: color.greenDark
 }
 
-const Item = (props) => {
+const Item = (props: any) => {
   var TYPE
   var IMAGE
   switch (props.type) {

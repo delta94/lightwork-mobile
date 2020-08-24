@@ -15,6 +15,7 @@ import BonusesScreenContainer from './screens/BonusesScreen/BonusesScreenContain
 import HistoryDetailsScreenContainer from './screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreenContainer'
 import MapScreen from './screens/MapScreen/MapScreen'
 import Header from './components/MainScreen/Header/Header'
+import { scale } from './constants/dimensions'
 
 const TAB_ICON: ImageStyle = {
   width: 25,
@@ -22,7 +23,7 @@ const TAB_ICON: ImageStyle = {
 }
 
 const ICON_DIVIDER: ViewStyle = {
-  padding: 10
+  padding: scale(10)
 }
 
 const HistoryStack = createStackNavigator()

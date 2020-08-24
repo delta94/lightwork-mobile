@@ -2,16 +2,15 @@ import React from 'react'
 import { ViewStyle, Text, TextStyle } from 'react-native'
 import { View } from 'native-base'
 import { color } from '../../../../theme/color'
-
-const CONTAINER: ViewStyle = {}
+import { scale } from '../../../../constants/dimensions';
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'space-between',
-  paddingTop: 20,
-  paddingBottom: 20,
-  paddingHorizontal: 20,
+  paddingTop: scale(20),
+  paddingBottom: scale(20),
+  paddingHorizontal: scale(20),
   borderBottomColor: color.backGrey,
   borderBottomWidth: 1
 }

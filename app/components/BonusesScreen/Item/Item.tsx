@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   Text,
   TextStyle,
@@ -11,6 +11,7 @@ import { color } from '../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
 import moment from 'moment/min/moment-with-locales'
 import IMAGES from '../../../constants/images'
+import { scale } from '../../../constants/dimensions';
 
 // DOCUMENTATION
 // https://momentjs.com/
@@ -27,7 +28,7 @@ const CONTAINER: ViewStyle = {
 const IMAGE_VIEW: ViewStyle = {
   backgroundColor: '#f4f4f4',
   borderRadius: 100,
-  padding: 7,
+  padding: scale(7),
   alignSelf: 'flex-start',
   borderColor: '#e8e8e8',
   borderWidth: 1
@@ -40,9 +41,9 @@ const IMAGE: ImageStyle = {
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
-  paddingHorizontal: 20,
+  paddingHorizontal: scale(20),
   backgroundColor: '#fff',
-  paddingVertical: 15,
+  paddingVertical: scale(15),
   borderBottomWidth: 1,
   borderColor: '#f4f4f4',
   justifyContent: 'space-between'
@@ -59,7 +60,7 @@ const ROW_RIGHT: ViewStyle = {
 }
 
 const TEXT_VIEW: ViewStyle = {
-  paddingLeft: 10
+  paddingLeft: scale(10)
 }
 
 // TextStyle
@@ -73,7 +74,7 @@ const TEXT_SERVICE: TextStyle = {
 const TEXT_DATE: TextStyle = {
   color: '#777',
   fontSize: 14,
-  paddingBottom: 5
+  paddingBottom: scale(5)
 }
 
 const BONUS_COUNT: TextStyle = {
@@ -83,9 +84,7 @@ const BONUS_COUNT: TextStyle = {
 }
 
 // COMPONENT
-const Item = (props) => {
-  const [isPressIn, setPressIn] = useState(false)
-
+const Item = (props: any) => {
   var TYPE
   switch (props.type) {
     case 'MASTER':

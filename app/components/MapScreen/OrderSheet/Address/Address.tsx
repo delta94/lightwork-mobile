@@ -3,6 +3,7 @@ import { ViewStyle, View, Image, ImageStyle } from 'react-native'
 import IMAGES from '../../../../constants/images'
 import { color } from '../../../../theme'
 import { TextField } from 'react-native-material-textfield'
+import { scale } from '../../../../constants/dimensions'
 
 const CONTAINER: ViewStyle = {}
 
@@ -13,7 +14,7 @@ const ROW: ViewStyle = {
 
 const COL: ViewStyle = {
   flexDirection: 'column',
-  paddingRight: 10
+  paddingRight: scale(10)
 }
 
 const COL_100: ViewStyle = {
@@ -26,7 +27,7 @@ const TEXT_FIELD: ViewStyle = {
 }
 
 const DIVIDER: ViewStyle = {
-  paddingHorizontal: 5
+  paddingHorizontal: scale(5)
 }
 
 const IMG_TYPE: ImageStyle = {

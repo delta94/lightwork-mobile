@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, ViewStyle, TextStyle } from 'react-native'
 import { SearchBar } from 'react-native-elements'
+import { scale } from '../../../constants/dimensions';
 
 // DOCUMENTATION
 // https://react-native-elements.github.io/react-native-elements/docs/searchbar.html
@@ -11,10 +12,10 @@ const CONTAINER: ViewStyle = {
   flexDirection: 'column',
   alignSelf: 'stretch',
   backgroundColor: '#fff',
-  paddingVertical: 5,
+  paddingVertical: scale(5),
   borderBottomWidth: 1,
   borderColor: '#f4f4f4',
-  paddingHorizontal: 10
+  paddingHorizontal: scale(10)
 }
 
 const INPUT_CONTAINER: ViewStyle = {
@@ -33,7 +34,7 @@ const INPUT_TEXT: TextStyle = {
 }
 
 // COMPONENT
-const Search = (props) => {
+const Search = (props: any) => {
   return (
     <View style={CONTAINER}>
       <SearchBar

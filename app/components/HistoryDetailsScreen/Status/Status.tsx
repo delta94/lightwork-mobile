@@ -9,6 +9,7 @@ import {
 } from 'react-native'
 import IMAGES from '../../../constants/images'
 import { color } from '../../../theme'
+import { scale } from '../../../constants/dimensions';
 
 // STYLES
 // ViewStyles
@@ -16,19 +17,19 @@ const ROW: ViewStyle = {
   flexDirection: 'row',
   alignSelf: 'stretch',
   justifyContent: 'flex-start',
-  paddingLeft: 20,
-  marginVertical: 10,
+  paddingLeft: scale(20),
+  marginVertical: scale(10),
   alignItems: 'center'
 }
 
 const ITEM_IMAGE: ViewStyle = {
-  paddingVertical: 4,
-  paddingHorizontal: 3
+  paddingVertical: scale(4),
+  paddingHorizontal: scale(3)
 }
 
 const ITEM: ViewStyle = {
   width: '100%',
-  marginLeft: 20
+  marginLeft: scale(20)
 }
 
 // TextStyles
@@ -51,7 +52,8 @@ const Status = (props: any) => {
   switch (props.status) {
     case 'active':
       STATUS_IMAGE = IMAGES.history.details.status.active
-      ;(STATUS_TEXT = 'В процессе'), (TEXT_COLOR = color.yellow)
+      STATUS_TEXT = 'В процессе'
+      TEXT_COLOR = color.yellow
       break
 
     case 'done':

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { ViewStyle, View, Image, ImageStyle, Animated } from 'react-native'
+import { ViewStyle, Image, ImageStyle, Animated } from 'react-native'
 import IMAGES from '../../../constants/images'
-import Header from '../../MainScreen/Other/Header/Header'
 
 const MARKER_WIDTH = 20
 

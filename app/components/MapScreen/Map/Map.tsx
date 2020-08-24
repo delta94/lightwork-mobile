@@ -1,9 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
-import { ViewStyle, View } from 'react-native'
+import { ViewStyle } from 'react-native'
 import YaMap, { Marker, Geocoder } from 'react-native-yamap'
 import IMAGES from '../../../constants/images'
-
-const CONTAINER: ViewStyle = {}
 
 const Map = (props: any) => {
   YaMap.init('c9fe7024-671e-49c8-945c-4b9a87c59902')

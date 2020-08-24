@@ -6,23 +6,23 @@ import OrderType from './OrderType/OrderType'
 import TypeCleaning from './TypeCleaning/TypeCleaning'
 import TypeMaster from './TypeMaster/TypeMaster'
 import TypeMover from './TypeMover/TypeMover'
-import { color } from '../../../theme'
+import { scale } from '../../../constants/dimensions'
 
 const CONTAINER: ViewStyle = {
   backgroundColor: '#fff',
-  paddingHorizontal: 20,
-  paddingVertical: 10
+  paddingHorizontal: scale(20),
+  paddingVertical: scale(10)
 }
 
 const OrderSheet = () => {
   const [activeType, setType] = useState('MOVERS')
 
   let OrderOptions
-  if (activeType == 'CLEANING') {
+  if (activeType === 'CLEANING') {
     OrderOptions = <TypeCleaning />
-  } else if (activeType == 'MASTER') {
+  } else if (activeType === 'MASTER') {
     OrderOptions = <TypeMaster />
-  } else if (activeType == 'MOVERS') {
+  } else if (activeType === 'MOVERS') {
     OrderOptions = <TypeMover />
   }
 

@@ -9,6 +9,7 @@ import {
 } from 'react-native'
 import { color } from '../../../theme'
 import IMAGES from '../../../constants/images'
+import { scale } from '../../../constants/dimensions';
 
 const CONTAINER: ViewStyle = {
   alignItems: 'center',
@@ -22,7 +23,7 @@ const ROW: ViewStyle = {
 }
 
 const INFO: ViewStyle = {
-  paddingLeft: 10
+  paddingLeft: scale(10)
 }
 
 const TEXT_NAME: TextStyle = {
@@ -39,7 +40,7 @@ const TEXT_NUMBER: TextStyle = {
 const USER_IMAGE: ViewStyle = {
   borderRadius: 100,
   backgroundColor: '#e4e4e4',
-  padding: 6
+  padding: scale(6)
 }
 
 const IMG_USER: ImageStyle = {

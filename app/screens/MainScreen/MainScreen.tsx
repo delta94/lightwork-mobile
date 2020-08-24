@@ -1,18 +1,17 @@
 import React from 'react'
-import { View, ViewStyle, Text, Dimensions, Button } from 'react-native'
+import { View, ViewStyle } from 'react-native'
 import Backdrop from '../../components/MainScreen/Backdrop'
-import { ScrollView } from 'react-native-gesture-handler'
 import BottomSheet from 'reanimated-bottom-sheet'
 import { useHeaderHeight } from '@react-navigation/stack'
 import {
   BottomTabHeight,
   WindowHeight,
-  HeaderHeight
 } from '../../constants/constants'
 import Balance from '../../components/MainScreen/Balance/Balance'
 import Orders from '../../components/MainScreen/Orders/Orders'
 import { color } from '../../theme'
 import Other from '../../components/MainScreen/Other/Other'
+import { scale } from '../../constants/dimensions'
 
 // DOCUMENTATION
 // https://github.com/osdnk/react-native-reanimated-bottom-sheet
@@ -27,15 +26,15 @@ const BOTTOM_HEADER: ViewStyle = {
   height: 10,
   borderTopLeftRadius: 10,
   borderTopRightRadius: 10,
-  backgroundColor: '#fff'
+  backgroundColor: '#fff',
 }
 
 const BOTTOM_SHEET: ViewStyle = {
-  backgroundColor: color.backGrey
+  backgroundColor: color.backGrey,
 }
 
 const DIVIDER: ViewStyle = {
-  marginBottom: 10
+  marginBottom: scale(10)
 }
 
 const GROUP: ViewStyle = {
@@ -43,7 +42,7 @@ const GROUP: ViewStyle = {
 }
 
 // COMPONENT
-const MainScreen = ({ navigation }) => {
+const MainScreen = ({ navigation }: any) => {
   const headerHeight = useHeaderHeight()
   const viewHeight = WindowHeight - headerHeight - BottomTabHeight
   const initialHeight = (viewHeight + 15) * 0.6
@@ -65,15 +64,17 @@ const MainScreen = ({ navigation }) => {
   )
 
   return (
+    <>
     <View style={CONTAINER}>
+      <Backdrop />
+    </View>
       <BottomSheet
         enabledBottomClamp
         snapPoints={[initialHeight, viewHeight]}
         renderContent={_renderContent}
         renderHeader={_renderHeader}
-      />
-      <Backdrop />
-    </View>
+      />     
+    </>
   )
 }
 

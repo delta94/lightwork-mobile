@@ -8,15 +8,14 @@ import {
   ImageStyle
 } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
-
-const CONTAINER: ViewStyle = {}
+import { scale } from '../../../../constants/dimensions'
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'flex-start',
-  paddingVertical: 15,
-  paddingHorizontal: 20
+  paddingVertical: scale(15),
+  paddingHorizontal: scale(20)
 }
 
 const TEXT: TextStyle = {
@@ -32,10 +31,10 @@ const TITLE: TextStyle = {
 const IMAGE: ImageStyle = {
   width: 35,
   height: 35,
-  marginRight: 15
+  marginRight: scale(15)
 }
 
-const Item = (props) => {
+const Item = (props: any) => {
   return (
     <RectButton>
       <View style={ROW} key={'item-' + props.id}>

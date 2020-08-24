@@ -1,14 +1,15 @@
 import React from 'react'
 import { Text, TextStyle, View, ViewStyle } from 'react-native'
+import { scale } from '../../../constants/dimensions';
 
 // STYLES
 // ViewStyles
 const CONTAINER: ViewStyle = {
-  paddingHorizontal: 20,
-  paddingTop: 10,
+  paddingHorizontal: scale(20),
+  paddingTop: scale(10),
   backgroundColor: '#fff',
   flexDirection: 'column',
-  paddingBottom: 20
+  paddingBottom: scale(20)
 }
 
 // TextStyles
@@ -31,7 +32,7 @@ const TEXT_MUTED: TextStyle = {
 }
 
 // COMPONENT
-const Balance = (props) => {
+const Balance = (props: any) => {
   return (
     <View style={CONTAINER}>
       <Text style={BONUS_COUNT}>{props.balance}</Text>

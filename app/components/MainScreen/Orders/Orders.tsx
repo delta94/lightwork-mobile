@@ -12,7 +12,7 @@ const initialState = [
   { id: 3, type: 'CLEANING', bonusCount: 60, date: '11/25/2019', price: 5000 }
 ]
 
-const Orders = (props) => {
+const Orders = () => {
   const Items = initialState.map((n) => {
     return <Item type={n.type} key={n.id} price={n.price} />
   })

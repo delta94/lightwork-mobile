@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import {
   ViewStyle,
-  View,
   Image,
   ImageStyle,
   Animated,
-  Button
 } from 'react-native'
-import { color } from '../../../theme'
 import IMAGES from '../../../constants/images'
 
 const MARKER_WIDTH = 60
