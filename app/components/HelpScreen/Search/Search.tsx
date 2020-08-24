@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, ViewStyle, TextStyle } from 'react-native'
 import { SearchBar } from 'react-native-elements'
-import { scale } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../constants/dimensions';
 
 // DOCUMENTATION
 // https://react-native-elements.github.io/react-native-elements/docs/searchbar.html
@@ -30,7 +30,7 @@ const INPUT: ViewStyle = {
 
 // TextStyles
 const INPUT_TEXT: TextStyle = {
-  fontSize: 16
+  fontSize: fontSize.regularSmall
 }
 
 // COMPONENT

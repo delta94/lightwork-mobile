@@ -10,46 +10,48 @@ import {
 import moment from 'moment/min/moment-with-locales'
 import IMAGES from '../../../constants/images'
 import Status from '../../../components/HistoryDetailsScreen/Status/Status'
+import { fontSize, scale } from '../../../constants/dimensions';
+import { color } from '../../../theme/color';
 
 // STYLES
 // ViewStyles
 const CONTAINER: ViewStyle = {
-  backgroundColor: '#fff',
+  backgroundColor: color.white,
   flexDirection: 'column',
   alignSelf: 'stretch',
   flex: 1,
-  paddingVertical: 20
+  paddingVertical: scale(20)
 }
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
   alignSelf: 'stretch',
   justifyContent: 'flex-start',
-  paddingLeft: 20,
-  marginVertical: 10,
+  paddingLeft: scale(20),
+  marginVertical: scale(10),
   alignItems: 'flex-end'
 }
 
 const ITEM_IMAGE: ViewStyle = {
-  paddingVertical: 4
+  paddingVertical: scale(4)
 }
 
 const ITEM: ViewStyle = {
   borderBottomColor: '#eee',
   borderBottomWidth: 1,
   width: '100%',
-  marginLeft: 20
+  marginLeft: scale(20)
 }
 
 // TextStyles
 const TEXT_TITLE: TextStyle = {
-  fontSize: 16,
-  color: '#555'
+  fontSize: fontSize.small,
+  color: color.textGrey
 }
 
 const TEXT_DESCR: TextStyle = {
-  fontSize: 18,
-  paddingBottom: 2
+  fontSize: fontSize.regular,
+  paddingBottom: scale(2)
 }
 
 // ImageStyles

@@ -10,7 +10,8 @@ import {
 import Accordion from 'react-native-collapsible/Accordion'
 import * as Animatable from 'react-native-animatable'
 import { Entypo, Ionicons, MaterialIcons } from '@expo/vector-icons'
-import { scale } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../constants/dimensions';
+import { color } from '../../../theme/color';
 
 // DOCUMENTATION
 // https://github.com/oblador/react-native-collapsible
@@ -67,21 +68,24 @@ const SUBHEADER: ViewStyle = {
 
 // TextStyle
 const HEADER_TEXT: TextStyle = {
-  fontSize: 15,
-  maxWidth: '92%'
+  fontSize: fontSize.regular,
+  maxWidth: '92%',
+  color: color.textGrey
 }
 
 const CONTENT_TEXT: TextStyle = {
-  fontSize: 13
+  fontSize: fontSize.small
 }
 
 const ERROR_TEXT: TextStyle = {
-  fontSize: 16,
-  alignSelf: 'center'
+  fontSize: fontSize.regular,
+  alignSelf: 'center',
+  color: color.textGrey
 }
 
 const SUBHEADER_TEXT: TextStyle = {
-  fontSize: 16
+  fontSize: fontSize.regular,
+  color: color.textGrey
 }
 
 // FUNCTIONS

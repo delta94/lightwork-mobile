@@ -3,15 +3,16 @@ import { ViewStyle, View, Image, Text, TextStyle, FlatList } from 'react-native'
 import IMAGES from '../../../../../../constants/images'
 import { color } from '../../../../../../theme'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
+import { scale } from '../../../../../../constants/dimensions';
 
 const CONTAINER: ViewStyle = {
-  paddingVertical: 10
+  paddingVertical: scale(10)
 }
 
 const ROW: ViewStyle = {
   flexDirection: 'row',
   alignContent: 'flex-start',
-  marginTop: 10
+  marginTop: scale(10)
 }
 
 const COL: ViewStyle = {
@@ -25,7 +26,7 @@ const COL: ViewStyle = {
 
 const CARD: ViewStyle = {
   alignItems: 'center',
-  paddingTop: 15
+  paddingTop: scale(15)
 }
 
 const TEXT: TextStyle = {
@@ -36,15 +37,15 @@ const TEXT: TextStyle = {
 const TEXT_VIEW: ViewStyle = {
   flexDirection: 'column',
   alignContent: 'stretch',
-  paddingTop: 5,
-  paddingBottom: 10
+  paddingTop: scale(5),
+  paddingBottom: scale(10)
 }
 
 const STATUS: ViewStyle = {
   height: 22,
   width: 22,
   right: 10,
-  marginTop: 10,
+  marginTop: scale(10),
   justifyContent: 'center',
   alignItems: 'center',
   borderRadius: 100,

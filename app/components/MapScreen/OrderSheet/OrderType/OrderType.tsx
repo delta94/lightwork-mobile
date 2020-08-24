@@ -3,7 +3,7 @@ import { ViewStyle, View, Image, Text, TextStyle, FlatList } from 'react-native'
 import IMAGES from '../../../../constants/images'
 import { color } from '../../../../theme'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
-import { scale } from '../../../../constants/dimensions'
+import { scale, fontSize } from '../../../../constants/dimensions';
 
 const CONTAINER: ViewStyle = {
   paddingVertical: scale(10)
@@ -29,7 +29,7 @@ const CARD: ViewStyle = {
 }
 
 const TITLE: TextStyle = {
-  fontSize: 14
+  fontSize: fontSize.small
 }
 
 const TEXT: TextStyle = {
@@ -94,10 +94,10 @@ const OrderType = (props: any) => {
                 style={[
                   { ...COL },
                   index === 1
-                    ? { marginHorizontal: 5 }
+                    ? { marginHorizontal: scale(5) }
                     : index === 0
-                      ? { marginRight: 5 }
-                      : { marginLeft: 5 }
+                      ? { marginRight: scale(5) }
+                      : { marginLeft: scale(5) }
                 ]}
               >
                 <TouchableWithoutFeedback

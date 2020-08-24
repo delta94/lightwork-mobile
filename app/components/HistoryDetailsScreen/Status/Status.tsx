@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import IMAGES from '../../../constants/images'
 import { color } from '../../../theme'
-import { scale } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../constants/dimensions';
 
 // STYLES
 // ViewStyles
@@ -34,8 +34,8 @@ const ITEM: ViewStyle = {
 
 // TextStyles
 const TEXT: TextStyle = {
-  fontSize: 16,
-  color: '#555'
+  fontSize: fontSize.regular,
+  color: color.textGrey
 }
 
 // ImageStyles

@@ -2,7 +2,8 @@ import React from 'react'
 import { Text, TextStyle, View, ViewStyle, FlatList } from 'react-native'
 import Item from './Item/Item'
 import moment from 'moment/min/moment-with-locales'
-import { scale } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../constants/dimensions';
+import { color } from '../../../theme/color';
 
 // STYLES
 // ViewStyles
@@ -18,9 +19,8 @@ const HEADER: ViewStyle = {
 
 // TextStyles
 const TEXT_DATE: TextStyle = {
-  color: '#888',
-  fontFamily: 'Lato',
-  fontSize: 14
+  color: color.textGrey,
+  fontSize: fontSize.small
 }
 
 // COMPONENT

@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import { color } from '../../../theme'
 import IMAGES from '../../../constants/images'
-import { scale } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../constants/dimensions';
 
 const CONTAINER: ViewStyle = {
   alignItems: 'center',
@@ -28,13 +28,13 @@ const INFO: ViewStyle = {
 
 const TEXT_NAME: TextStyle = {
   color: '#fff',
-  fontSize: 16,
+  fontSize: fontSize.regularSmall,
   fontFamily: 'Lato-Bold'
 }
 
 const TEXT_NUMBER: TextStyle = {
   color: color.white,
-  fontSize: 12
+  fontSize: fontSize.smaller
 }
 
 const USER_IMAGE: ViewStyle = {

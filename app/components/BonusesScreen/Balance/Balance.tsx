@@ -1,13 +1,14 @@
 import React from 'react'
 import { Text, TextStyle, View, ViewStyle } from 'react-native'
-import { scale } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../constants/dimensions';
+import { color } from '../../../theme/color';
 
 // STYLES
 // ViewStyles
 const CONTAINER: ViewStyle = {
   paddingHorizontal: scale(20),
   paddingTop: scale(10),
-  backgroundColor: '#fff',
+  backgroundColor: color.white,
   flexDirection: 'column',
   paddingBottom: scale(20)
 }
@@ -19,16 +20,16 @@ const TEXT: TextStyle = {
 
 const BONUS_COUNT: TextStyle = {
   ...TEXT,
-  color: '#444',
-  fontSize: 52,
+  color: color.textGrey,
+  fontSize: fontSize.xExtraLarge,
   fontWeight: '500',
   fontFamily: 'Lato-Bold'
 }
 
 const TEXT_MUTED: TextStyle = {
   ...TEXT,
-  color: '#666',
-  fontSize: 16
+  color: color.textGrey,
+  fontSize: fontSize.regular
 }
 
 // COMPONENT

@@ -7,9 +7,10 @@ import TypeCleaning from './TypeCleaning/TypeCleaning'
 import TypeMaster from './TypeMaster/TypeMaster'
 import TypeMover from './TypeMover/TypeMover'
 import { scale } from '../../../constants/dimensions'
+import { color } from '../../../theme/color';
 
 const CONTAINER: ViewStyle = {
-  backgroundColor: '#fff',
+  backgroundColor: color.white,
   paddingHorizontal: scale(20),
   paddingVertical: scale(10)
 }

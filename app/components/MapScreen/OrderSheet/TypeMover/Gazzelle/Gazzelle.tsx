@@ -7,18 +7,19 @@ import {
 } from 'react-native'
 import { color } from '../../../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
+import { scale } from '../../../../../constants/dimensions';
 
 const CONTAINER: ViewStyle = {
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  marginTop: 10
+  marginTop: scale(10)
 }
 
 const TITLE: TextStyle = {}
 
 const COUNT_PICKER: ViewStyle = {
-  backgroundColor: '#fff',
+  backgroundColor: color.white,
   flexDirection: 'row',
   borderRadius: 15,
   borderWidth: 1,
@@ -27,8 +28,8 @@ const COUNT_PICKER: ViewStyle = {
 
 const ITEM: ViewStyle = {
   alignSelf: 'stretch',
-  padding: 8,
-  paddingHorizontal: 30
+  padding: scale(8),
+  paddingHorizontal: scale(30)
 }
 
 const Gazzelle = (props: any) => {

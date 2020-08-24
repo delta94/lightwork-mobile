@@ -1,5 +1,5 @@
 import React from 'react'
-import { ViewStyle, View } from 'react-native'
+import { View } from 'react-native'
 import Type from './Type/Type'
 import { TextField } from 'react-native-material-textfield'
 import { color } from '../../../../theme'

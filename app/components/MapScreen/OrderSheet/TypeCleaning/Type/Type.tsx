@@ -5,6 +5,8 @@ import { color } from '../../../../../theme'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 import { scale } from '../../../../../constants/dimensions'
 
+//STYLES
+//ViewStyles
 const CONTAINER: ViewStyle = {}
 
 const ROW: ViewStyle = {
@@ -27,11 +29,6 @@ const CARD: ViewStyle = {
   paddingTop: scale(15)
 }
 
-const TEXT: TextStyle = {
-  textAlign: 'center',
-  textAlignVertical: 'center'
-}
-
 const TEXT_VIEW: ViewStyle = {
   flexDirection: 'column',
   alignContent: 'stretch',
@@ -50,6 +47,12 @@ const STATUS: ViewStyle = {
   backgroundColor: color.backGrey,
   alignSelf: 'flex-end',
   position: 'absolute'
+}
+
+//TextStyles
+const TEXT: TextStyle = {
+  textAlign: 'center',
+  textAlignVertical: 'center'
 }
 
 const DATA = [
@@ -80,7 +83,7 @@ const Type = () => {
               <View
                 style={[
                   { ...COL },
-                  index === 0 ? { marginRight: 5 } : { marginLeft: 5 }
+                  index === 0 ? { marginRight: scale(5) } : { marginLeft: scale(5) }
                 ]}
               >
                 <TouchableWithoutFeedback
@@ -105,7 +108,6 @@ const Type = () => {
                       style={{ width: 20, height: 20 }}
                     />
                   </View>
-
                   <Image source={item.image} />
                   <View style={TEXT_VIEW}>
                     <Text style={TEXT}>{item.title}</Text>

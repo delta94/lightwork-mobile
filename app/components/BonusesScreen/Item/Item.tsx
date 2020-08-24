@@ -11,14 +11,14 @@ import { color } from '../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
 import moment from 'moment/min/moment-with-locales'
 import IMAGES from '../../../constants/images'
-import { scale } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../constants/dimensions';
 
 // DOCUMENTATION
 // https://momentjs.com/
 // https://reactnative.dev/docs/touchablewithoutfeedback
 
 // STYLES
-// ViewStyle
+// ViewStyles
 const CONTAINER: ViewStyle = {
   flexDirection: 'column',
   borderBottomWidth: 1,
@@ -63,22 +63,22 @@ const TEXT_VIEW: ViewStyle = {
   paddingLeft: scale(10)
 }
 
-// TextStyle
+// TextStyles
 const TEXT_SERVICE: TextStyle = {
   color: '#565656',
-  fontSize: 16,
+  fontSize: fontSize.regularSmall,
   marginTop: 0,
   fontFamily: 'Lato-Bold'
 }
 
 const TEXT_DATE: TextStyle = {
   color: '#777',
-  fontSize: 14,
+  fontSize: fontSize.smaller,
   paddingBottom: scale(5)
 }
 
 const BONUS_COUNT: TextStyle = {
-  fontSize: 17,
+  fontSize: fontSize.regularSmall,
   fontFamily: 'Lato-Bold',
   color: color.green
 }
@@ -90,11 +90,9 @@ const Item = (props: any) => {
     case 'MASTER':
       TYPE = 'Заказ мастера'
       break
-
     case 'CLEANING':
       TYPE = 'Заказ клинеров'
       break
-
     case 'MOVERS':
       TYPE = 'Заказ грузчиков'
       break

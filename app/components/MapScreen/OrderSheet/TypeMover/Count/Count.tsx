@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ViewStyle, View, Text, TextStyle } from 'react-native'
 import { color } from '../../../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
+import { scale } from '../../../../../constants/dimensions';
 
 const CONTAINER: ViewStyle = {
   flexDirection: 'row',
@@ -12,7 +13,7 @@ const CONTAINER: ViewStyle = {
 const TITLE: TextStyle = {}
 
 const COUNT_PICKER: ViewStyle = {
-  backgroundColor: '#fff',
+  backgroundColor: color.white,
   flexDirection: 'row',
   borderRadius: 15,
   borderWidth: 1,
@@ -21,7 +22,7 @@ const COUNT_PICKER: ViewStyle = {
 
 const ITEM: ViewStyle = {
   alignSelf: 'stretch',
-  padding: 8
+  padding: scale(8)
 }
 
 const Count = () => {
