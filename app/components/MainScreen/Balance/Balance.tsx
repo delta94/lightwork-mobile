@@ -38,13 +38,13 @@ const DIVIDER: ViewStyle = {
 
 // TextStyles
 const TEXT: TextStyle = {
-  fontSize: fontSize.regular
+  fontSize: fontSize.regular,
 }
 
 const TITLE: TextStyle = {
   ...TEXT,
   fontWeight: 'bold',
-  color: color.black
+  color: color.black,
 }
 
 const CODE: TextStyle = {
@@ -55,7 +55,7 @@ const CODE: TextStyle = {
 const LINK: TextStyle = {
   ...TEXT,
   fontWeight: 'bold',
-  color: color.green
+  color: color.green,
 }
 
 // ImageStyles
