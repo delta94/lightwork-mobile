@@ -11,7 +11,7 @@ import { color } from '../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
 import moment from 'moment/min/moment-with-locales'
 import IMAGES from '../../../constants/images'
-import { scale, fontSize } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../theme/dimensions'
 
 // DOCUMENTATION
 // https://momentjs.com/

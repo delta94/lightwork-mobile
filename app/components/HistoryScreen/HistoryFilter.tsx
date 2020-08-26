@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { View, ViewStyle, Text, TextStyle, FlatList } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
 import { color } from '../../theme'
-import { scale } from '../../constants/dimensions'
+import { scale } from '../../theme/dimensions'
 
 // DATA
 const BUTTONS = [

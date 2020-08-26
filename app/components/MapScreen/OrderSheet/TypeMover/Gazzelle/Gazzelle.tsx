@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 import { color } from '../../../../../theme'
 import { RectButton } from 'react-native-gesture-handler'
-import { scale } from '../../../../../constants/dimensions'
+import { scale } from '../../../../../theme/dimensions'
 
 const CONTAINER: ViewStyle = {
   flexDirection: 'row',

@@ -3,7 +3,7 @@ import { ViewStyle, View, Image, ImageStyle } from 'react-native'
 import IMAGES from '../../../../constants/images'
 import { color } from '../../../../theme'
 import { TextField } from 'react-native-material-textfield'
-import { scale } from '../../../../constants/dimensions'
+import { scale } from '../../../../theme/dimensions'
 
 const CONTAINER: ViewStyle = {}
 

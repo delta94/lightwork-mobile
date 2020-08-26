@@ -10,7 +10,7 @@ import {
 import { BorderlessButton } from 'react-native-gesture-handler'
 import { color } from '../../../theme'
 import IMAGES from '../../../constants/images'
-import { scale, fontSize } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../theme/dimensions'
 
 // STYLES
 // ViewStyles

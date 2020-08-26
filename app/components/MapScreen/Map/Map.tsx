@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from 'react'
 import { ViewStyle } from 'react-native'
 import YaMap, { Marker, Geocoder } from 'react-native-yamap'
 import IMAGES from '../../../constants/images'
+import { useHeaderHeight } from '@react-navigation/stack'
+import { WINDOW_HEIGHT, BOTTOMTAB_HEIGHT, STATUSBAR_HEIGHT } from '../../../constants/constants'
 
 const Map = (props: any) => {
   YaMap.init('c9fe7024-671e-49c8-945c-4b9a87c59902')
@@ -15,7 +17,8 @@ const Map = (props: any) => {
   const [activeZoom, setZoom] = useState(13)
   const YA_MAP: any = useRef(null)
   const [timerId, setTimerId] = useState()
-
+  const HEADER_HEIGHT = useHeaderHeight()
+  const VIEW_HEIGHT = WINDOW_HEIGHT - HEADER_HEIGHT - BOTTOMTAB_HEIGHT - STATUSBAR_HEIGHT
   const _onMapPress = (p: any) => {
     YA_MAP.current.setCenter(p.nativeEvent, activeZoom, 0, 0, 0.5)
   }
@@ -64,7 +67,7 @@ const Map = (props: any) => {
       onMapPress={(point) => {
         _onMapPress(point)
       }}
-      style={{ flex: 1 }}
+      style={{ flex: 1, position: 'absolute', width: '100%', height: VIEW_HEIGHT }}
     >
       <Marker point={activePoint}/>
     </YaMap>

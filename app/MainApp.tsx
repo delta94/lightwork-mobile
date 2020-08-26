@@ -5,7 +5,7 @@ import { Image, ImageStyle, View, ViewStyle } from 'react-native'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import { color } from './theme/color'
 import IMAGES from './constants/images'
-import { BottomTabHeight } from './constants/constants'
+import { BOTTOMTAB_HEIGHT } from './constants/constants'
 
 // SCREENS
 import HistoryScreenContainer from './screens/HistoryScreen/HistoryScreenContainer'
@@ -15,7 +15,7 @@ import BonusesScreenContainer from './screens/BonusesScreen/BonusesScreenContain
 import HistoryDetailsScreenContainer from './screens/HistoryScreen/HistoryDetailsScreen/HistoryDetailsScreenContainer'
 import MapScreen from './screens/MapScreen/MapScreen'
 import Header from './components/MainScreen/Header/Header'
-import { scale } from './constants/dimensions'
+import { scale } from './theme/dimensions'
 
 const TAB_ICON: ImageStyle = {
   width: 25,
@@ -184,7 +184,7 @@ const App = () => {
         inactiveColor={color.darkGrey}
         barStyle={{
           backgroundColor: color.white,
-          height: BottomTabHeight,
+          height: BOTTOMTAB_HEIGHT,
           justifyContent: 'center'
         }}
         shifting={false}

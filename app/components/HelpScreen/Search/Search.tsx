@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, ViewStyle, TextStyle } from 'react-native'
 import { SearchBar } from 'react-native-elements'
-import { scale, fontSize } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../theme/dimensions'
 import { color } from '../../../theme/color'
 
 // DOCUMENTATION

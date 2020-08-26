@@ -6,7 +6,7 @@ import OrderType from './OrderType/OrderType'
 import TypeCleaning from './TypeCleaning/TypeCleaning'
 import TypeMaster from './TypeMaster/TypeMaster'
 import TypeMover from './TypeMover/TypeMover'
-import { scale } from '../../../constants/dimensions'
+import { scale } from '../../../theme/dimensions'
 import { color } from '../../../theme/color'
 
 const CONTAINER: ViewStyle = {

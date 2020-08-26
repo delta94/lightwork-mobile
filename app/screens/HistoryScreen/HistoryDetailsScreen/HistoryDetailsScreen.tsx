@@ -10,7 +10,7 @@ import {
 import moment from 'moment/min/moment-with-locales'
 import IMAGES from '../../../constants/images'
 import Status from '../../../components/HistoryDetailsScreen/Status/Status'
-import { fontSize, scale } from '../../../constants/dimensions'
+import { fontSize, scale } from '../../../theme/dimensions'
 import { color } from '../../../theme/color'
 
 // STYLES

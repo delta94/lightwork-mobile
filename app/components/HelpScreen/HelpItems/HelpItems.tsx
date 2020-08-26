@@ -10,7 +10,7 @@ import {
 import Accordion from 'react-native-collapsible/Accordion'
 import * as Animatable from 'react-native-animatable'
 import { Entypo, Ionicons, MaterialIcons } from '@expo/vector-icons'
-import { scale, fontSize } from '../../../constants/dimensions'
+import { scale, fontSize } from '../../../theme/dimensions'
 import { color } from '../../../theme/color'
 
 // DOCUMENTATION
@@ -68,7 +68,7 @@ const SUBHEADER: ViewStyle = {
 
 // TextStyle
 const HEADER_TEXT: TextStyle = {
-  fontSize: fontSize.regular,
+  fontSize: fontSize.regularSmall,
   maxWidth: '92%',
   color: color.textGrey
 }

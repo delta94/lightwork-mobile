@@ -10,7 +10,7 @@ import {
 import IMAGES from '../../../../constants/images'
 import { color } from '../../../../theme/color'
 import { RectButton } from 'react-native-gesture-handler'
-import { scale, fontSize } from '../../../../constants/dimensions'
+import { scale, fontSize } from '../../../../theme/dimensions'
 
 const TEXT: TextStyle = {
 }

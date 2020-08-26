@@ -12,7 +12,7 @@ import Balance from '../../components/MainScreen/Balance/Balance'
 import Orders from '../../components/MainScreen/Orders/Orders'
 import { color } from '../../theme'
 import Other from '../../components/MainScreen/Other/Other'
-import { scale } from '../../constants/dimensions'
+import { scale } from '../../theme/dimensions'
 
 // DOCUMENTATION
 // https://github.com/osdnk/react-native-reanimated-bottom-sheet
